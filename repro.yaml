@@ -2,7 +2,7 @@
 team: UW-IPL                     # exactly as registered on macvi.org
 track: maritime-visual-odometry
 submission_id: 19406                 # ID of the selected final entry on macvi.org (drift 10.83 %)
-contact: contact supplied privately                       # an address you check during the verification period
+contact: https://github.com/heejaeee/TideGraph-MaCVi2027-VO/issues  # organizer email supplied privately
 submission_sha256: 41133948ef57731a18df59c66d919179be3a66730725109ac6621c2b8953bc35
 reported_drift_pct: 10.83
 hardware: RTX 5080 (original Omega run), RTX 4090 (release re-run); CPU for trajectory assembly

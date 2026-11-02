@@ -1,0 +1,8 @@
+{
+  "scope": "All reachable Git objects in main and both review tags, after privacy history rewrite",
+  "objects_scanned": 338,
+  "target_contact_occurrences": 0,
+  "private_documents_in_history": 0,
+  "third_party_licenses_preserved": true,
+  "cached_host_views_and_external_clones_not_covered": true
+}

@@ -14,9 +14,9 @@ adapted to a trajectory task: the output is one `submission.json` bundle, not pe
 
 ## Hand-in status
 
-Current [factsheet PDF](docs/factsheet.pdf), [LaTeX source ZIP](docs/factsheet_LaTeX.zip) and [unsent organizer email](docs/email_to_organizers.txt). The document includes the completed full raw-run comparison and its limitations.
+The factsheet, author contact records and organizer correspondence are distributed privately to the organizers. This public repository contains the reproduction code and technical verification evidence.
 
-A full raw-video run completed all 20 trajectories from the released TEST videos and frozen weights. The mean prediction-to-prediction drift proxy is 0.005156% (maximum 0.081205%), and the maximum aligned RMSE/path-length ratio is 0.000225228. This is self-consistency against the submitted estimates, not hidden-TEST rescoring. Fresh GPU inference is not byte-identical. See `evidence/raw_video_all20.json` and `RAW_REPRODUCTION.md`. Cached replay and rebuild remain byte-identical. All seven author contact and OpenReview records are complete, and the team confirmed VO registration. The official server JSON verifies the submitted SHA-256, 20/20 qualified clips and 100% coverage. The submission factsheet is [docs/factsheet.pdf](docs/factsheet.pdf).
+A full raw-video run completed all 20 trajectories from the released TEST videos and frozen weights. The mean prediction-to-prediction drift proxy is 0.005156% (maximum 0.081205%), and the maximum aligned RMSE/path-length ratio is 0.000225228. This is self-consistency against the submitted estimates, not hidden-TEST rescoring. Fresh GPU inference is not byte-identical. See `evidence/raw_video_all20.json` and `RAW_REPRODUCTION.md`. Cached replay and rebuild remain byte-identical. The official server JSON verifies the submitted SHA-256, 20/20 qualified clips and 100% coverage.
 
 ## Repository and artifact access
 
@@ -135,16 +135,18 @@ The team's code is under the MIT License (`LICENSE`). Vendored starter files are
 (LOOKOUT contributors). The LOOKOUT dataset-derived metadata in `data/metadata` is CC BY-NC 4.0.
 VGGT-Omega and the other upstream models keep their own terms; see `THIRD_PARTY_NOTICES.txt`.
 
-## Team metadata
+## Team
 
-Registered team: UW-IPL. Team leader: HeeJae Kwon, University of Washington, contact supplied privately, macvi.org user ID 2038. HeeJae Kwon OpenReview: https://openreview.net/profile?id=~HeeJae_Kwon1. The ordered author record is in `configs/author_metadata.json`; author order is confirmed and all seven email/OpenReview records are complete.
+UW-IPL, Information Processing Lab, University of Washington. Final VO entry: 19406. Author details and organizer contact information are supplied in the private hand-in.
 
 ## Published-release verification
 
 A fresh GitHub clone, fresh Python 3.10 environment and fresh Hugging Face download cache reproduced all 20 clips with zero position difference and the exact entry SHA-256 in both replay and rebuild modes. See `evidence/fresh_clone_verification.json`. The raw-video reproduction boundary above still applies.
 
-## Author metadata update
+## Privacy and hand-in materials
 
-The author order is confirmed. Updated emails/OpenReview profiles are in `configs/author_metadata.json` and the factsheet. The team confirmed that all seven authors are registered VO team members. The final VO entry is 19406.
+Factsheet PDFs/LaTeX, author-email records, internal hand-in notes and unsent correspondence are excluded from the public source distribution. The team sends those materials directly to the organizers.
+
+The public Git history and its two review tags were rewritten to remove those files and redact team/organizer contact addresses. Existing collaborators should make a fresh clone instead of merging the old history back. Historical commit IDs in verification records predate this documentation cleanup; inference code, weights, frozen settings and the submitted JSON were not changed by it. Third-party license attribution is retained.
 
 Public access was tested with credentials disabled for Git and a new Hugging Face home with no token. Both downloaded-cache inference modes passed with socket connections blocked; see `evidence/anonymous_verification.json`. This verifies public delivery and offline cached assembly, not full raw-video regeneration.

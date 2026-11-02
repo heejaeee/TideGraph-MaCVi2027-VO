@@ -16,3 +16,10 @@ data/inputs/
 data/final_signals/
 data/omega/
 legacy/speed_prior_flow_v3/model.pkl
+
+# Organizer-only personal contact information and correspondence
+/configs/author_metadata.json
+/HANDIN_STATUS.txt
+/docs/factsheet*
+/docs/email_to_organizers*
+*handin*.zip
