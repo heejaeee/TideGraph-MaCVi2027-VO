@@ -1,0 +1,169 @@
+{
+  "passed": true,
+  "clips": 20,
+  "replayed": 20,
+  "GT_access_blocked": true,
+  "rows": [
+    {
+      "key": "clip_092",
+      "camera_mode": "wide",
+      "rule": "Omega416 median relative rotations sigma2s; originalV87 source speed ->TV10",
+      "max_position_replay_error": 0.0,
+      "coverage": 1.0,
+      "max_gap_s": 0.5947999999999993
+    },
+    {
+      "key": "clip_093",
+      "camera_mode": "flir-VIS",
+      "rule": "Omega512 A1 Huber3deg sigma2s gain1.2; exact retainedV87 speed",
+      "max_position_replay_error": 0.0,
+      "coverage": 1.0,
+      "max_gap_s": 0.5362999999999971
+    },
+    {
+      "key": "clip_094",
+      "camera_mode": "flir-VIS",
+      "rule": "Omega512 A1 Huber3deg sigma2s gain1.2; exact retainedV87 speed",
+      "max_position_replay_error": 0.0,
+      "coverage": 1.0,
+      "max_gap_s": 0.5834000000000117
+    },
+    {
+      "key": "clip_095",
+      "camera_mode": "flir-VIS",
+      "rule": "Omega512 A1 Huber3deg sigma2s gain1.2; exact retainedV87 speed",
+      "max_position_replay_error": 0.0,
+      "coverage": 1.0,
+      "max_gap_s": 0.6427
+    },
+    {
+      "key": "clip_096",
+      "camera_mode": "flir-VIS",
+      "rule": "Omega512 A1 Huber3deg sigma2s gain1.1; exact retainedV87 speed",
+      "max_position_replay_error": 0.0,
+      "coverage": 1.0,
+      "max_gap_s": 0.6377000000000237
+    },
+    {
+      "key": "clip_097",
+      "camera_mode": "wide",
+      "rule": "Omega416 median relative rotations sigma2s; originalV87 source speed ->TV10",
+      "max_position_replay_error": 0.0,
+      "coverage": 1.0,
+      "max_gap_s": 0.8240000000000123
+    },
+    {
+      "key": "clip_098",
+      "camera_mode": "flir-VIS",
+      "rule": "Omega512 A1 Huber3deg sigma2s gain1.2; exact retainedV87 speed",
+      "max_position_replay_error": 0.0,
+      "coverage": 1.0,
+      "max_gap_s": 0.6612999999999829
+    },
+    {
+      "key": "clip_099",
+      "camera_mode": "flir-VIS",
+      "rule": "Omega512 A1 Huber3deg sigma2s gain1.1; exact retainedV87 speed",
+      "max_position_replay_error": 0.0,
+      "coverage": 1.0,
+      "max_gap_s": 0.5652000000000044
+    },
+    {
+      "key": "clip_100",
+      "camera_mode": "flir-IR",
+      "rule": "Legacy selectedR3 yaw75percent + KLT25percent, sigma2s, constant speed",
+      "max_position_replay_error": 0.0,
+      "coverage": 1.0,
+      "max_gap_s": 0.5628999999999991
+    },
+    {
+      "key": "clip_101",
+      "camera_mode": "wide",
+      "rule": "Omega416 median relative rotations sigma2s; originalV87 source speed ->TV10",
+      "max_position_replay_error": 0.0,
+      "coverage": 1.0,
+      "max_gap_s": 0.6299999999999955
+    },
+    {
+      "key": "clip_103",
+      "camera_mode": "wide",
+      "rule": "Omega416 median relative rotations sigma2s; originalV87 source speed ->TV10",
+      "max_position_replay_error": 0.0,
+      "coverage": 1.0,
+      "max_gap_s": 0.5479166666666515
+    },
+    {
+      "key": "clip_104",
+      "camera_mode": "flir-VIS",
+      "rule": "Omega512 A1 Huber3deg sigma2s gain1.1; exact retainedV87 speed",
+      "max_position_replay_error": 0.0,
+      "coverage": 1.0,
+      "max_gap_s": 0.6419999999999995
+    },
+    {
+      "key": "clip_105",
+      "camera_mode": "wide",
+      "rule": "Omega416 median relative rotations sigma2s; originalV87 source speed ->TV10",
+      "max_position_replay_error": 0.0,
+      "coverage": 1.0,
+      "max_gap_s": 0.6020000000000003
+    },
+    {
+      "key": "clip_106",
+      "camera_mode": "wide",
+      "rule": "Omega416 median relative rotations sigma2s; originalV87 source speed ->TV10",
+      "max_position_replay_error": 0.0,
+      "coverage": 1.0,
+      "max_gap_s": 0.5380000000000109
+    },
+    {
+      "key": "clip_107",
+      "camera_mode": "flir-VIS",
+      "rule": "Omega512 A1 Huber3deg sigma2s gain1.1; exact retainedV87 speed",
+      "max_position_replay_error": 0.0,
+      "coverage": 1.0,
+      "max_gap_s": 0.6585000000000036
+    },
+    {
+      "key": "clip_108",
+      "camera_mode": "flir-VIS",
+      "rule": "Omega512 A1 Huber3deg sigma2s gain1.2; exact retainedV87 speed",
+      "max_position_replay_error": 0.0,
+      "coverage": 1.0,
+      "max_gap_s": 0.6436999999999955
+    },
+    {
+      "key": "clip_109",
+      "camera_mode": "flir-VIS",
+      "rule": "Omega512 A1 Huber3deg sigma2s gain1.2; exact retainedV87 speed",
+      "max_position_replay_error": 0.0,
+      "coverage": 1.0,
+      "max_gap_s": 0.6691000000000003
+    },
+    {
+      "key": "clip_110",
+      "camera_mode": "wide",
+      "rule": "Omega416 median relative rotations sigma2s; originalV87 source speed ->TV10",
+      "max_position_replay_error": 0.0,
+      "coverage": 1.0,
+      "max_gap_s": 0.6964000000000001
+    },
+    {
+      "key": "clip_111",
+      "camera_mode": "flir-VIS",
+      "rule": "Omega512 A1 Huber3deg sigma2s gain1.1; exact retainedV87 speed",
+      "max_position_replay_error": 0.0,
+      "coverage": 1.0,
+      "max_gap_s": 0.5849000000000011
+    },
+    {
+      "key": "clip_112",
+      "camera_mode": "wide",
+      "rule": "Omega416 median relative rotations sigma2s; originalV87 source speed ->TV10",
+      "max_position_replay_error": 0.0,
+      "coverage": 1.0,
+      "max_gap_s": 0.5519999999999925
+    }
+  ],
+  "submission_identical_to_19226": true
+}

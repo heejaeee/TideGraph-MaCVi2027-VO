@@ -1,0 +1,142 @@
+[
+  {
+    "key": "clip_092",
+    "mode": "wide",
+    "legacy_signal_source": "runs/domain_v83_omega_wide_test/signals/clip_092.npz",
+    "source_sha256": "a80f13572c3822ff060abf238d2caf07e98ee349cbbe3490875e2aa8c3bfdc11",
+    "note": "Wide speed is pre-TV; FLIR exact retained speed; IR already fused legacy yaw. Initial heading gauge retained."
+  },
+  {
+    "key": "clip_093",
+    "mode": "flir-VIS",
+    "legacy_signal_source": "submissions/macvi27_vo_best_19226/replay_signals/clip_093.npz",
+    "source_sha256": "5da600fba1ea7e187f57eb699ffa48354e715984e5ca755ae6fa205dc1d75f48",
+    "note": "Wide speed is pre-TV; FLIR exact retained speed; IR already fused legacy yaw. Initial heading gauge retained."
+  },
+  {
+    "key": "clip_094",
+    "mode": "flir-VIS",
+    "legacy_signal_source": "submissions/macvi27_vo_best_19226/replay_signals/clip_094.npz",
+    "source_sha256": "13080584d4512396d2d3ddbbd5d2639ebc25baa13bda53948f147c1bef410e76",
+    "note": "Wide speed is pre-TV; FLIR exact retained speed; IR already fused legacy yaw. Initial heading gauge retained."
+  },
+  {
+    "key": "clip_095",
+    "mode": "flir-VIS",
+    "legacy_signal_source": "submissions/macvi27_vo_best_19226/replay_signals/clip_095.npz",
+    "source_sha256": "96b60e9d336958ba1da56f98a99e5338c3100818d0ddf56716d48d12b66960e3",
+    "note": "Wide speed is pre-TV; FLIR exact retained speed; IR already fused legacy yaw. Initial heading gauge retained."
+  },
+  {
+    "key": "clip_096",
+    "mode": "flir-VIS",
+    "legacy_signal_source": "submissions/macvi27_vo_best_19226/replay_signals/clip_096.npz",
+    "source_sha256": "b0c86784814e08d94c6ef6cd9465fc998a7e79583688ac9cd6e5ceedb40334ed",
+    "note": "Wide speed is pre-TV; FLIR exact retained speed; IR already fused legacy yaw. Initial heading gauge retained."
+  },
+  {
+    "key": "clip_097",
+    "mode": "wide",
+    "legacy_signal_source": "runs/domain_v83_omega_wide_test/signals/clip_097.npz",
+    "source_sha256": "6446f1d04c1816d3e632ab38faa8fb1af8d70bdf3705891a2d76b9f0bdf3385b",
+    "note": "Wide speed is pre-TV; FLIR exact retained speed; IR already fused legacy yaw. Initial heading gauge retained."
+  },
+  {
+    "key": "clip_098",
+    "mode": "flir-VIS",
+    "legacy_signal_source": "submissions/macvi27_vo_best_19226/replay_signals/clip_098.npz",
+    "source_sha256": "6d8eeb4909853a4858bc71218ee1e50bc3f616aef920c624958f4b86706433c7",
+    "note": "Wide speed is pre-TV; FLIR exact retained speed; IR already fused legacy yaw. Initial heading gauge retained."
+  },
+  {
+    "key": "clip_099",
+    "mode": "flir-VIS",
+    "legacy_signal_source": "submissions/macvi27_vo_best_19226/replay_signals/clip_099.npz",
+    "source_sha256": "879312e39742b0fb65b5f3f5e2aed537bd08c37f1d4b41dcb1e203ddaf2d69ed",
+    "note": "Wide speed is pre-TV; FLIR exact retained speed; IR already fused legacy yaw. Initial heading gauge retained."
+  },
+  {
+    "key": "clip_100",
+    "mode": "flir-IR",
+    "legacy_signal_source": "submissions/macvi27_vo_best_19226/replay_signals/clip_100.npz",
+    "source_sha256": "c67b5feeab3a0b19d4c4916a19357d11b8a8d8b1a94167d1fbbac0496a855971",
+    "note": "Wide speed is pre-TV; FLIR exact retained speed; IR already fused legacy yaw. Initial heading gauge retained."
+  },
+  {
+    "key": "clip_101",
+    "mode": "wide",
+    "legacy_signal_source": "runs/domain_v83_omega_wide_test/signals/clip_101.npz",
+    "source_sha256": "1eedb6b4e3241f00a315b90819252e56820d093b943426d8ff66db56ad060310",
+    "note": "Wide speed is pre-TV; FLIR exact retained speed; IR already fused legacy yaw. Initial heading gauge retained."
+  },
+  {
+    "key": "clip_103",
+    "mode": "wide",
+    "legacy_signal_source": "runs/domain_v83_omega_wide_test/signals/clip_103.npz",
+    "source_sha256": "9a11797a09390290015301fc726c40218a69cbee1402fdf3a5a93f8dbf7e471c",
+    "note": "Wide speed is pre-TV; FLIR exact retained speed; IR already fused legacy yaw. Initial heading gauge retained."
+  },
+  {
+    "key": "clip_104",
+    "mode": "flir-VIS",
+    "legacy_signal_source": "submissions/macvi27_vo_best_19226/replay_signals/clip_104.npz",
+    "source_sha256": "ced5ccad4606cab5f56cca4ca207ec5c103b6c8b0fd90aa6b262e63473c6fccd",
+    "note": "Wide speed is pre-TV; FLIR exact retained speed; IR already fused legacy yaw. Initial heading gauge retained."
+  },
+  {
+    "key": "clip_105",
+    "mode": "wide",
+    "legacy_signal_source": "runs/domain_v83_omega_wide_test/signals/clip_105.npz",
+    "source_sha256": "bb075cd21a67c9dfe67a67551addcbfdad9d416fb0d84445b5a3043e1bfd73ea",
+    "note": "Wide speed is pre-TV; FLIR exact retained speed; IR already fused legacy yaw. Initial heading gauge retained."
+  },
+  {
+    "key": "clip_106",
+    "mode": "wide",
+    "legacy_signal_source": "runs/domain_v83_omega_wide_test/signals/clip_106.npz",
+    "source_sha256": "32ef86ce0dabcfcfffc94ed73883781862c40b6a8be3018fb3acb57bc4c51f19",
+    "note": "Wide speed is pre-TV; FLIR exact retained speed; IR already fused legacy yaw. Initial heading gauge retained."
+  },
+  {
+    "key": "clip_107",
+    "mode": "flir-VIS",
+    "legacy_signal_source": "submissions/macvi27_vo_best_19226/replay_signals/clip_107.npz",
+    "source_sha256": "4eda7859fa12d55a64955d0aaf5304c0c5d8e82fe3215e4a3474fb462103e9bf",
+    "note": "Wide speed is pre-TV; FLIR exact retained speed; IR already fused legacy yaw. Initial heading gauge retained."
+  },
+  {
+    "key": "clip_108",
+    "mode": "flir-VIS",
+    "legacy_signal_source": "submissions/macvi27_vo_best_19226/replay_signals/clip_108.npz",
+    "source_sha256": "d97298454eb0536b81a2cc718bd1881f643104f76175cf20427947978a097463",
+    "note": "Wide speed is pre-TV; FLIR exact retained speed; IR already fused legacy yaw. Initial heading gauge retained."
+  },
+  {
+    "key": "clip_109",
+    "mode": "flir-VIS",
+    "legacy_signal_source": "submissions/macvi27_vo_best_19226/replay_signals/clip_109.npz",
+    "source_sha256": "8ea54fc368e8efd2afb968d66099a2c411cbbd68685dbed27a9c0fbd9f2e9d06",
+    "note": "Wide speed is pre-TV; FLIR exact retained speed; IR already fused legacy yaw. Initial heading gauge retained."
+  },
+  {
+    "key": "clip_110",
+    "mode": "wide",
+    "legacy_signal_source": "runs/domain_v83_omega_wide_test/signals/clip_110.npz",
+    "source_sha256": "518546495d863a985fb170ede9286d5e1284ba58ccedbb9c9b8d3409a45c8856",
+    "note": "Wide speed is pre-TV; FLIR exact retained speed; IR already fused legacy yaw. Initial heading gauge retained."
+  },
+  {
+    "key": "clip_111",
+    "mode": "flir-VIS",
+    "legacy_signal_source": "submissions/macvi27_vo_best_19226/replay_signals/clip_111.npz",
+    "source_sha256": "d4eeedb26c1c768cd03f5ba3aee871aa31686cd0b80c4310dc52d6c66a53234c",
+    "note": "Wide speed is pre-TV; FLIR exact retained speed; IR already fused legacy yaw. Initial heading gauge retained."
+  },
+  {
+    "key": "clip_112",
+    "mode": "wide",
+    "legacy_signal_source": "runs/domain_v83_omega_wide_test/signals/clip_112.npz",
+    "source_sha256": "89385c95a7df6e3da1adf303ee28570e33c8f8750d0356e9b7c460fd7408c316",
+    "note": "Wide speed is pre-TV; FLIR exact retained speed; IR already fused legacy yaw. Initial heading gauge retained."
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "note": "Pinned Omega artifact and included speed model; supporting upstream source links are download entry points, not a completed weight-lock manifest for raw legacy regeneration. Upstream access/license requirements apply.",
+  "models": [
+    {
+      "model": "VGGT-Omega",
+      "role": "active visible heading",
+      "url": "https://huggingface.co/facebook/VGGT-Omega/resolve/1041e80fc0e911235d3426b0a3d9a81075111a53/vggt_omega_1b_416_reproduce.pt",
+      "sha256": "e900833330eb0e570e10543e6108d0dd704fa7c8dbc32738a645987875298896",
+      "access": "gated, organizer must obtain access; not redistributed"
+    },
+    {
+      "model": "TRAIN speed regressor",
+      "role": "source of retained speed prior",
+      "included": "legacy/speed_prior_flow_v3/model.pkl",
+      "sha256": "b288dfc83fd9f6f875004b84d27a72bf277affb5c4a915ba7394a65fc31c2a0b"
+    },
+    {
+      "model": "R3",
+      "source": "https://github.com/KevinXu02/R3"
+    },
+    {
+      "model": "VGGT",
+      "source": "https://github.com/facebookresearch/vggt"
+    },
+    {
+      "model": "Pi3X",
+      "source": "https://github.com/yyfz/Pi3"
+    },
+    {
+      "model": "DPVO / static DPV-SLAM",
+      "source": "https://github.com/princeton-vl/DPVO"
+    },
+    {
+      "model": "AnyCalib",
+      "source": "https://github.com/javrtg/AnyCalib"
+    },
+    {
+      "model": "CoTracker3",
+      "source": "https://github.com/facebookresearch/co-tracker"
+    },
+    {
+      "model": "Mask2Former Swin Tiny ADE20K",
+      "source": "https://huggingface.co/facebook/mask2former-swin-tiny-ade-semantic"
+    },
+    {
+      "model": "Depth Anything 3",
+      "source": "https://github.com/ByteDance-Seed/Depth-Anything-3"
+    }
+  ]
+}

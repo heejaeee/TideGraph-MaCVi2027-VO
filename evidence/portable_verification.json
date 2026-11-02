@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "original_workspace_reads_blocked": true,
+  "isolated_unpacked_directory": true,
+  "fresh_venv": true,
+  "python": "3.10",
+  "packages": {
+    "numpy": "1.26.4",
+    "scipy": "1.15.3",
+    "osqp": "1.1.3"
+  },
+  "actions": [
+    "verify",
+    "replay",
+    "rebuild"
+  ],
+  "clips": 20,
+  "max_position_error": 0.0,
+  "exact_sha256_match": true,
+  "expected_submission_sha256": "b629c7a73ccd8ee597abfe95d876e9f9977f88eedf178d5dd982af5d6dbe2dde",
+  "scope": "Cached estimates to final submission, not raw-video end-to-end inference"
+}

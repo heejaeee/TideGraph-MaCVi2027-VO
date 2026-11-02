@@ -1,0 +1,8 @@
+# Only mode=video needs a checkpoint: the frozen, unmodified VGGT-Omega 1B "416 reproduce" release.
+# It is NOT redistributed here (FAIR Noncommercial Research License, gated on Hugging Face):
+# request access at https://huggingface.co/facebook/VGGT-Omega, then
+#   HF_TOKEN=... python repro_check.py . --download-weights
+# The same checkpoint is used at 416 px (wide) and 512 px (flir-VIS).
+url: https://huggingface.co/facebook/VGGT-Omega/resolve/1041e80fc0e911235d3426b0a3d9a81075111a53/vggt_omega_1b_416_reproduce.pt
+sha256: e900833330eb0e570e10543e6108d0dd704fa7c8dbc32738a645987875298896
+filename: vggt_omega_1b_416_reproduce.pt

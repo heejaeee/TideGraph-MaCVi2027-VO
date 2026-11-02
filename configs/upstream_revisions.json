@@ -1,0 +1,58 @@
+[
+  {
+    "name": "vggt-omega",
+    "url": "https://github.com/facebookresearch/vggt-omega.git",
+    "commit": "48b23c8ce72c9a8fcf987f0d7f43d8e4870759f6",
+    "tracked_source_patch": null,
+    "untracked_source_files": []
+  },
+  {
+    "name": "R3_submission_original",
+    "url": "https://github.com/KevinXu02/R3.git",
+    "commit": "e345f1112fbc9c451d44c9c5aa22d9bfec2a954d",
+    "tracked_source_patch": null,
+    "untracked_source_files": []
+  },
+  {
+    "name": "vggt",
+    "url": "https://github.com/facebookresearch/vggt.git",
+    "commit": "a288dd0f14786c93483e45524328726ab7b1b4ce",
+    "tracked_source_patch": null,
+    "untracked_source_files": []
+  },
+  {
+    "name": "Pi3",
+    "url": "https://github.com/yyfz/Pi3.git",
+    "commit": "9fa3ddb3f8d53041f8b2738df404f62223bbaa7b",
+    "tracked_source_patch": null,
+    "untracked_source_files": []
+  },
+  {
+    "name": "DPVO",
+    "url": "https://github.com/princeton-vl/DPVO.git",
+    "commit": "859bbbfdac6c6185f345003b3c473901fcd13ace",
+    "tracked_source_patch": "workspace_source/upstream_patches/DPVO.patch",
+    "untracked_source_files": []
+  },
+  {
+    "name": "AnyCalib",
+    "url": "https://github.com/javrtg/AnyCalib.git",
+    "commit": "027a8497d893f4b2596f23d6324c05e4b81064ed",
+    "tracked_source_patch": null,
+    "untracked_source_files": []
+  },
+  {
+    "name": "co-tracker",
+    "url": "https://github.com/facebookresearch/co-tracker.git",
+    "commit": "82e02e8029753ad4ef13cf06be7f4fc5facdda4d",
+    "tracked_source_patch": null,
+    "untracked_source_files": []
+  },
+  {
+    "name": "lookout-vo-challenge",
+    "url": "https://github.com/LOOKOUT-AI/lookout-vo-challenge.git",
+    "commit": "37ca5c061589eafb9d8026b25ec86640e0a255ef",
+    "tracked_source_patch": "workspace_source/upstream_patches/lookout-vo-challenge.patch",
+    "untracked_source_files": []
+  }
+]

@@ -1,0 +1,31 @@
+LOOKOUT Visual Odometry Challenge — Development Dataset
+Copyright (c) 2026, Lookout. Portions curated for MaCVi @ WACV 2027.
+
+This dataset (video, camera calibration, and reference trajectories) is
+licensed under the Creative Commons Attribution-NonCommercial 4.0
+International License (CC BY-NC 4.0).
+
+You are free to:
+  - Share -- copy and redistribute the material in any medium or format
+  - Adapt -- remix, transform, and build upon the material
+
+Under the following terms:
+  - Attribution -- You must give appropriate credit to the LOOKOUT Visual
+    Odometry Challenge (MaCVi @ WACV 2027), provide a link to this license,
+    and indicate if changes were made.
+  - NonCommercial -- You may not use the material for commercial purposes.
+  - No additional restrictions -- You may not apply legal terms or
+    technological measures that legally restrict others from doing
+    anything the license permits.
+
+Full legal code: https://creativecommons.org/licenses/by-nc/4.0/legalcode
+Human-readable summary: https://creativecommons.org/licenses/by-nc/4.0/
+
+Suggested citation:
+  [author list / paper TBD], "LOOKOUT: A Visual Odometry Challenge for
+  Maritime Vessels," MaCVi Workshop, WACV 2027.
+
+This license covers the dataset only. Starter code and evaluation
+tooling in this repository are separately licensed -- see CODE_LICENSE.txt
+for the MIT code license. Upstream DPVO and checkpoint terms apply separately;
+see THIRD_PARTY.md.

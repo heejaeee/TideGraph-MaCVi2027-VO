@@ -1,0 +1,65 @@
+{
+  "A": [
+    "clip_098",
+    "clip_094",
+    "clip_095",
+    "clip_109",
+    "clip_108",
+    "clip_093"
+  ],
+  "B": [
+    "clip_099",
+    "clip_107",
+    "clip_111",
+    "clip_104",
+    "clip_096"
+  ],
+  "ranking": [
+    {
+      "key": "clip_098",
+      "median_land_fraction": 0.15427965167548502
+    },
+    {
+      "key": "clip_094",
+      "median_land_fraction": 0.13773837081128748
+    },
+    {
+      "key": "clip_095",
+      "median_land_fraction": 0.13695987654320987
+    },
+    {
+      "key": "clip_109",
+      "median_land_fraction": 0.1240286044973545
+    },
+    {
+      "key": "clip_108",
+      "median_land_fraction": 0.10748043430335097
+    },
+    {
+      "key": "clip_093",
+      "median_land_fraction": 0.09305417768959436
+    },
+    {
+      "key": "clip_099",
+      "median_land_fraction": 0.05536954365079365
+    },
+    {
+      "key": "clip_107",
+      "median_land_fraction": 0.054811507936507936
+    },
+    {
+      "key": "clip_111",
+      "median_land_fraction": 0.05454971340388007
+    },
+    {
+      "key": "clip_104",
+      "median_land_fraction": 0.03791887125220458
+    },
+    {
+      "key": "clip_096",
+      "median_land_fraction": 0.028776730599647266
+    }
+  ],
+  "source_sha256": "d0d46e5f7adf8f3ca624924d98b131cea293714822026eeac647e153cc4100ed",
+  "rule": "Fixed before A/B probe: descending median static land/building fraction in upper70%,central80%, frames0:16:600. A top6,B bottom5. Gains selected with aggregate leaderboard feedback."
+}

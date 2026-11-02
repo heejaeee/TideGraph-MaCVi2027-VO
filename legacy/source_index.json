@@ -1,0 +1,398 @@
+{
+  "roots": [
+    "v152_group_probe",
+    "v150_flir512_submission",
+    "v83_omega_wide_submission",
+    "v87_omega_flir_submission",
+    "v118_edge_speed",
+    "v101_protocol",
+    "v77_speed_deployment",
+    "v76_direction_guarded_speed",
+    "v65_submission_inputs",
+    "v65_static_slam",
+    "v65_complete_masks",
+    "v6_test_prepare",
+    "v6_test_models",
+    "v6_test_geometry",
+    "v6_test_dpvo",
+    "run_submission_inference",
+    "submission_fuse",
+    "submission_r3_infer_clip",
+    "submission_vggt_infer_clip",
+    "submission_rotation_infer_clip",
+    "submission_water_infer_clip",
+    "submission_extract_features",
+    "pi3x_domain_infer"
+  ],
+  "files": [
+    {
+      "module": "pi3x_domain_infer",
+      "source_sha256": "cf255b893e5b92f350df41f0c1ec2013a28ae88d4e81b7042bffeac12de9282c",
+      "doc": "Frozen Pi3X inference using released images/calibration only, no references."
+    },
+    {
+      "module": "window_geometry",
+      "source_sha256": "687a13de1ef65c0a978398d77640f28536e5ee9f9323bdfc402a68d8d13df87e",
+      "doc": "GT-free overlap alignment using camera rotations and depth scale agreement."
+    },
+    {
+      "module": "submission_extract_features",
+      "source_sha256": "f48984da72ab20a03784d25a3169a923c2bfb692187f8f0847d79152ed63a296",
+      "doc": "Extract the frozen v3 regressor's visual features from a supplied manifest."
+    },
+    {
+      "module": "probe_pairs",
+      "source_sha256": "3648c352d82e202f020d3b61b44ea09df6d1a733d0bb696182d6dbe1e9fed987",
+      "doc": "Sample sparse probes and enforce a strictly earlier comparison frame."
+    },
+    {
+      "module": "extract_speed_features_v2",
+      "source_sha256": "9ff02493649802ff847d64201bd2d0c7f769543e90b2ed5c46ba2a8523c759d7",
+      "doc": "Image-only speed features. This program never opens trajectory references."
+    },
+    {
+      "module": "submission_water_infer_clip",
+      "source_sha256": "402167a7371a807b570b10ddcef66882e747ce1232690cca57926a588418858d",
+      "doc": "Experimental water-plane speed from images/calibration, with no label access."
+    },
+    {
+      "module": "rotation_flow_infer_clip",
+      "source_sha256": "76bc558ceebe3e9286a22ed557bd1972901e695fe4f5339128b90c9793b27095",
+      "doc": "Calibrated robust bearing rotation from KLT tracks; image-only motion prior."
+    },
+    {
+      "module": "submission_rotation_infer_clip",
+      "source_sha256": "dcea4ef03482821f52c623177621f5c488daf0d655ded893820c61c744cdc99a",
+      "doc": "Calibrated robust bearing rotation from KLT tracks; image-only motion prior."
+    },
+    {
+      "module": "submission_vggt_infer_clip",
+      "source_sha256": "b5052c19938b0836932661a3ef9a4ff02baf977c7c1d2be56d5fcc4c89f0d0f1",
+      "doc": "VGGT-1B overlapping-window maritime VO; no reference labels are read."
+    },
+    {
+      "module": "submission_r3_infer_clip",
+      "source_sha256": "8635350e136052ede0937779f574d322c84c98d1b5215733f5ffbdbe298da6f8",
+      "doc": "R3 long-preset adapter. Reads video/timestamps/calibration, never reference labels."
+    },
+    {
+      "module": "submission_fuse",
+      "source_sha256": "dffeef3239480e98133f5ae1661299f1dea7cb390b5ebc7748ae52d4a1769d9c",
+      "doc": "Apply the frozen 9.7548757% validation recipe to arbitrary released clips."
+    },
+    {
+      "module": "train_speed_regressor_v3",
+      "source_sha256": "9893696dcd8a432de7724811a717af721e4e7938cfe77dca66b8c0b6a2d0443f",
+      "doc": "TRAIN-only grouped CV for relative-feature speed regressors; no VAL tuning."
+    },
+    {
+      "module": "water_current",
+      "source_sha256": "4260387e70ee574a340e5c7a8675176e482eea9ff57772e01f5a5a2c1e27ff6c",
+      "doc": "Infer a constant surface-current nuisance vector using the vessel's forward-motion prior."
+    },
+    {
+      "module": "horizon_geometry",
+      "source_sha256": "80c7293ccacec68672ec60db0a576a2c988e53f98e4652cb28519a5240067852",
+      "doc": "Fit a fixed water-plane normal to visual horizons and estimated camera rotations."
+    },
+    {
+      "module": "fuse_headings",
+      "source_sha256": "32e2654405fb23dfe6b60e71b2d0ba2a8af4bdac5f805083d84a53e7f4e8f71a",
+      "doc": "Robust image-only heading consensus; a single rule applied to every clip."
+    },
+    {
+      "module": "run_submission_inference",
+      "source_sha256": "b464906061070020dd1be30d1ebda5e66332d499c245a71bd48b7e985dfe73e6",
+      "doc": "Run the validation-frozen visual components on TEST, preserving stage provenance."
+    },
+    {
+      "module": "v6_test_dpvo",
+      "source_sha256": "9cf436ba4a1b442bfda0e00d56d99ed8c7568ffa576cb8875ede1893bd08562a",
+      "doc": "Frozen v5 DPVO RANDOM96 / fixed AnyCalib intrinsics, three TEST passes."
+    },
+    {
+      "module": "v6_test_common",
+      "source_sha256": "c83e577d8689cfc2bd1d8041608e884169399990f1f57dd7ed4844b544c64cfc",
+      "doc": "TEST-only data plumbing for the frozen v6 candidate. Never loads references."
+    },
+    {
+      "module": "v5_common",
+      "source_sha256": "19e92fcc28c20c9b6ca1bfe1dc277b66d72cbfdb7e5d259b6e9e5c4c310e1f50",
+      "doc": "Shared v5 image-only primitives. No trajectory reference loading here."
+    },
+    {
+      "module": "domain_fusion_v3",
+      "source_sha256": "f9bb84b6bcbdc6d19c051b883aa5186a2e05b938b38341c4bcd53b60c36dd004",
+      "doc": "Reference-free v3 postprocessing. Pure functions, no label/file access."
+    },
+    {
+      "module": "piecewise_speed_v3",
+      "source_sha256": "781779639aee9fc69ed1ffa3638a43da7a628fb6b16bfcbaabe5a44df95ea29a",
+      "doc": "Reference-free piecewise-constant visual speed prior; preserves reverse motion."
+    },
+    {
+      "module": "domain_fusion_v2",
+      "source_sha256": "f5d6ca063a4f14b0fba11f0c0018caf809131b2228672ed4192aa0f7c72ea72d",
+      "doc": "Reference-free fusion ablations; original v1 artifacts remain immutable."
+    },
+    {
+      "module": "evaluate_domain_train",
+      "source_sha256": "818d350cb21ea8a4759d8600140ba025390e4662b15339c8ca7d597adc698e17",
+      "doc": "Choose a FLIR rule on designated TRAIN development clips, then audit once."
+    },
+    {
+      "module": "v6_test_geometry",
+      "source_sha256": "e76724fa2c1cd93ea191da83fe0c0fe648ae9ea92f631bdd6086e22e1de07a2d",
+      "doc": "Frozen TRAIN-selected self-calibration and rotation fitting on TEST images."
+    },
+    {
+      "module": "v5_selfcal",
+      "source_sha256": "7c5b6265fafd47b5ea12678d49080db1f4c4d87d1b8743a63770f1dd951f5b11",
+      "doc": "Focal self-calibration from image correspondences, no trajectory labels."
+    },
+    {
+      "module": "v6_test_models",
+      "source_sha256": "3c1a7cf4091a8f0afde5ed0eb6291ed837ab2dfe674b4fe46197a8e9f443cf4d",
+      "doc": "Only CoTracker query-frame masks and long tracks required for focal estimation."
+    },
+    {
+      "module": "v6_test_prepare",
+      "source_sha256": "d74ab20461797645e48c6e79e60ba8ed380b919396bc061c483954ff50a7462b",
+      "doc": ""
+    },
+    {
+      "module": "v65_complete_masks",
+      "source_sha256": "bbffcfab866c6299058199b3b054d06f21c733ab9693c9570ffd96d602826b19",
+      "doc": "Complete TEST masks with the same frozen model and image preprocessing."
+    },
+    {
+      "module": "v65_submission_inputs",
+      "source_sha256": "a1ce271687cb87581fc3d182078435c18d7c58d29dae38f8d99dc2b6d848f69b",
+      "doc": "Split-aware deployment of the frozen V64 envelope_plus_course rule."
+    },
+    {
+      "module": "v50_multiview_course",
+      "source_sha256": "9f51d9c4d3d2e92aadfb3b198579cf4dd7fa7611b047a20404d00b554bfbebd5",
+      "doc": "Reference-free three-view translation from two different image frontends."
+    },
+    {
+      "module": "v45_independent_course",
+      "source_sha256": "d04ba70f42503d0ef9b8204a090d3b1edd06601e91dab3f2ff6e2cf2a67d8861",
+      "doc": "Two-view image-only translation, independently of BA centers/depth/scale."
+    },
+    {
+      "module": "v43_ba_ablation",
+      "source_sha256": "98b02f62d2af3e01f1bd1d5526fd709f02c44674144dcf038eb3f3e0850af74c",
+      "doc": "V24-only global BA ablations with predeclared image-only observability gates."
+    },
+    {
+      "module": "v42_global_core",
+      "source_sha256": "be01581a60655d04a0522c2b855526e3174cbc3b71904cf1726432b42f81f4b5",
+      "doc": "Connected-map global BA of long static SIFT tracks, optionally deep tracks."
+    },
+    {
+      "module": "v13_common",
+      "source_sha256": "b1c1c38efe72638d8d9f5430189183687ef959c68fdf165211c8bfa3e0e60dfe",
+      "doc": "V13 starts from official-best v2; never reads trajectory references."
+    },
+    {
+      "module": "v33_long_ba",
+      "source_sha256": "679c5353647d145a8c26704f693b41559effef69e5404823e3de0546c1aee144",
+      "doc": "Overlapping VGGT submap initialization and eight-view static-background BA."
+    },
+    {
+      "module": "v33_multiview_solver",
+      "source_sha256": "fc4653a0a566b89b0976b2cc346e4c65495549cfc7dcf33687aaede224356c3d",
+      "doc": "Generalized multiview joint BA, derived from our V30 solver."
+    },
+    {
+      "module": "v30_horizon_ba",
+      "source_sha256": "c6339d00b59d0bbe838ce422c27c9ac8996418d397a752f497b0f72316430cfc",
+      "doc": "Four-view VGGT-initialized local bundle adjustment with held-out tracks."
+    },
+    {
+      "module": "v20_five_pass",
+      "source_sha256": "821f1d5b7ce06751f6bca1422e11ffcc4a0a1c99612f75e5b74a437da81c99ae",
+      "doc": "Controlled DPVO3 versus DPVO5 experiment, retaining all original three seeds."
+    },
+    {
+      "module": "v5_dpvo_masked",
+      "source_sha256": "52239510fb0df69095488664809aeca59ece42eef2f324de22aed3445ddf2df7",
+      "doc": "DPVO ablation: same frozen model, calibrated K, random vs static patch sampling."
+    },
+    {
+      "module": "v13_infer",
+      "source_sha256": "0b70c01e520b4c042ae493ac288ef92d43a1efa9f26e6e22b2692901e1bde335",
+      "doc": "Bounded complementary rotation evidence around v2, no .65 heading gain."
+    },
+    {
+      "module": "v12_relative_speed",
+      "source_sha256": "79862c541c9b0020d815062573165068214c21616f2fcf2fc700ff6b368c495d",
+      "doc": "Static three-view relative-speed graph. Image-only inference; no references."
+    },
+    {
+      "module": "v11_temporal",
+      "source_sha256": "9ac2c530f06c64f1c2831f0c3824feeb4611ff2ab0925a54260ade9fc04d2ff4",
+      "doc": "Image-derived low-frequency yaw bias, separate from trajectory evaluation."
+    },
+    {
+      "module": "v10_bias",
+      "source_sha256": "7a75a2d58aef1123db4e42bae3217a625ea17bb9bba78a7fe93520a8aaa32d0e",
+      "doc": "Follow-up: estimate low-dimensional yaw drift from static multi-frame evidence."
+    },
+    {
+      "module": "v10_evidence_graph",
+      "source_sha256": "e19c6df6e5c4e9455a174f96f784c9b5e89527f2a0e95182ddd65ff82599abf7",
+      "doc": "Static image evidence + multi-interval yaw graph. Never loads trajectory labels."
+    },
+    {
+      "module": "v11_threeview",
+      "source_sha256": "77e90c14da9fc22de6386bccdf3c2d9e26e9296be0515591c1dc58d496af254f",
+      "doc": "Three-view static-ray consistency with nuisance structure/translation fitting."
+    },
+    {
+      "module": "v11_test_candidate",
+      "source_sha256": "8612006a4687c3d4ff0cb8c3a71ac376e19ad535cf87621cda962230a796a7b0",
+      "doc": "Shared image-measurement extraction and frozen V11 inference on TEST."
+    },
+    {
+      "module": "v12_common",
+      "source_sha256": "2be2f92dd476f3e7d685bc3431511b070c38874cb8857941b0d89f50b5a10b3e",
+      "doc": "V12 reference-free prediction utilities."
+    },
+    {
+      "module": "v12_speed_residual",
+      "source_sha256": "508f605ed411808817be6c8d0e27803f02a8e521718dbc0998583576e04d3994",
+      "doc": "Confidence-gated residual log-speed graph, with an exact prior fallback."
+    },
+    {
+      "module": "v25_background",
+      "source_sha256": "2eac9080811f0d014b84fcdbdd142606767a487f94f18266b778bbb9ac09fd5e",
+      "doc": "Static-background geometry around the fixed raw3 uncapped submission."
+    },
+    {
+      "module": "v18_long_graph",
+      "source_sha256": "444358a4d6e3f19dc0ec17e0bd01be868f5ebea4508244f83b28b224cb3c31ee",
+      "doc": "Long-baseline static-image rotation constraints around frozen v2 speed."
+    },
+    {
+      "module": "v17_depth_geometry",
+      "source_sha256": "5f7b1f1999d2a7fae6f9e1e15f2bbb2327df82d33112183f65085b3fd31afd59",
+      "doc": "RePoseD/PoseLib geometry on cached Pi3X depth and static CoTracker matches."
+    },
+    {
+      "module": "v19_motion",
+      "source_sha256": "591cfae837a7fb75efb749c7553e2668ff2b140c4188782869b4d691544f71af",
+      "doc": "V19: reference-free, observable interval translation on frozen TideGraph."
+    },
+    {
+      "module": "v53_course_uncertainty",
+      "source_sha256": "a282b9b3424214ba59074a052e8e357b77ba06e13bd8d3ce1bdf4d9455195f8e",
+      "doc": "Input-only conservative course envelope across five spatial track folds."
+    },
+    {
+      "module": "v65_static_slam",
+      "source_sha256": "91fcb58438b76c2d25f0a809d89dc280d95017f4e8ff5281b8331238bfb73e3e",
+      "doc": "Exact V54/V55/V57 runner port with TEST paths; instrumentation retained."
+    },
+    {
+      "module": "v76_direction_guarded_speed",
+      "source_sha256": "93a6e3b6f691dbabd8567f81816b6d9bf368a10cbc6d118627f6e4157158b1a9",
+      "doc": "Follow-up after V74: preserve old consensus, shrink only new observations."
+    },
+    {
+      "module": "v74_observable_speed",
+      "source_sha256": "5143b3b37bf0c86ee9af371e0b71c0110bb36155e7739411477cf38a4fc4df57",
+      "doc": "Separate missing speed evidence from contradictory observed motion."
+    },
+    {
+      "module": "v73_pack_independent_speed",
+      "source_sha256": "46c801a9c33cfd7eda40ce94ca5f7853cfe37d3710bceed083bc8893124fe7c6",
+      "doc": "Deploy the fixed V71 R3/SLAM speed rule after V72 audits passed."
+    },
+    {
+      "module": "v68_consensus_speed",
+      "source_sha256": "936f11ce0422d14fa070aa5ce217702da6d80451e23db01fabd4f22a3744ddd0",
+      "doc": "Separate relative-speed sensitivity from V64 travel-direction correction."
+    },
+    {
+      "module": "v65_pack_submission",
+      "source_sha256": "76311be4731a1cd51c1afcbd98665132202392ac947ff6a4bf15b256192aefd9",
+      "doc": "Validate and pack V64 deployment; never reads TEST reference trajectories."
+    },
+    {
+      "module": "v77_speed_deployment",
+      "source_sha256": "ec70479e6c4f710e2027ab80ac4fffc0999aa434c18e051ad510bf7c1a43fceb",
+      "doc": "Full dependency-removal audits and deployment of frozen V76 primary."
+    },
+    {
+      "module": "v101_protocol",
+      "source_sha256": "a71b032738a9d45c6a8acaabe4c7ffb8c22d03bfd45e45aa3032e9d898802470",
+      "doc": "Frozen TEST-composition development protocol. Oracles are evaluation-only."
+    },
+    {
+      "module": "v118_edge_speed",
+      "source_sha256": "4df25615bbd280689582b8c68a09efb47c62bf4f87913c56dc49ac09fee2a8fb",
+      "doc": "TRAIN-selected edge-preserving speed filters; VAL used after predictions freeze."
+    },
+    {
+      "module": "v110_speed_gate",
+      "source_sha256": "7b7b358e96c4ac0581a5ff6eb895f6a99661c3ae89605a248d803e2800b82c2c",
+      "doc": "Wide46 LOCO + wide VAL21 gate validation; FLIR8 transfer is separate."
+    },
+    {
+      "module": "v103_speed_audit",
+      "source_sha256": "a7dfd661fe597bf8aceeec2aa904214c57a0cd6b2c2af01448030b57e50b62a1",
+      "doc": "Exclude evaluation clips from the frozen HGB speed-prior training recipe."
+    },
+    {
+      "module": "v87_omega_flir_submission",
+      "source_sha256": "a239db46d01ae6de6b94071366d894660ecc3771f63c24703313cba275ffd921",
+      "doc": "Deploy the selected Omega16-only FLIR heading ablation, with V83 speed."
+    },
+    {
+      "module": "v78_external_data",
+      "source_sha256": "882a920e94b5a0f6d5b33c6550f89c74d1118a3f8a17cd344222e58f9d8b9c39",
+      "doc": "Frozen, time-selected external validation data. No reference data in inference release."
+    },
+    {
+      "module": "v83_omega_wide_submission",
+      "source_sha256": "565eef1e655a6908c11c56c3179e75e3da9cdd62c9d2dcf41e687efea04db9fe",
+      "doc": "Deploy the V82 wide-only rule on TEST; preserve every other V77 prediction."
+    },
+    {
+      "module": "v82_omega_val",
+      "source_sha256": "f5c84835cfb96c41041b6656652c088163f085e73409a2229dedf2ac9e6ada71",
+      "doc": "Frozen Omega16 direction transfer on all 24 public VAL clips; no GT access."
+    },
+    {
+      "module": "v24_pack_uncapped",
+      "source_sha256": "84465d45c377b6ecbd922bfe7049bc46672cf4cbebfe5ba49da8684ed9c9fc38",
+      "doc": "User-requested submission: fixed raw DPVO3 family median, no CLAHE or cap."
+    },
+    {
+      "module": "v81_omega_pipeline",
+      "source_sha256": "91b63bc6e5b3ee83258db1bf235284308507064d7d53bf887922be959d97ec9a",
+      "doc": "Official VGGT-Omega adapter and isolated TideGraph heading replacement."
+    },
+    {
+      "module": "v84_flir_dvlt",
+      "source_sha256": "208b1e7c0c68efa659ee3f9ea7199cb993ab8b1a900a6e303cbae69de322bbe5",
+      "doc": "Frozen DVLT pilot on reused FLIR TRAIN8 and CANOE RGB2. No TEST inference."
+    },
+    {
+      "module": "v150_flir512_submission",
+      "source_sha256": "1dc446b184e28048099cc1fb5a091040da2b418339215bd0659945221c9d580f",
+      "doc": "Single-change TEST probe: #19163 FLIR input416->512, same weights/A1/gain."
+    },
+    {
+      "module": "v152_group_probe",
+      "source_sha256": "2288292b4918a15c267cb1e8597b9f9d09824108be3fb5bd0ea4ba09784a33b2",
+      "doc": "Frozen image-only FLIR grouping; single A gain120 probe from entry19182."
+    }
+  ],
+  "excluded": [
+    "v73_upload_drive"
+  ],
+  "warning": "Historical workspace code, with paths/cache dependencies of the original project. Do not run main functions blindly: some run sweeps or try optional delivery functions. Portable entrypoint is team.py. This archive does not claim complete from-video reproduction."
+}

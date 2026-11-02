@@ -1,0 +1,59 @@
+{
+  "entry": 19226,
+  "official_score_user_reported": 11.29,
+  "expected_sha256": "b629c7a73ccd8ee597abfe95d876e9f9977f88eedf178d5dd982af5d6dbe2dde",
+  "clip_order": [
+    "clip_092",
+    "clip_093",
+    "clip_094",
+    "clip_095",
+    "clip_096",
+    "clip_097",
+    "clip_098",
+    "clip_099",
+    "clip_100",
+    "clip_101",
+    "clip_103",
+    "clip_104",
+    "clip_105",
+    "clip_106",
+    "clip_107",
+    "clip_108",
+    "clip_109",
+    "clip_110",
+    "clip_111",
+    "clip_112"
+  ],
+  "yaw_sigma_seconds": 2.0,
+  "wide_tv_lambda": 10.0,
+  "graph_huber_degrees": 3.0,
+  "window": 16,
+  "stride": 8,
+  "input_resolution": {
+    "wide": 416,
+    "flir_VIS": 512
+  },
+  "flir_groups": {
+    "A": [
+      "clip_098",
+      "clip_094",
+      "clip_095",
+      "clip_109",
+      "clip_108",
+      "clip_093"
+    ],
+    "B": [
+      "clip_099",
+      "clip_107",
+      "clip_111",
+      "clip_104",
+      "clip_096"
+    ]
+  },
+  "flir_gains": {
+    "A": 1.2,
+    "B": 1.1
+  },
+  "excluded": "No soft/deadband or rotation-budget normalization. These were later exploratory candidates.",
+  "scope": "Exact final-signal replay and cached Omega-window postprocessing; raw-video end-to-end execution is not packaged as a verified portable command."
+}

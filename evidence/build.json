@@ -1,0 +1,11 @@
+{
+  "best_entry": 19226,
+  "sha256": "b629c7a73ccd8ee597abfe95d876e9f9977f88eedf178d5dd982af5d6dbe2dde",
+  "source_code_modules": 73,
+  "estimated_windows": 1419,
+  "raw_video_reproduction_verified": false,
+  "CPU_reproduction_verification_pending": false,
+  "score_source": "User report",
+  "latest_experiments_included": false,
+  "CPU_reproduction_verified": true
+}

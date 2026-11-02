@@ -1,0 +1,29 @@
+{
+  "fuse_headings.py": {
+    "functions": [
+      "planar_yaw"
+    ],
+    "sha256": "32e2654405fb23dfe6b60e71b2d0ba2a8af4bdac5f805083d84a53e7f4e8f71a"
+  },
+  "domain_fusion_v2.py": {
+    "functions": [
+      "relative_window_yaw"
+    ],
+    "sha256": "f5d6ca063a4f14b0fba11f0c0018caf809131b2228672ed4192aa0f7c72ea72d"
+  },
+  "v101_protocol.py": {
+    "functions": [
+      "chain_and_edges",
+      "solve_yaw",
+      "integrate"
+    ],
+    "sha256": "a71b032738a9d45c6a8acaabe4c7ffb8c22d03bfd45e45aa3032e9d898802470"
+  },
+  "v118_edge_speed.py": {
+    "functions": [
+      "prox",
+      "apply"
+    ],
+    "sha256": "4df25615bbd280689582b8c68a09efb47c62bf4f87913c56dc49ac09fee2a8fb"
+  }
+}

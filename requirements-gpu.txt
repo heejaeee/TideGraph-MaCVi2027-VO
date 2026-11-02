@@ -1,0 +1,8 @@
+# Extra packages for mode=video (raw video -> VGGT-Omega windows), on top of requirements.txt
+# and a CUDA PyTorch (original run: torch 2.7.1+cu128; release re-run: torch 2.10.0+cu128, torchvision 0.25.0).
+# Do not pin torch here; install the build that matches your CUDA driver.
+opencv-python-headless==4.13.0.92
+pillow==12.1.1
+einops==0.8.2
+safetensors==0.7.0
+huggingface_hub==1.6.0

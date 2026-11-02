@@ -1,0 +1,46 @@
+{
+  "active_visible_heading": "VGGT-Omega416 reproduction checkpoint, input416/512; no PURE or soft correction.",
+  "upstream_retained_signal_dependencies": [
+    {
+      "model": "R3",
+      "role": "Legacy orientation/geometry, wide speed routing and IR orientation; see submission_r3_infer_clip.py"
+    },
+    {
+      "model": "VGGT1B",
+      "role": "Legacy orientation routing, auxiliary geometry; main final visible heading is Omega"
+    },
+    {
+      "model": "Pi3X",
+      "role": "Historical FLIR heading supporting retained tiny speed corrections and gauge"
+    },
+    {
+      "model": "DPVO / static DPV-SLAM mode",
+      "role": "Historical multi-seed geometry and retained guarded speed support"
+    },
+    {
+      "model": "Mask2Former ADE20K Swin-Tiny",
+      "role": "Static masks and A/B land-visibility grouping; facebook/mask2former-swin-tiny-ade-semantic"
+    },
+    {
+      "model": "AnyCalib",
+      "role": "Learned calibration for legacy static geometry"
+    },
+    {
+      "model": "CoTracker3 offline",
+      "role": "Static feature tracks in retained legacy geometry"
+    },
+    {
+      "model": "DepthAnything3 metric",
+      "role": "R3 upstream model dependency; inspect R3 adapter/config"
+    }
+  ],
+  "included_trained_prior": {
+    "path": "legacy/speed_prior_flow_v3/model.pkl",
+    "sha256": "b288dfc83fd9f6f875004b84d27a72bf277affb5c4a915ba7394a65fc31c2a0b",
+    "train_clips": 68,
+    "split": "official TRAIN",
+    "serialization": "pickle; not loaded by CPU replay/rebuild",
+    "sklearn": "1.7.2"
+  },
+  "excluded_external_weights": "Download through own accounts and upstream license/access process. No access tokens, external checkpoint binaries, videos or GT trajectories included."
+}

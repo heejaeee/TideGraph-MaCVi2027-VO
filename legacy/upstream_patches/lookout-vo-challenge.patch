@@ -1,0 +1,16 @@
+diff --git a/starter/tracking.py b/starter/tracking.py
+index 5c75379..37816e0 100644
+--- a/starter/tracking.py
++++ b/starter/tracking.py
+@@ -180,7 +180,10 @@ def track(video_path: str, preset: str, target_fps: float, seed: int,
+                 slam(index, image_t, intr_t)
+         if slam is None:
+             raise RuntimeError('no frames decoded')
+-        poses, indices = slam.terminate()
++        # terminate() performs 12 additional network updates. Inference must not
++        # retain autograd graphs here (can exhaust a 16 GB GPU).
++        with torch.no_grad():
++            poses, indices = slam.terminate()
+         # Move the child's timestamps onto the instance the caller will score against.
+         # Without this the caller holds a preprocessor that was never iterated, and
+         # frame_time() answers from the average-fps estimate instead of the real PTS.

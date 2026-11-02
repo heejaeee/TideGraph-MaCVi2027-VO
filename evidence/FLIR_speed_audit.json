@@ -1,0 +1,83 @@
+{
+  "rows": [
+    {
+      "key": "clip_093",
+      "minimum": 1.0,
+      "maximum": 1.0,
+      "CV": 0.0,
+      "exact_constant": true
+    },
+    {
+      "key": "clip_094",
+      "minimum": 1.0,
+      "maximum": 1.0,
+      "CV": 0.0,
+      "exact_constant": true
+    },
+    {
+      "key": "clip_095",
+      "minimum": 0.9930045351243083,
+      "maximum": 1.004023326773825,
+      "CV": 0.002513923157363056,
+      "exact_constant": false
+    },
+    {
+      "key": "clip_096",
+      "minimum": 1.0,
+      "maximum": 1.0,
+      "CV": 0.0,
+      "exact_constant": true
+    },
+    {
+      "key": "clip_098",
+      "minimum": 1.0,
+      "maximum": 1.0,
+      "CV": 0.0,
+      "exact_constant": true
+    },
+    {
+      "key": "clip_099",
+      "minimum": 1.0,
+      "maximum": 1.0,
+      "CV": 0.0,
+      "exact_constant": true
+    },
+    {
+      "key": "clip_104",
+      "minimum": 1.0,
+      "maximum": 1.0,
+      "CV": 0.0,
+      "exact_constant": true
+    },
+    {
+      "key": "clip_107",
+      "minimum": 1.0,
+      "maximum": 1.0,
+      "CV": 0.0,
+      "exact_constant": true
+    },
+    {
+      "key": "clip_108",
+      "minimum": 1.0,
+      "maximum": 1.0,
+      "CV": 0.0,
+      "exact_constant": true
+    },
+    {
+      "key": "clip_109",
+      "minimum": 1.0,
+      "maximum": 1.0,
+      "CV": 0.0,
+      "exact_constant": true
+    },
+    {
+      "key": "clip_111",
+      "minimum": 0.9999842667120304,
+      "maximum": 1.0,
+      "CV": 1.5617249857421359e-06,
+      "exact_constant": false
+    }
+  ],
+  "exact_constant_count": 9,
+  "retained_minor_corrections": true
+}

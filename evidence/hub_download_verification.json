@@ -1,0 +1,21 @@
+{
+  "entry_id": 19406,
+  "hf": {
+    "repo_id": "hjkwon1996/TideGraph-MaCVi2027-VO",
+    "url": "https://huggingface.co/hjkwon1996/TideGraph-MaCVi2027-VO",
+    "private": true,
+    "revision": "4c6641e990b860d72f5715927c1fa50a33636fab"
+  },
+  "downloaded_with_fresh_hub_cache": true,
+  "verified_artifact_files": 1460,
+  "replay": {
+    "byte_identical": true,
+    "maximum_position_error": 0.0
+  },
+  "rebuild": {
+    "byte_identical": true,
+    "maximum_position_error": 0.0
+  },
+  "expected_json_sha256": "41133948ef57731a18df59c66d919179be3a66730725109ac6621c2b8953bc35",
+  "scope": "cached estimates, not full raw-video regeneration"
+}

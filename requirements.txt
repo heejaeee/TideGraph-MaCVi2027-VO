@@ -1,0 +1,4 @@
+# CPU trajectory assembly (modes replay / rebuild). Pinned to the versions that reproduce the uploaded bytes.
+numpy==1.26.4
+scipy==1.15.3
+osqp==1.1.3

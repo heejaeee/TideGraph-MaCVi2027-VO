@@ -1,0 +1,13 @@
+# First restore Hugging Face artifacts on the host: python scripts/fetch_artifacts.py
+# GPU image for mode=video. Build from the repository root after scripts/setup_vggt_omega.sh;
+# mount the checkpoint read-only at /pkg/weights.
+#   docker build -t tidegraph-gpu -f docker/Dockerfile.gpu .
+#   docker run --rm --gpus all --network none -v $PWD/weights:/pkg/weights:ro \
+#       -v /path/to/lookout-vo-test-v0.1:/in:ro -v /tmp/out:/out tidegraph-gpu \
+#       python run.py --input /in --output /out --mode video --device cuda
+FROM pytorch/pytorch:2.7.1-cuda12.8-cudnn9-runtime
+RUN apt-get update && apt-get install -y --no-install-recommends libgl1 libglib2.0-0 && rm -rf /var/lib/apt/lists/*
+COPY requirements.txt requirements-gpu.txt /tmp/
+RUN pip install --no-cache-dir -r /tmp/requirements.txt -r /tmp/requirements-gpu.txt
+COPY . /pkg
+WORKDIR /pkg

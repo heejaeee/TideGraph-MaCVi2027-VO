@@ -1,0 +1,512 @@
+{
+  "schema_version": 1,
+  "version": "v0.1",
+  "counts": {
+    "train": 0,
+    "val": 0,
+    "test": 20,
+    "total": 20
+  },
+  "clips": [
+    {
+      "key": "clip_092",
+      "split": "test",
+      "camera_mode": "wide",
+      "calibration": {
+        "fx": 1832.41,
+        "fy": 1832.41,
+        "cx": 960.0,
+        "cy": 540.0,
+        "width": 1920,
+        "height": 1080,
+        "container_width": 1920,
+        "container_height": 1080,
+        "active_rect": [
+          0,
+          0,
+          1920,
+          1080
+        ],
+        "provenance": "nominal-fov-derived"
+      },
+      "video": "videos/clip_092.mp4",
+      "timestamps": "timing/clip_092.json",
+      "reference": null
+    },
+    {
+      "key": "clip_093",
+      "split": "test",
+      "camera_mode": "flir-VIS",
+      "calibration": {
+        "fx": 1545.31,
+        "fy": 1671.0,
+        "cx": 960.0,
+        "cy": 540.0,
+        "width": 1920,
+        "height": 1080,
+        "container_width": 1920,
+        "container_height": 1080,
+        "active_rect": [
+          0,
+          0,
+          1920,
+          1080
+        ],
+        "provenance": "nominal-fov-derived"
+      },
+      "video": "videos/clip_093.mp4",
+      "timestamps": "timing/clip_093.json",
+      "reference": null
+    },
+    {
+      "key": "clip_094",
+      "split": "test",
+      "camera_mode": "flir-VIS",
+      "calibration": {
+        "fx": 1545.31,
+        "fy": 1671.0,
+        "cx": 960.0,
+        "cy": 540.0,
+        "width": 1920,
+        "height": 1080,
+        "container_width": 1920,
+        "container_height": 1080,
+        "active_rect": [
+          0,
+          0,
+          1920,
+          1080
+        ],
+        "provenance": "nominal-fov-derived"
+      },
+      "video": "videos/clip_094.mp4",
+      "timestamps": "timing/clip_094.json",
+      "reference": null
+    },
+    {
+      "key": "clip_095",
+      "split": "test",
+      "camera_mode": "flir-VIS",
+      "calibration": {
+        "fx": 1545.31,
+        "fy": 1671.0,
+        "cx": 960.0,
+        "cy": 540.0,
+        "width": 1920,
+        "height": 1080,
+        "container_width": 1920,
+        "container_height": 1080,
+        "active_rect": [
+          0,
+          0,
+          1920,
+          1080
+        ],
+        "provenance": "nominal-fov-derived"
+      },
+      "video": "videos/clip_095.mp4",
+      "timestamps": "timing/clip_095.json",
+      "reference": null
+    },
+    {
+      "key": "clip_096",
+      "split": "test",
+      "camera_mode": "flir-VIS",
+      "calibration": {
+        "fx": 1545.31,
+        "fy": 1671.0,
+        "cx": 960.0,
+        "cy": 540.0,
+        "width": 1920,
+        "height": 1080,
+        "container_width": 1920,
+        "container_height": 1080,
+        "active_rect": [
+          0,
+          0,
+          1920,
+          1080
+        ],
+        "provenance": "nominal-fov-derived"
+      },
+      "video": "videos/clip_096.mp4",
+      "timestamps": "timing/clip_096.json",
+      "reference": null
+    },
+    {
+      "key": "clip_097",
+      "split": "test",
+      "camera_mode": "wide",
+      "calibration": {
+        "fx": 1832.41,
+        "fy": 1832.41,
+        "cx": 960.0,
+        "cy": 540.0,
+        "width": 1920,
+        "height": 1080,
+        "container_width": 1920,
+        "container_height": 1080,
+        "active_rect": [
+          0,
+          0,
+          1920,
+          1080
+        ],
+        "provenance": "nominal-fov-derived"
+      },
+      "video": "videos/clip_097.mp4",
+      "timestamps": "timing/clip_097.json",
+      "reference": null
+    },
+    {
+      "key": "clip_098",
+      "split": "test",
+      "camera_mode": "flir-VIS",
+      "calibration": {
+        "fx": 1545.31,
+        "fy": 1671.0,
+        "cx": 960.0,
+        "cy": 540.0,
+        "width": 1920,
+        "height": 1080,
+        "container_width": 1920,
+        "container_height": 1080,
+        "active_rect": [
+          0,
+          0,
+          1920,
+          1080
+        ],
+        "provenance": "nominal-fov-derived"
+      },
+      "video": "videos/clip_098.mp4",
+      "timestamps": "timing/clip_098.json",
+      "reference": null
+    },
+    {
+      "key": "clip_099",
+      "split": "test",
+      "camera_mode": "flir-VIS",
+      "calibration": {
+        "fx": 1545.31,
+        "fy": 1671.0,
+        "cx": 960.0,
+        "cy": 540.0,
+        "width": 1920,
+        "height": 1080,
+        "container_width": 1920,
+        "container_height": 1080,
+        "active_rect": [
+          0,
+          0,
+          1920,
+          1080
+        ],
+        "provenance": "nominal-fov-derived"
+      },
+      "video": "videos/clip_099.mp4",
+      "timestamps": "timing/clip_099.json",
+      "reference": null
+    },
+    {
+      "key": "clip_100",
+      "split": "test",
+      "camera_mode": "flir-IR",
+      "calibration": {
+        "fx": 3185.03,
+        "fy": 3409.43,
+        "cx": 677.0,
+        "cy": 540.0,
+        "width": 1354,
+        "height": 1080,
+        "container_width": 1920,
+        "container_height": 1080,
+        "active_rect": [
+          283,
+          0,
+          1354,
+          1080
+        ],
+        "provenance": "nominal-fov-derived"
+      },
+      "video": "videos/clip_100.mp4",
+      "timestamps": "timing/clip_100.json",
+      "reference": null
+    },
+    {
+      "key": "clip_101",
+      "split": "test",
+      "camera_mode": "wide",
+      "calibration": {
+        "fx": 1832.41,
+        "fy": 1832.41,
+        "cx": 960.0,
+        "cy": 540.0,
+        "width": 1920,
+        "height": 1080,
+        "container_width": 1920,
+        "container_height": 1080,
+        "active_rect": [
+          0,
+          0,
+          1920,
+          1080
+        ],
+        "provenance": "nominal-fov-derived"
+      },
+      "video": "videos/clip_101.mp4",
+      "timestamps": "timing/clip_101.json",
+      "reference": null
+    },
+    {
+      "key": "clip_103",
+      "split": "test",
+      "camera_mode": "wide",
+      "calibration": {
+        "fx": 1832.41,
+        "fy": 1832.41,
+        "cx": 960.0,
+        "cy": 540.0,
+        "width": 1920,
+        "height": 1080,
+        "container_width": 1920,
+        "container_height": 1080,
+        "active_rect": [
+          0,
+          0,
+          1920,
+          1080
+        ],
+        "provenance": "nominal-fov-derived"
+      },
+      "video": "videos/clip_103.mp4",
+      "timestamps": "timing/clip_103.json",
+      "reference": null
+    },
+    {
+      "key": "clip_104",
+      "split": "test",
+      "camera_mode": "flir-VIS",
+      "calibration": {
+        "fx": 1545.31,
+        "fy": 1671.0,
+        "cx": 960.0,
+        "cy": 540.0,
+        "width": 1920,
+        "height": 1080,
+        "container_width": 1920,
+        "container_height": 1080,
+        "active_rect": [
+          0,
+          0,
+          1920,
+          1080
+        ],
+        "provenance": "nominal-fov-derived"
+      },
+      "video": "videos/clip_104.mp4",
+      "timestamps": "timing/clip_104.json",
+      "reference": null
+    },
+    {
+      "key": "clip_105",
+      "split": "test",
+      "camera_mode": "wide",
+      "calibration": {
+        "fx": 1832.41,
+        "fy": 1832.41,
+        "cx": 960.0,
+        "cy": 540.0,
+        "width": 1920,
+        "height": 1080,
+        "container_width": 1920,
+        "container_height": 1080,
+        "active_rect": [
+          0,
+          0,
+          1920,
+          1080
+        ],
+        "provenance": "nominal-fov-derived"
+      },
+      "video": "videos/clip_105.mp4",
+      "timestamps": "timing/clip_105.json",
+      "reference": null
+    },
+    {
+      "key": "clip_106",
+      "split": "test",
+      "camera_mode": "wide",
+      "calibration": {
+        "fx": 1832.41,
+        "fy": 1832.41,
+        "cx": 960.0,
+        "cy": 540.0,
+        "width": 1920,
+        "height": 1080,
+        "container_width": 1920,
+        "container_height": 1080,
+        "active_rect": [
+          0,
+          0,
+          1920,
+          1080
+        ],
+        "provenance": "nominal-fov-derived"
+      },
+      "video": "videos/clip_106.mp4",
+      "timestamps": "timing/clip_106.json",
+      "reference": null
+    },
+    {
+      "key": "clip_107",
+      "split": "test",
+      "camera_mode": "flir-VIS",
+      "calibration": {
+        "fx": 1545.31,
+        "fy": 1671.0,
+        "cx": 960.0,
+        "cy": 540.0,
+        "width": 1920,
+        "height": 1080,
+        "container_width": 1920,
+        "container_height": 1080,
+        "active_rect": [
+          0,
+          0,
+          1920,
+          1080
+        ],
+        "provenance": "nominal-fov-derived"
+      },
+      "video": "videos/clip_107.mp4",
+      "timestamps": "timing/clip_107.json",
+      "reference": null
+    },
+    {
+      "key": "clip_108",
+      "split": "test",
+      "camera_mode": "flir-VIS",
+      "calibration": {
+        "fx": 1545.31,
+        "fy": 1671.0,
+        "cx": 960.0,
+        "cy": 540.0,
+        "width": 1920,
+        "height": 1080,
+        "container_width": 1920,
+        "container_height": 1080,
+        "active_rect": [
+          0,
+          0,
+          1920,
+          1080
+        ],
+        "provenance": "nominal-fov-derived"
+      },
+      "video": "videos/clip_108.mp4",
+      "timestamps": "timing/clip_108.json",
+      "reference": null
+    },
+    {
+      "key": "clip_109",
+      "split": "test",
+      "camera_mode": "flir-VIS",
+      "calibration": {
+        "fx": 1545.31,
+        "fy": 1671.0,
+        "cx": 960.0,
+        "cy": 540.0,
+        "width": 1920,
+        "height": 1080,
+        "container_width": 1920,
+        "container_height": 1080,
+        "active_rect": [
+          0,
+          0,
+          1920,
+          1080
+        ],
+        "provenance": "nominal-fov-derived"
+      },
+      "video": "videos/clip_109.mp4",
+      "timestamps": "timing/clip_109.json",
+      "reference": null
+    },
+    {
+      "key": "clip_110",
+      "split": "test",
+      "camera_mode": "wide",
+      "calibration": {
+        "fx": 1832.41,
+        "fy": 1832.41,
+        "cx": 960.0,
+        "cy": 540.0,
+        "width": 1920,
+        "height": 1080,
+        "container_width": 1920,
+        "container_height": 1080,
+        "active_rect": [
+          0,
+          0,
+          1920,
+          1080
+        ],
+        "provenance": "nominal-fov-derived"
+      },
+      "video": "videos/clip_110.mp4",
+      "timestamps": "timing/clip_110.json",
+      "reference": null
+    },
+    {
+      "key": "clip_111",
+      "split": "test",
+      "camera_mode": "flir-VIS",
+      "calibration": {
+        "fx": 1545.31,
+        "fy": 1671.0,
+        "cx": 960.0,
+        "cy": 540.0,
+        "width": 1920,
+        "height": 1080,
+        "container_width": 1920,
+        "container_height": 1080,
+        "active_rect": [
+          0,
+          0,
+          1920,
+          1080
+        ],
+        "provenance": "nominal-fov-derived"
+      },
+      "video": "videos/clip_111.mp4",
+      "timestamps": "timing/clip_111.json",
+      "reference": null
+    },
+    {
+      "key": "clip_112",
+      "split": "test",
+      "camera_mode": "wide",
+      "calibration": {
+        "fx": 1832.41,
+        "fy": 1832.41,
+        "cx": 960.0,
+        "cy": 540.0,
+        "width": 1920,
+        "height": 1080,
+        "container_width": 1920,
+        "container_height": 1080,
+        "active_rect": [
+          0,
+          0,
+          1920,
+          1080
+        ],
+        "provenance": "nominal-fov-derived"
+      },
+      "video": "videos/clip_112.mp4",
+      "timestamps": "timing/clip_112.json",
+      "reference": null
+    }
+  ]
+}

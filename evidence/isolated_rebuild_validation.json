@@ -1,0 +1,379 @@
+{
+  "action": "rebuild",
+  "clips": 20,
+  "max_position_error": 0.0,
+  "sha256": "b629c7a73ccd8ee597abfe95d876e9f9977f88eedf178d5dd982af5d6dbe2dde",
+  "expected_sha256": "b629c7a73ccd8ee597abfe95d876e9f9977f88eedf178d5dd982af5d6dbe2dde",
+  "byte_identical": true,
+  "numerical_match": true,
+  "elapsed_seconds": 1.5528134980704635,
+  "time_scope": "CPU cached-signal reproduction only, NOT video throughput/FPS",
+  "checks": [
+    {
+      "key": "clip_092",
+      "mode": "wide",
+      "coverage": 1.0,
+      "max_gap_s": 0.5947999999999993,
+      "solver": {
+        "converged": true,
+        "iterations": 975,
+        "projected_gradient_max": 1.0882850176585634e-11,
+        "solver": "OSQP_dual",
+        "solver_version": "1.1.3",
+        "fallback": false
+      }
+    },
+    {
+      "key": "clip_093",
+      "mode": "flir-VIS",
+      "coverage": 1.0,
+      "max_gap_s": 0.5362999999999971,
+      "solver": {
+        "edges": 8916,
+        "iterations": 2,
+        "downweighted_fraction": 0.0,
+        "residual_median_deg": 0.03493359626611776,
+        "residual_p95_deg": 0.1238427621356464,
+        "final_step_rad": 0.0,
+        "converged": true
+      }
+    },
+    {
+      "key": "clip_094",
+      "mode": "flir-VIS",
+      "coverage": 1.0,
+      "max_gap_s": 0.5834000000000117,
+      "solver": {
+        "edges": 8916,
+        "iterations": 2,
+        "downweighted_fraction": 0.0,
+        "residual_median_deg": 0.014735240734845665,
+        "residual_p95_deg": 0.07182463112279348,
+        "final_step_rad": 0.0,
+        "converged": true
+      }
+    },
+    {
+      "key": "clip_095",
+      "mode": "flir-VIS",
+      "coverage": 1.0,
+      "max_gap_s": 0.6427,
+      "solver": {
+        "edges": 8880,
+        "iterations": 2,
+        "downweighted_fraction": 0.0,
+        "residual_median_deg": 0.008017339328253749,
+        "residual_p95_deg": 0.0267560396636085,
+        "final_step_rad": 0.0,
+        "converged": true
+      }
+    },
+    {
+      "key": "clip_096",
+      "mode": "flir-VIS",
+      "coverage": 1.0,
+      "max_gap_s": 0.6377000000000237,
+      "solver": {
+        "edges": 8916,
+        "iterations": 2,
+        "downweighted_fraction": 0.0,
+        "residual_median_deg": 0.04448195831647849,
+        "residual_p95_deg": 0.17851474221986469,
+        "final_step_rad": 0.0,
+        "converged": true
+      }
+    },
+    {
+      "key": "clip_097",
+      "mode": "wide",
+      "coverage": 1.0,
+      "max_gap_s": 0.8240000000000123,
+      "solver": {
+        "converged": true,
+        "iterations": 1025,
+        "projected_gradient_max": 5.417000181751064e-12,
+        "solver": "OSQP_dual",
+        "solver_version": "1.1.3",
+        "fallback": false
+      }
+    },
+    {
+      "key": "clip_098",
+      "mode": "flir-VIS",
+      "coverage": 1.0,
+      "max_gap_s": 0.6612999999999829,
+      "solver": {
+        "edges": 8880,
+        "iterations": 8,
+        "downweighted_fraction": 0.0033783783783783786,
+        "residual_median_deg": 0.010860915172727519,
+        "residual_p95_deg": 0.13074446988455557,
+        "final_step_rad": 2.8869573398537796e-11,
+        "converged": true
+      }
+    },
+    {
+      "key": "clip_099",
+      "mode": "flir-VIS",
+      "coverage": 1.0,
+      "max_gap_s": 0.5652000000000044,
+      "solver": {
+        "edges": 8916,
+        "iterations": 2,
+        "downweighted_fraction": 0.0,
+        "residual_median_deg": 0.031909318725043746,
+        "residual_p95_deg": 0.1264064194033102,
+        "final_step_rad": 0.0,
+        "converged": true
+      }
+    },
+    {
+      "key": "clip_100",
+      "mode": "flir-IR",
+      "coverage": 1.0,
+      "max_gap_s": 0.5628999999999991,
+      "solver": {}
+    },
+    {
+      "key": "clip_101",
+      "mode": "wide",
+      "coverage": 1.0,
+      "max_gap_s": 0.6299999999999955,
+      "solver": {
+        "converged": true,
+        "iterations": 100,
+        "projected_gradient_max": 7.105427357601002e-15,
+        "solver": "OSQP_dual",
+        "solver_version": "1.1.3",
+        "fallback": false
+      }
+    },
+    {
+      "key": "clip_103",
+      "mode": "wide",
+      "coverage": 1.0,
+      "max_gap_s": 0.5479166666666515,
+      "solver": {
+        "converged": true,
+        "iterations": 775,
+        "projected_gradient_max": 1.077360423096252e-12,
+        "solver": "OSQP_dual",
+        "solver_version": "1.1.3",
+        "fallback": false
+      }
+    },
+    {
+      "key": "clip_104",
+      "mode": "flir-VIS",
+      "coverage": 1.0,
+      "max_gap_s": 0.6419999999999995,
+      "solver": {
+        "edges": 8880,
+        "iterations": 2,
+        "downweighted_fraction": 0.0,
+        "residual_median_deg": 0.057099597385309904,
+        "residual_p95_deg": 0.23332201943281303,
+        "final_step_rad": 0.0,
+        "converged": true
+      }
+    },
+    {
+      "key": "clip_105",
+      "mode": "wide",
+      "coverage": 1.0,
+      "max_gap_s": 0.6020000000000003,
+      "solver": {
+        "converged": true,
+        "iterations": 975,
+        "projected_gradient_max": 4.164579792131917e-11,
+        "solver": "OSQP_dual",
+        "solver_version": "1.1.3",
+        "fallback": false
+      }
+    },
+    {
+      "key": "clip_106",
+      "mode": "wide",
+      "coverage": 1.0,
+      "max_gap_s": 0.5380000000000109,
+      "solver": {
+        "converged": true,
+        "iterations": 1025,
+        "projected_gradient_max": 3.199662756969701e-11,
+        "solver": "OSQP_dual",
+        "solver_version": "1.1.3",
+        "fallback": false
+      }
+    },
+    {
+      "key": "clip_107",
+      "mode": "flir-VIS",
+      "coverage": 1.0,
+      "max_gap_s": 0.6585000000000036,
+      "solver": {
+        "edges": 8880,
+        "iterations": 2,
+        "downweighted_fraction": 0.0,
+        "residual_median_deg": 0.01797788363428596,
+        "residual_p95_deg": 0.08576482109583564,
+        "final_step_rad": 0.0,
+        "converged": true
+      }
+    },
+    {
+      "key": "clip_108",
+      "mode": "flir-VIS",
+      "coverage": 1.0,
+      "max_gap_s": 0.6436999999999955,
+      "solver": {
+        "edges": 8925,
+        "iterations": 2,
+        "downweighted_fraction": 0.0,
+        "residual_median_deg": 0.02071712976936777,
+        "residual_p95_deg": 0.07125152788808445,
+        "final_step_rad": 0.0,
+        "converged": true
+      }
+    },
+    {
+      "key": "clip_109",
+      "mode": "flir-VIS",
+      "coverage": 1.0,
+      "max_gap_s": 0.6691000000000003,
+      "solver": {
+        "edges": 8925,
+        "iterations": 2,
+        "downweighted_fraction": 0.0,
+        "residual_median_deg": 0.016041246217723074,
+        "residual_p95_deg": 0.058089170060749734,
+        "final_step_rad": 0.0,
+        "converged": true
+      }
+    },
+    {
+      "key": "clip_110",
+      "mode": "wide",
+      "coverage": 1.0,
+      "max_gap_s": 0.6964000000000001,
+      "solver": {
+        "converged": true,
+        "iterations": 1250,
+        "projected_gradient_max": 2.4607116344554925e-10,
+        "solver": "OSQP_dual",
+        "solver_version": "1.1.3",
+        "fallback": false
+      }
+    },
+    {
+      "key": "clip_111",
+      "mode": "flir-VIS",
+      "coverage": 1.0,
+      "max_gap_s": 0.5849000000000011,
+      "solver": {
+        "edges": 8916,
+        "iterations": 2,
+        "downweighted_fraction": 0.0,
+        "residual_median_deg": 0.021493848717142144,
+        "residual_p95_deg": 0.1120620397800118,
+        "final_step_rad": 0.0,
+        "converged": true
+      }
+    },
+    {
+      "key": "clip_112",
+      "mode": "wide",
+      "coverage": 1.0,
+      "max_gap_s": 0.5519999999999925,
+      "solver": {
+        "converged": true,
+        "iterations": 725,
+        "projected_gradient_max": 2.149391775674303e-13,
+        "solver": "OSQP_dual",
+        "solver_version": "1.1.3",
+        "fallback": false
+      }
+    }
+  ],
+  "parity": [
+    {
+      "key": "clip_092",
+      "max_position_error": 0.0
+    },
+    {
+      "key": "clip_093",
+      "max_position_error": 0.0
+    },
+    {
+      "key": "clip_094",
+      "max_position_error": 0.0
+    },
+    {
+      "key": "clip_095",
+      "max_position_error": 0.0
+    },
+    {
+      "key": "clip_096",
+      "max_position_error": 0.0
+    },
+    {
+      "key": "clip_097",
+      "max_position_error": 0.0
+    },
+    {
+      "key": "clip_098",
+      "max_position_error": 0.0
+    },
+    {
+      "key": "clip_099",
+      "max_position_error": 0.0
+    },
+    {
+      "key": "clip_100",
+      "max_position_error": 0.0
+    },
+    {
+      "key": "clip_101",
+      "max_position_error": 0.0
+    },
+    {
+      "key": "clip_103",
+      "max_position_error": 0.0
+    },
+    {
+      "key": "clip_104",
+      "max_position_error": 0.0
+    },
+    {
+      "key": "clip_105",
+      "max_position_error": 0.0
+    },
+    {
+      "key": "clip_106",
+      "max_position_error": 0.0
+    },
+    {
+      "key": "clip_107",
+      "max_position_error": 0.0
+    },
+    {
+      "key": "clip_108",
+      "max_position_error": 0.0
+    },
+    {
+      "key": "clip_109",
+      "max_position_error": 0.0
+    },
+    {
+      "key": "clip_110",
+      "max_position_error": 0.0
+    },
+    {
+      "key": "clip_111",
+      "max_position_error": 0.0
+    },
+    {
+      "key": "clip_112",
+      "max_position_error": 0.0
+    }
+  ]
+}

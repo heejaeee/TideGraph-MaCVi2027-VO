@@ -1,0 +1,17 @@
+{
+  "repo_url": "https://github.com/facebookresearch/vggt-omega",
+  "repo_commit": "48b23c8ce72c9a8fcf987f0d7f43d8e4870759f6",
+  "hf_repo": "facebook/VGGT-Omega",
+  "hf_revision": "1041e80fc0e911235d3426b0a3d9a81075111a53",
+  "filename": "vggt_omega_1b_416_reproduce.pt",
+  "sha256": "e900833330eb0e570e10543e6108d0dd704fa7c8dbc32738a645987875298896",
+  "external_weights_included": false,
+  "input_resolution": {
+    "wide": 416,
+    "flir_VIS": 512
+  },
+  "same_weights_both_resolutions": true,
+  "torch": "2.7.1+cu128",
+  "cuda": "12.8",
+  "measured_hardware": "NVIDIA GeForce RTX 5080"
+}

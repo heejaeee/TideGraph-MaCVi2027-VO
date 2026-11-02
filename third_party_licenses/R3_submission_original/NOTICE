@@ -1,0 +1,15 @@
+R3 Notice
+=========
+
+Unless otherwise noted, original R3 source code is released under the Apache
+License 2.0 in `LICENSE`.
+
+Some repository components adapt or depend on upstream projects with their own
+license terms. In particular, the training code under `R3/training/` adapts
+components from DUSt3R, CroCo, CUT3R, VGGT, and Depth Anything 3.
+See `R3/training/NOTICE` for the training-specific attribution and
+non-commercial research-use notice.
+
+This notice does not modify the licenses of upstream projects. Users are
+responsible for complying with the terms of the relevant upstream components,
+datasets, checkpoints, and generated models.

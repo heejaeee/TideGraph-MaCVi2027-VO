@@ -1,0 +1,14 @@
+Third-party notices
+===================
+src/tidegraph/starter/   public_dataset.py, metrics.py from https://github.com/LOOKOUT-AI/lookout-vo-challenge
+                         (MIT, Copyright (c) 2026 LOOKOUT contributors; see src/tidegraph/starter/LICENSE).
+data/metadata/           manifest, calibration and timestamps of the LOOKOUT / Maritime Visual Odometry test
+                         release v0.1, CC BY-NC 4.0 (third_party_licenses/LOOKOUT_dataset_LICENSE.txt).
+VGGT-Omega               https://github.com/facebookresearch/vggt-omega (commit 48b23c8) and
+                         https://huggingface.co/facebook/VGGT-Omega (revision 1041e80); FAIR Noncommercial
+                         Research License (third_party_licenses/vggt-omega/LICENSE). Weights are not redistributed.
+legacy/upstream_patches  patches against DPVO and lookout-vo-challenge; they keep the upstream terms.
+Other upstream models    R3, VGGT, Pi3/Pi3X, DPVO, AnyCalib, CoTracker3, Mask2Former, Depth Anything 3:
+                         repositories and commits in configs/upstream_revisions.json, licences under
+                         third_party_licenses/ where provided upstream. No upstream weights are included.
+data/omega, data/inputs, data/final_signals are the team's own estimates computed with these models.

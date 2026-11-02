@@ -1,0 +1,31 @@
+{
+  "verified_at": "2026-11-01",
+  "scope": "CPU cached replay and cached Omega-window rebuild; NOT full raw-video regeneration",
+  "submission_sha256": "41133948ef57731a18df59c66d919179be3a66730725109ac6621c2b8953bc35",
+  "modes": {
+    "replay": {
+      "exit_code": 0,
+      "clips": 20,
+      "byte_identical": true,
+      "max_position_difference": 0.0,
+      "released_timestamp_coverage_min": 1.0,
+      "elapsed_seconds": 1.6045331368222833
+    },
+    "rebuild": {
+      "exit_code": 0,
+      "clips": 20,
+      "byte_identical": true,
+      "max_position_difference": 0.0,
+      "released_timestamp_coverage_min": 1.0,
+      "elapsed_seconds": 3.491730267647654
+    }
+  },
+  "environment": {
+    "platform": "Linux-6.8.0-146-generic-x86_64-with-glibc2.39",
+    "cpu": "11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz",
+    "host_memory": "MemTotal:       65668056 kB",
+    "interpreter": "original workspace .envs/r3 Python 3.10; pinned CPU dependencies"
+  },
+  "server_score": "10.83% reported in supplied release; no new server evaluation",
+  "gpu_rerun": "supplied historical RTX4090 log; not repeated during this preparation"
+}

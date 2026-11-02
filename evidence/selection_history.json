@@ -1,0 +1,155 @@
+{
+ "_note": "Leaderboard (TEST, aggregate mean drift) feedback used to choose global/per-clip settings after entry 19226. Scores are those recorded in the team workspace (candidate build.json parent fields). Each listed candidate is fully determined by data/ + configs: wide yaw gain about the initial heading and the wide-speed TV lambda; FLIR and IR clips are unchanged from 19226. The other candidates were built during the same search; whether each was uploaded and its score are not recorded here.",
+ "scored_chain": [
+  {
+   "name": "entry_19226",
+   "sha256": "b629c7a73ccd8ee597abfe95d876e9f9977f88eedf178d5dd982af5d6dbe2dde",
+   "drift_pct": 11.29,
+   "settings": "wide gain 1.00, wide TV lambda 10, FLIR gains A1.20/B1.10"
+  },
+  {
+   "name": "wide_gain095_tv15",
+   "sha256": "987cc8220f6a9d9abb8bc1bb3e85775212ecde8461f94d6a949ff9a87093d902",
+   "drift_pct": 11.08,
+   "settings": "wide gain 0.95, wide TV lambda 15"
+  },
+  {
+   "name": "wide_gain095_tv25",
+   "sha256": "032808e64bb21720862d7428b477c62b4b19d506e59c1ebd3ca946386a97af3a",
+   "drift_pct": 10.96,
+   "settings": "wide gain 0.95, wide TV lambda 25"
+  },
+  {
+   "name": "wide_gain095_tv32_hi110",
+   "sha256": "fba0e60a36b85efd767ab5fa9e7be2d58447e906ef0149c495b9b91aa4c1026d",
+   "drift_pct": 10.89,
+   "settings": "wide gain 0.95 (clip_092, clip_103: 1.10), wide TV lambda 32"
+  },
+  {
+   "name": "wide_gain095_tv32_hi130",
+   "sha256": "41133948ef57731a18df59c66d919179be3a66730725109ac6621c2b8953bc35",
+   "drift_pct": 10.83,
+   "settings": "wide gain 0.95 (clip_092, clip_103: 1.30), wide TV lambda 32  <- FINAL ENTRY"
+  }
+ ],
+ "other_candidates_built": [
+  {
+   "name": "wide_gain095",
+   "sha256": "c59fb2f398dce7bf66c7f157a0da40030c76bc8373f3bc41a2270100c26d54bb"
+  },
+  {
+   "name": "wide_gain095_const",
+   "sha256": "260697712cb802db71893a9189f02c8a8ff76d4761a67d0236b39482d5b79fca",
+   "parent": "wide_gain095_tv25 (10.96)"
+  },
+  {
+   "name": "wide_gain095_spare092_103",
+   "sha256": "31a39d0fab438e0199d66d327281bbe52f32d22bd80fd05076b32e4eaad74e07",
+   "spared": [
+    "clip_092",
+    "clip_103"
+   ]
+  },
+  {
+   "name": "wide_gain095_spare092_103_tv15",
+   "sha256": "bd07bdf6e824d94bc70a31980d2b83e94f929248cebd317baba31a2fbfec78e5",
+   "spared": [
+    "clip_092",
+    "clip_103"
+   ]
+  },
+  {
+   "name": "wide_gain095_tv20",
+   "sha256": "580f76ec8cd141945a7b78cd15c71318b366f5a4c6ee0a15aeeee2dc3b8fc772",
+   "parent": "wide_gain095_tv15 (11.08)"
+  },
+  {
+   "name": "wide_gain095_tv25_hi110",
+   "sha256": "12fc38870b2fb1a6f886d62259821b7dadda8dd6acef99abcb91a15c71c819ed",
+   "parent": "wide_gain095_tv25 (10.96)",
+   "tv": 25.0,
+   "gain_092_103": 1.1
+  },
+  {
+   "name": "wide_gain095_tv32",
+   "sha256": "2924e772c6397e5b0a107feb9cd7da5c5f2e7061090b61e96b8ab7546446d25a",
+   "parent": "wide_gain095_tv25 (10.96)",
+   "tv": 32.0,
+   "gain_092_103": 0.95
+  },
+  {
+   "name": "wide_gain095_tv32_103at130_092at095",
+   "sha256": "43adcd74db26f6b39040658b48df32271c1ed4b74c3a0a8a3e31c7073d0ae79b",
+   "parent": "wide_gain095_tv32_hi130 (10.83)",
+   "gains": {
+    "clip_092": 0.95
+   }
+  },
+  {
+   "name": "wide_gain095_tv32_103at150_092at130",
+   "sha256": "0a30b43c97f9399ad7dab11fe21196efffb522ffab68a1d097a393e94da6b313",
+   "parent": "wide_gain095_tv32_hi130 (10.83)",
+   "gains": {
+    "clip_103": 1.5
+   }
+  },
+  {
+   "name": "wide_gain095_tv32_103at180_092at130",
+   "sha256": "85821b33b9b82fe0a94bc0b2da43c58e975d3c5a3ec49ea8244a4228d5bb9ccc",
+   "parent": "wide_gain095_tv32_hi130 (10.83)",
+   "gains": {
+    "clip_103": 1.8
+   }
+  },
+  {
+   "name": "wide_gain095_tv32_103at200_092at130",
+   "sha256": "07f991deccf2b0fd6bdaac89afd7cefa4ff7c8714a97a9ee36f66585dc48a0c5",
+   "parent": "wide_gain095_tv32_hi130 (10.83)",
+   "gains": {
+    "clip_103": 2.0
+   }
+  },
+  {
+   "name": "wide_gain095_tv32_hi120",
+   "sha256": "1ae232e1376f3c183c2578a8c92c8426df0aff8225519b96763d556162549273",
+   "parent": "wide_gain095_tv32_hi110 (10.89)",
+   "gain_092_103": 1.2
+  },
+  {
+   "name": "wide_gain095_tv32_hi150",
+   "sha256": "806aba60a2c3b768c4d83723fdad4eadcfbf8d44a263937f03a09cabb7ea52dd",
+   "parent": "wide_gain095_tv32_hi130 (10.83)",
+   "gains": {
+    "clip_092": 1.5,
+    "clip_103": 1.5
+   }
+  },
+  {
+   "name": "wide_gain095_tv35",
+   "sha256": "b1e33e89af2abaec6bf18f62bc4be9d904ee43fdb562baee321d3c091397bce3",
+   "parent": "wide_gain095_tv25 (10.96)"
+  },
+  {
+   "name": "wide_gain095_tv50",
+   "sha256": "b239bf0c25da3164281768c3d6c240a2c6c0f8538ada2d7ab7e97ad873e39c39",
+   "parent": "wide_gain095_tv25 (10.96)"
+  },
+  {
+   "name": "wide_tv15",
+   "sha256": "7acc761746c6f437af23f9db18c08f02fba3111748d812039c03dd828491ccdc"
+  }
+ ],
+ "dev_evidence_wide_gain": {
+  "source": "outputs/wide_heading_dev/fine_gain.json (team workspace)",
+  "clips": "39 development wide clips (21 official val, 18 train key>=060), reference-speed integration, no training",
+  "mean_drift_pct": {
+   "0.90": 5.205,
+   "0.92": 4.992,
+   "0.94": 4.886,
+   "0.96": 4.904,
+   "0.98": 5.027,
+   "1.00": 5.26,
+   "1.02": 5.548
+  }
+ }
+}
