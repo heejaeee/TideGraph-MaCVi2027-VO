@@ -1,0 +1,153 @@
+{
+  "self_consistency_mean_drift_pct": 0.004849576400741998,
+  "self_consistency_scored_clips": 20,
+  "self_consistency_metric_note": "Starter drift with submitted predictions as reference, using 100-800 lengths in the arbitrary units of the submitted trajectory. Not a hidden-reference challenge score.",
+  "scope": "Isolation diagnostic: RAW regenerated legacy speed, IR heading and initial gauge, but ARCHIVED Omega windows. Not the complete raw-video pipeline and not a hidden-reference score.",
+  "clips": 20,
+  "complete": true,
+  "byte_identical": false,
+  "generated_sha256": "8b7df2a748262914b055138335de568ef6c3718ca222c51362e066b3feecf64a",
+  "submitted_sha256": "41133948ef57731a18df59c66d919179be3a66730725109ac6621c2b8953bc35",
+  "per_clip": {
+    "clip_092": {
+      "self_consistency_drift_pct": 8.561851301992378e-14,
+      "samples": 601,
+      "max_coordinate_difference": 0.0,
+      "aligned_rmse_over_path_length": 2.4875692726406584e-16,
+      "alignment_scale": 0.9999999999999993
+    },
+    "clip_093": {
+      "self_consistency_drift_pct": 4.022798214594416e-15,
+      "samples": 601,
+      "max_coordinate_difference": 0.0,
+      "aligned_rmse_over_path_length": 1.726006988965506e-17,
+      "alignment_scale": 1.0000000000000002
+    },
+    "clip_094": {
+      "self_consistency_drift_pct": 6.174083863354939e-14,
+      "samples": 601,
+      "max_coordinate_difference": 0.0,
+      "aligned_rmse_over_path_length": 1.731229119715124e-16,
+      "alignment_scale": 0.9999999999999991
+    },
+    "clip_095": {
+      "self_consistency_drift_pct": 0.08119797735017782,
+      "samples": 600,
+      "max_coordinate_difference": 0.35066946988482073,
+      "aligned_rmse_over_path_length": 0.00022520901527353608,
+      "alignment_scale": 0.9988107638354354
+    },
+    "clip_096": {
+      "self_consistency_drift_pct": 1.2873087019664824e-13,
+      "samples": 601,
+      "max_coordinate_difference": 6.666589058568206e-09,
+      "aligned_rmse_over_path_length": 4.838975197103377e-16,
+      "alignment_scale": 0.9999999999999976
+    },
+    "clip_097": {
+      "self_consistency_drift_pct": 5.410613349432738e-14,
+      "samples": 596,
+      "max_coordinate_difference": 0.0,
+      "aligned_rmse_over_path_length": 1.6200644037996984e-16,
+      "alignment_scale": 0.9999999999999998
+    },
+    "clip_098": {
+      "self_consistency_drift_pct": 3.757877195473263e-14,
+      "samples": 600,
+      "max_coordinate_difference": 0.0,
+      "aligned_rmse_over_path_length": 1.1269027650967106e-16,
+      "alignment_scale": 0.9999999999999993
+    },
+    "clip_099": {
+      "self_consistency_drift_pct": 5.99644193873809e-14,
+      "samples": 601,
+      "max_coordinate_difference": 0.0,
+      "aligned_rmse_over_path_length": 1.7950441594220368e-16,
+      "alignment_scale": 0.9999999999999993
+    },
+    "clip_100": {
+      "self_consistency_drift_pct": 1.3464407803793359e-13,
+      "samples": 602,
+      "max_coordinate_difference": 0.0,
+      "aligned_rmse_over_path_length": 3.8615486855204264e-16,
+      "alignment_scale": 1.0000000000000007
+    },
+    "clip_101": {
+      "self_consistency_drift_pct": 9.6635145704117e-15,
+      "samples": 601,
+      "max_coordinate_difference": 0.0,
+      "aligned_rmse_over_path_length": 4.1946829001986234e-17,
+      "alignment_scale": 1.0
+    },
+    "clip_103": {
+      "self_consistency_drift_pct": 6.01303115855308e-14,
+      "samples": 601,
+      "max_coordinate_difference": 0.0,
+      "aligned_rmse_over_path_length": 1.833337913911646e-16,
+      "alignment_scale": 0.9999999999999997
+    },
+    "clip_104": {
+      "self_consistency_drift_pct": 5.4126629937228955e-14,
+      "samples": 600,
+      "max_coordinate_difference": 0.0,
+      "aligned_rmse_over_path_length": 1.5530267555087554e-16,
+      "alignment_scale": 0.9999999999999997
+    },
+    "clip_105": {
+      "self_consistency_drift_pct": 8.381765097018111e-14,
+      "samples": 601,
+      "max_coordinate_difference": 0.0,
+      "aligned_rmse_over_path_length": 2.4638158150493335e-16,
+      "alignment_scale": 1.0000000000000004
+    },
+    "clip_106": {
+      "self_consistency_drift_pct": 4.806202831030806e-15,
+      "samples": 601,
+      "max_coordinate_difference": 0.0,
+      "aligned_rmse_over_path_length": 1.5770964694211173e-17,
+      "alignment_scale": 0.9999999999999996
+    },
+    "clip_107": {
+      "self_consistency_drift_pct": 0.008091469951993353,
+      "samples": 600,
+      "max_coordinate_difference": 0.024692294621331712,
+      "aligned_rmse_over_path_length": 2.1555936968766286e-05,
+      "alignment_scale": 1.0001586884566256
+    },
+    "clip_108": {
+      "self_consistency_drift_pct": 6.384184096600449e-14,
+      "samples": 602,
+      "max_coordinate_difference": 1.734723475976807e-18,
+      "aligned_rmse_over_path_length": 1.8956122349696243e-16,
+      "alignment_scale": 1.0000000000000004
+    },
+    "clip_109": {
+      "self_consistency_drift_pct": 8.909523836109586e-15,
+      "samples": 602,
+      "max_coordinate_difference": 0.0,
+      "aligned_rmse_over_path_length": 3.0111179661728655e-17,
+      "alignment_scale": 1.0
+    },
+    "clip_110": {
+      "self_consistency_drift_pct": 1.7504136402151215e-14,
+      "samples": 601,
+      "max_coordinate_difference": 0.0,
+      "aligned_rmse_over_path_length": 5.084982691218635e-17,
+      "alignment_scale": 0.9999999999999998
+    },
+    "clip_111": {
+      "self_consistency_drift_pct": 0.007702080711713077,
+      "samples": 601,
+      "max_coordinate_difference": 0.01829075598976715,
+      "aligned_rmse_over_path_length": 1.8114718019533346e-05,
+      "alignment_scale": 0.9998887084715041
+    },
+    "clip_112": {
+      "self_consistency_drift_pct": 8.65114941125571e-14,
+      "samples": 600,
+      "max_coordinate_difference": 0.0,
+      "aligned_rmse_over_path_length": 2.5992418660742304e-16,
+      "alignment_scale": 0.9999999999999993
+    }
+  }
+}

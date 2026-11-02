@@ -1,0 +1,112 @@
+{
+  "scope": "All fresh raw legacy motion stages complete; comparing computed inputs with archived estimates outside inference",
+  "per_clip_max_absolute_difference": {
+    "clip_092": {
+      "times": 0.0,
+      "initial_yaw": 0.0,
+      "speed": 0.0
+    },
+    "clip_093": {
+      "times": 0.0,
+      "initial_yaw": 0.0,
+      "speed": 0.0
+    },
+    "clip_094": {
+      "times": 0.0,
+      "initial_yaw": 0.0,
+      "speed": 0.0
+    },
+    "clip_095": {
+      "times": 0.0,
+      "initial_yaw": 0.0,
+      "speed": 0.006199687627566508
+    },
+    "clip_096": {
+      "times": 0.0,
+      "initial_yaw": 2.268999571564123e-11,
+      "speed": 0.0
+    },
+    "clip_097": {
+      "times": 0.0,
+      "initial_yaw": 0.0,
+      "speed": 0.0
+    },
+    "clip_098": {
+      "times": 0.0,
+      "initial_yaw": 0.0,
+      "speed": 0.0
+    },
+    "clip_099": {
+      "times": 0.0,
+      "initial_yaw": 0.0,
+      "speed": 0.0
+    },
+    "clip_100": {
+      "times": 0.0,
+      "initial_yaw": 0.0,
+      "speed": 0.0,
+      "legacy_yaw": 0.0
+    },
+    "clip_101": {
+      "times": 0.0,
+      "initial_yaw": 0.0,
+      "speed": 0.0
+    },
+    "clip_103": {
+      "times": 0.0,
+      "initial_yaw": 0.0,
+      "speed": 0.0
+    },
+    "clip_104": {
+      "times": 0.0,
+      "initial_yaw": 0.0,
+      "speed": 0.0
+    },
+    "clip_105": {
+      "times": 0.0,
+      "initial_yaw": 0.0,
+      "speed": 0.0
+    },
+    "clip_106": {
+      "times": 0.0,
+      "initial_yaw": 0.0,
+      "speed": 0.0
+    },
+    "clip_107": {
+      "times": 0.0,
+      "initial_yaw": 0.0,
+      "speed": 0.003082211563827819
+    },
+    "clip_108": {
+      "times": 0.0,
+      "initial_yaw": 4.336808689942018e-19,
+      "speed": 0.0
+    },
+    "clip_109": {
+      "times": 0.0,
+      "initial_yaw": 0.0,
+      "speed": 0.0
+    },
+    "clip_110": {
+      "times": 0.0,
+      "initial_yaw": 0.0,
+      "speed": 0.0
+    },
+    "clip_111": {
+      "times": 0.0,
+      "initial_yaw": 2.168404344971009e-19,
+      "speed": 0.0019086174368421194
+    },
+    "clip_112": {
+      "times": 0.0,
+      "initial_yaw": 0.0,
+      "speed": 0.0
+    }
+  },
+  "max_absolute_difference_by_field": {
+    "initial_yaw": 2.268999571564123e-11,
+    "legacy_yaw": 0,
+    "speed": 0.006199687627566508,
+    "times": 0.0
+  }
+}

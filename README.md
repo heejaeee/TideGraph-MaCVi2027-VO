@@ -14,6 +14,8 @@ adapted to a trajectory task: the output is one `submission.json` bundle, not pe
 
 ## Hand-in status
 
+Current [factsheet PDF](docs/factsheet.pdf), [LaTeX source ZIP](docs/factsheet_LaTeX.zip) and [unsent organizer email](docs/email_to_organizers.txt). The document explicitly distinguishes completed checks from the remaining full raw run.
+
 This is a review draft. Cached replay and rebuild were verified again on 2026-11-01: both exactly match the supplied 10.83% artifact. A new **raw-video pipeline is implemented** in [`raw_run.py`](raw_run.py), including legacy speed, infrared heading and the initial gauge. A full-path FLIR pilot passed; the 20-clip raw verification is running. This remains distinct from the older hybrid `video` mode. See `HANDIN_STATUS.txt` and `evidence/handin_cpu_verification.json`. All seven author contact and OpenReview records are complete. Entry 19406 and uploader 2038 were verified on the public leaderboard.
 
 ## Repository and artifact access
@@ -49,7 +51,7 @@ python repro_check.py . --run --input /path/to/lookout-vo-test-v0.1 --mode rebui
 | Mode | Starts from | Result vs the uploaded file |
 |---|---|---|
 | `replay` | 19226 heading/speed signals (`data/final_signals`) + final wide settings | **byte-identical** (SHA-256 above) |
-| `rebuild` | Omega window rotations (`data/omega`) + retained signals (`data/inputs`) | max 4.9e-11 m |
+| `rebuild` | Omega window rotations (`data/omega`) + retained signals (`data/inputs`) | **byte-identical** in the fresh release verification; historical alternate environment differed by at most 4.9e-11 coordinate units |
 | `raw` | raw videos plus frozen weights; regenerates every motion input | representative full-path FLIR pilot verified; full 20-clip verification pending |
 | `video` | raw test videos → VGGT-Omega on GPU → `rebuild` | Omega rotations within 0.06° median / 0.32° worst of `data/omega`; drift vs the uploaded trajectories 0.080 % mean, 0.137 % max (RTX 4090, 16 min; `evidence/video_rerun_rtx4090.json`) |
 
@@ -90,8 +92,9 @@ estimates in `data/inputs`:
 * the infrared heading, and
 * the initial heading gauge.
 
-The code that produced them is in `legacy/` for review, but it depends on historical caches and
-is not a verified single-command raw-video pipeline (`legacy/README.md`). For the metric only the
+The historical scripts in `legacy/` depend on archived caches and are kept for review.
+Their standalone release port is in `src/tidegraph/raw/`, orchestrated by `raw_run.py`;
+this is the implementation used for fresh raw-video verification. For the metric only the
 relative shape of speed and heading matters: one global similarity transform is fitted, so the
 gauge and absolute scale have no effect.
 
@@ -121,7 +124,7 @@ released input or the team's own estimate.
 ## Data use and disclosure
 
 * No training or self-supervised adaptation on VAL or TEST videos.
-* External pretrained models are listed in `METHOD.md`.
+* External pretrained models are listed in `METHOD.md`. Discarded CANOE/Pohang training and evaluation trials are disclosed separately in `evidence/development_trials.json`; no model trained on those datasets is retained in entry 19406.
 * Several global and per-clip settings were chosen with aggregate test-leaderboard feedback,
   including a per-clip gain for clip_092 and clip_103. They are listed in `METHOD.md` and
   `evidence/selection_history.json`.

@@ -1,0 +1,13 @@
+{
+  "scope": "Actual worker audit-hook smoke, with synthetic blocked-reference path; no reference data accessed",
+  "checks": {
+    "packaged_submission": true,
+    "packaged_inputs": true,
+    "legacy_cache": true,
+    "historical_prediction": true,
+    "reference_path": true,
+    "network_blocked": true,
+    "fresh_workspace_allowed": true
+  },
+  "all_passed": true
+}
