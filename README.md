@@ -14,15 +14,15 @@ adapted to a trajectory task: the output is one `submission.json` bundle, not pe
 
 ## Hand-in status
 
-This is a review draft. Cached replay and rebuild were verified again on 2026-11-01: both exactly match the supplied 10.83% artifact. **Full reproduction from released frames alone is not complete**, because video mode still consumes retained speed, IR heading and initial gauge signals. See `HANDIN_STATUS.txt` and `evidence/handin_cpu_verification.json`. The uploader ID, remaining author contact/profile details and organizer repository access must be completed before hand-in.
+This is a review draft. Cached replay and rebuild were verified again on 2026-11-01: both exactly match the supplied 10.83% artifact. **Full reproduction from released frames alone is not complete**, because video mode still consumes retained speed, IR heading and initial gauge signals. See `HANDIN_STATUS.txt` and `evidence/handin_cpu_verification.json`. The uploader ID and the remaining Yuanjun Chai contact/profile fields must be completed before hand-in.
 
 ## Repository and artifact access
 
-- Code: https://github.com/heejaeee/TideGraph-MaCVi2027-VO (private)
-- Team artifacts: https://huggingface.co/hjkwon1996/TideGraph-MaCVi2027-VO (private)
+- Code: https://github.com/heejaeee/TideGraph-MaCVi2027-VO (public)
+- Team artifacts: https://huggingface.co/hjkwon1996/TideGraph-MaCVi2027-VO (public)
 - Entry: **19406**, supplied by the team; reported score **10.83%**.
 - No external pretrained neural checkpoint or original video is mirrored in either repository.
-- Private access must be arranged for organizers separately; creating these repositories does not grant them access. Never send a personal access token to another person.
+- Code and team artifacts are public; no login or collaborator invitation is required. The separate upstream VGGT-Omega checkpoint still has its own access conditions.
 
 `artifacts.lock.json` pins the Hugging Face commit and SHA-256 of both downloads and every extracted cache file. Cached estimates and the TRAIN-fitted model are restored to their original paths before running the existing code.
 
@@ -31,7 +31,6 @@ This is a review draft. Cached replay and rebuild were verified again on 2026-11
 ```bash
 python3.10 -m venv .venv && . .venv/bin/activate
 pip install -r requirements.txt -r requirements-download.txt
-hf auth login                         # your own account needs access to the private artifact repo
 python scripts/fetch_artifacts.py      # pinned revision + SHA-256 verification
 python scripts/fetch_artifacts.py --verify-only
 python repro_check.py . --run --input /path/to/lookout-vo-test-v0.1            # mode replay
@@ -135,3 +134,7 @@ Registered team: UW-IPL. Team leader: HeeJae Kwon, University of Washington, con
 ## Published-release verification
 
 A fresh GitHub clone, fresh Python 3.10 environment and fresh Hugging Face download cache reproduced all 20 clips with zero position difference and the exact entry SHA-256 in both replay and rebuild modes. See `evidence/fresh_clone_verification.json`. The raw-video reproduction boundary above still applies.
+
+## Author metadata update
+
+The author order is confirmed. Updated emails/OpenReview profiles are in `configs/author_metadata.json` and the factsheet. Team member macvi.org IDs were recovered from the final EURS factsheet at the team's request. The separate EURS Jetson submission is not used as the VO entry identifier; VO remains 19406.

@@ -10,4 +10,4 @@
 
 These are the team's estimates. None of them is a reference trajectory.
 
-Only `metadata/` is tracked in Git. Restore the other three directories with `python scripts/fetch_artifacts.py` from the pinned private Hugging Face snapshot. Every restored file is hash-verified. These caches enable review and cached reproduction, not a claim of full raw-video regeneration.
+Only `metadata/` is tracked in Git. Restore the other three directories with `python scripts/fetch_artifacts.py` from the pinned public Hugging Face snapshot. Every restored file is hash-verified. These caches enable review and cached reproduction, not a claim of full raw-video regeneration.

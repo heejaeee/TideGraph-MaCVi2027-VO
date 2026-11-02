@@ -1,6 +1,6 @@
-"""Restore pinned, hash-verified private Hugging Face artifacts into this checkout.
+"""Restore pinned, hash-verified public Hugging Face artifacts into this checkout.
 
-Authenticate with `hf auth login` first. No credentials are embedded in this repo.
+No authentication is needed for the public team artifacts. No credentials are embedded in this repo.
 This restores model estimates, not a replacement for raw-video inference.
 """
 import argparse
