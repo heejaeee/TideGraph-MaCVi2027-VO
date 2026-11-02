@@ -85,9 +85,8 @@ def tasks(clips, lane):
         for stage in ('v24', 'courses', 'speeds'):
             yield stage, None, None
     if lane in ('all', 'omega'):
-        for c in clips:
-            if c['camera_mode'] != 'flir-IR':
-                yield 'omega', c['key'], None
+        # Reuse one frozen model across clips; generate() resumes completed clips.
+        yield 'omega', None, None
     if lane in ('all', 'assemble'):
         yield 'assemble', None, None
 

@@ -244,7 +244,9 @@ def main():
     elif a.stage == 'assemble': assemble()
     elif a.stage == 'omega':
         from ..omega_windows import generate
-        generate(DATA, ROOT/'omega', ROOT/'models/omega.pt', ROOT/'repos/vggt-omega', keys=[a.key])
+        generate(DATA, ROOT/'omega', ROOT/'models/omega.pt', ROOT/'repos/vggt-omega',
+                 keys=[a.key] if a.key else (sorted(os.environ['TIDEGRAPH_RAW_KEYS'].split(','))
+                                             if os.environ.get('TIDEGRAPH_RAW_KEYS') else None))
     else: raise ValueError(a.stage)
     print('RAW_STAGE_COMPLETE', a.stage, a.key, time.perf_counter()-started, flush=True)
 
