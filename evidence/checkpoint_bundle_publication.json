@@ -1,0 +1,52 @@
+{
+  "repo": "hjkwon1996/TideGraph-MaCVi2027-VO",
+  "commit": "9853ab0bb823cf5118d4e22cf724e4e5ca018db7",
+  "url": "https://huggingface.co/hjkwon1996/TideGraph-MaCVi2027-VO/resolve/9853ab0bb823cf5118d4e22cf724e4e5ca018db7/checkpoints/TideGraph-MaCVi2027-VO_checkpoints_verified.zip",
+  "verification": {
+    "filename": "TideGraph-MaCVi2027-VO_checkpoints_verified.zip",
+    "bytes": 10032741062,
+    "sha256": "6af084656fb983c5c12f769f1c72d56b4b91ab8e5d67b08d361ff2b5777f4400",
+    "zip_crc_valid": true,
+    "checkpoint_sha256_valid": true,
+    "manifest": {
+      "submission_id": 19406,
+      "original_supplied_archive_valid": false,
+      "files": [
+        {
+          "archive_path": "TideGraph_checkpoints/weights/vggt_omega_1b_416_reproduce.pt",
+          "sha256": "e900833330eb0e570e10543e6108d0dd704fa7c8dbc32738a645987875298896",
+          "bytes": 4576703488,
+          "upstream": "facebook/VGGT-Omega",
+          "upstream_revision": "1041e80fc0e911235d3426b0a3d9a81075111a53"
+        },
+        {
+          "archive_path": "TideGraph_checkpoints/legacy_upstream/pi3x/model.safetensors",
+          "sha256": "69972d6e1c4492cb4d737a84fe940e357087d81c52f5c9b7c160b49c1f41669a",
+          "bytes": 5440325620,
+          "upstream": "yyfz233/Pi3X",
+          "upstream_revision": "bb1deea4d7423de5b30691739cb451a3f57dc1d5"
+        },
+        {
+          "archive_path": "TideGraph_checkpoints/legacy_upstream/DPVO/dpvo.pth",
+          "sha256": "30d02dc2b88a321cf99aad8e4ea1152a44d791b5b65bf95ad036922819c0ff12",
+          "bytes": 14167743,
+          "upstream": "https://github.com/princeton-vl/DPVO",
+          "upstream_revision": null
+        },
+        {
+          "archive_path": "TideGraph_checkpoints/trained_models/flow_speed_v3/model.pkl",
+          "sha256": "b288dfc83fd9f6f875004b84d27a72bf277affb5c4a915ba7394a65fc31c2a0b",
+          "bytes": 1493181,
+          "upstream": "hjkwon1996/TideGraph-MaCVi2027-VO",
+          "upstream_revision": "4c6641e990b860d72f5715927c1fa50a33636fab"
+        }
+      ],
+      "scope": "Verified replacement of the supplied four-model checkpoint bundle; additional raw-pipeline models are linked by setup_raw_assets.py"
+    }
+  },
+  "anonymous_download_check": {
+    "status": 206,
+    "first_four_bytes_hex": "504b0304",
+    "remote_sha256_match": true
+  }
+}

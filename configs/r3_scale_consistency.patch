@@ -1,0 +1,69 @@
+diff --git a/R3/models/online/revisit.py b/R3/models/online/revisit.py
+index f25c050..8f6295d 100644
+--- a/R3/models/online/revisit.py
++++ b/R3/models/online/revisit.py
+@@ -101,6 +101,20 @@ def run_online_sequence_pass(
+             current_frame_id=frame_id,
+             pose_max_recent=pose_max_recent,
+         )
++        # Bootstrap rescales stored poses and the current prediction, but the
++        # earlier outputs are detached copies. Keep the emitted prefix in the
++        # same coordinate units (pose encoding translation scales linearly).
++        correction = predictions.get("metric_scale_correction")
++        if correction is not None:
++            for previous in predictions_list:
++                for name in ("pose_enc", "depth"):
++                    if isinstance(previous.get(name), torch.Tensor):
++                        value = previous[name].clone()
++                        if name == "pose_enc":
++                            value[..., :3] *= float(correction)
++                        else:
++                            value *= float(correction)
++                        previous[name] = value
+         pending_fallback_action = state.pending_fallback_action
+         state.pending_fallback_action = None
+         if pending_fallback_action is not None:
+diff --git a/R3/models/r3_wrapper/online_inference.py b/R3/models/r3_wrapper/online_inference.py
+index ebb6b7b..4be4db7 100644
+--- a/R3/models/r3_wrapper/online_inference.py
++++ b/R3/models/r3_wrapper/online_inference.py
+@@ -1615,9 +1615,13 @@ class R3OnlineInferenceMixin:
+             old_ref_pose = old_ref_pose.clone()
+         old_depths = []
+         old_confs = []
++        # Buffers contain segment-local raw depths, whereas stored bridge poses
++        # and the scale assigned to the next segment use global units. Convert
++        # once here so depth registration and bridge fusion share those units.
++        old_depth_scale = float(state.scale_factor)
+         for fid in action.bridge_frame_ids:
+             depth = old_depth_buffer.get(fid)
+-            old_depths.append(depth.clone() if depth is not None else None)
++            old_depths.append(depth.clone() * old_depth_scale if depth is not None else None)
+             conf = old_depth_conf_buffer.get(fid)
+             old_confs.append(conf.clone() if conf is not None else None)
+ 
+@@ -1627,7 +1631,7 @@ class R3OnlineInferenceMixin:
+         old_ref_depth_conf = None
+         if not ref_in_bridge:
+             d = old_depth_buffer.get(action.new_ref_id)
+-            old_ref_depth = d.clone() if d is not None else None
++            old_ref_depth = d.clone() * old_depth_scale if d is not None else None
+             c = old_depth_conf_buffer.get(action.new_ref_id)
+             old_ref_depth_conf = c.clone() if c is not None else None
+ 
+@@ -1930,11 +1934,14 @@ class R3OnlineInferenceMixin:
+                     )
+             if valid_depth_pairs:
+                 depth_scale = self._estimate_scale_from_depth(
+-                    [pair[0] for pair in valid_depth_pairs],
++                    # The estimator's 0.01..100 plausibility bounds apply to
++                    # inter-segment ratios, not arbitrary global/metric units.
++                    [pair[0] / old_depth_scale for pair in valid_depth_pairs],
+                     [pair[1] for pair in valid_depth_pairs],
+                     old_confs=[pair[2] for pair in valid_depth_pairs],
+                     new_confs=[pair[3] for pair in valid_depth_pairs],
+                 )
++                depth_scale *= old_depth_scale
+ 
+         if metric_scale is not None and metric_scale > 0:
+             scale = float(metric_scale)

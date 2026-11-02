@@ -1,0 +1,138 @@
+{
+  "repositories": {
+    "R3": {
+      "url": "https://github.com/KevinXu02/R3.git",
+      "commit": "e345f1112fbc9c451d44c9c5aa22d9bfec2a954d"
+    },
+    "vggt": {
+      "url": "https://github.com/facebookresearch/vggt.git",
+      "commit": "a288dd0f14786c93483e45524328726ab7b1b4ce"
+    },
+    "vggt-omega": {
+      "url": "https://github.com/facebookresearch/vggt-omega.git",
+      "commit": "48b23c8ce72c9a8fcf987f0d7f43d8e4870759f6"
+    },
+    "Pi3": {
+      "url": "https://github.com/yyfz/Pi3.git",
+      "commit": "9fa3ddb3f8d53041f8b2738df404f62223bbaa7b"
+    },
+    "AnyCalib": {
+      "url": "https://github.com/javrtg/AnyCalib.git",
+      "commit": "027a8497d893f4b2596f23d6324c05e4b81064ed"
+    },
+    "DPVO": {
+      "url": "https://github.com/princeton-vl/DPVO.git",
+      "commit": "859bbbfdac6c6185f345003b3c473901fcd13ace"
+    },
+    "co-tracker": {
+      "url": "https://github.com/facebookresearch/co-tracker.git",
+      "commit": "82e02e8029753ad4ef13cf06be7f4fc5facdda4d"
+    }
+  },
+  "files": [
+    {
+      "path": "repos/R3/ckpt/r3_long.safetensors",
+      "repo": "KevinXu02/R3",
+      "revision": "c1f2aeccfa14d035a0e7b18f188253003a8417f0",
+      "filename": "r3_long.safetensors",
+      "sha256": "a5e14c7aa751450f8a9e2e78f1ac5e980060230af6dd0b6af86f1e6dd0859f7e",
+      "bytes": 1490568492
+    },
+    {
+      "path": "repos/R3/ckpt/da3_metric/model.safetensors",
+      "repo": "depth-anything/DA3METRIC-LARGE",
+      "revision": "4010e39f3634a45bc60553321fb49fb760bd594e",
+      "filename": "model.safetensors",
+      "sha256": "bbea5b0b3ee389849cffa7ddae89de064a90abd2b055fc5aa99aac68db324776",
+      "bytes": 1336734448
+    },
+    {
+      "path": "repos/R3/ckpt/da3_metric/config.json",
+      "repo": "depth-anything/DA3METRIC-LARGE",
+      "revision": "4010e39f3634a45bc60553321fb49fb760bd594e",
+      "filename": "config.json",
+      "sha256": "a336f3e76fe375aaae17a9aed9130c9f2aa061535d317ec57dcb2f1f02e1dd53",
+      "bytes": 847
+    },
+    {
+      "path": "repos/vggt/ckpt/model.pt",
+      "repo": "facebook/VGGT-1B",
+      "revision": "860abec7937da0a4c03c41d3c269c366e82abdf9",
+      "filename": "model.pt",
+      "sha256": "d15bf50a8615c8225ed48b51ea5cac673d82442ec0309036df555a053253afe0",
+      "bytes": 5026874952
+    },
+    {
+      "path": "models/omega.pt",
+      "repo": "facebook/VGGT-Omega",
+      "revision": "1041e80fc0e911235d3426b0a3d9a81075111a53",
+      "filename": "vggt_omega_1b_416_reproduce.pt",
+      "sha256": "e900833330eb0e570e10543e6108d0dd704fa7c8dbc32738a645987875298896",
+      "bytes": 4576703488
+    },
+    {
+      "path": "models/pi3x.safetensors",
+      "repo": "yyfz233/Pi3X",
+      "revision": "bb1deea4d7423de5b30691739cb451a3f57dc1d5",
+      "filename": "model.safetensors",
+      "sha256": "69972d6e1c4492cb4d737a84fe940e357087d81c52f5c9b7c160b49c1f41669a",
+      "bytes": 5440325620
+    },
+    {
+      "path": "models/flow_speed_v3/model.pkl",
+      "repo": "hjkwon1996/TideGraph-MaCVi2027-VO",
+      "revision": "4c6641e990b860d72f5715927c1fa50a33636fab",
+      "filename": "models/flow_speed_v3.pkl",
+      "sha256": "b288dfc83fd9f6f875004b84d27a72bf277affb5c4a915ba7394a65fc31c2a0b",
+      "bytes": 1493181
+    },
+    {
+      "path": "torch/hub/anycalib/anycalib_pinhole.pt",
+      "url": "https://github.com/javrtg/AnyCalib/releases/download/v1.0.0/anycalib_pinhole.pt",
+      "sha256": "e73b174563bcb90dc9a0e348ee64fbb898901d2a1786623e62fc0e3b176a1a38",
+      "bytes": 1281195455
+    },
+    {
+      "path": "torch/hub/checkpoints/scaled_offline.pth",
+      "url": "https://huggingface.co/facebook/cotracker3/resolve/main/scaled_offline.pth",
+      "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834",
+      "bytes": 101890938
+    },
+    {
+      "path": "repos/DPVO/dpvo.pth",
+      "url": null,
+      "sha256": "30d02dc2b88a321cf99aad8e4ea1152a44d791b5b65bf95ad036922819c0ff12",
+      "bytes": 14167743
+    },
+    {
+      "path": "models/mask2former/config.json",
+      "repo": "facebook/mask2former-swin-tiny-ade-semantic",
+      "revision": "c8cf1b5e823aee214d937d0d001c1850ba44ef6a",
+      "filename": "config.json",
+      "sha256": "7929dfd52f551f8dc0d6302dc9329abc7741277c8e853c5abcd479776745e65e",
+      "bytes": 82535
+    },
+    {
+      "path": "models/mask2former/preprocessor_config.json",
+      "repo": "facebook/mask2former-swin-tiny-ade-semantic",
+      "revision": "c8cf1b5e823aee214d937d0d001c1850ba44ef6a",
+      "filename": "preprocessor_config.json",
+      "sha256": "2cc071ffa594ec111c765acfcf18e279ef61f0ac09f493fb331704d4b6220e3c",
+      "bytes": 538
+    },
+    {
+      "path": "models/mask2former/pytorch_model.bin",
+      "repo": "facebook/mask2former-swin-tiny-ade-semantic",
+      "revision": "c8cf1b5e823aee214d937d0d001c1850ba44ef6a",
+      "filename": "pytorch_model.bin",
+      "sha256": "97bb47771b1f679d0d8b2de75f2d48ce8ad53a60ab56d489c792d48ccb044500",
+      "bytes": 190189605
+    }
+  ],
+  "dpvo_drive_id": "1dRqftpImtHbbIPNBIseCv9EvrlHEnjhX",
+  "dpvo_patch": "configs/dpvo_torch27.patch",
+  "patches": {
+    "R3": "configs/r3_scale_consistency.patch",
+    "DPVO": "configs/dpvo_torch27.patch"
+  }
+}

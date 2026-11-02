@@ -2,18 +2,19 @@
 
     main(model_dir, input_dir, output_dir, device, mode=None)
 
-  model_dir   the weights/ folder (only mode='video' reads it: vggt_omega_1b_416_reproduce.pt)
-  input_dir   the released test package root (release_manifest.json, timing/, videos/)
-  output_dir  receives submission.json (the 20-clip bundle) and report.json
-  device      "cuda" or "cpu" (only the Omega stage of mode='video' uses it)
-  mode        'replay'  cached 19226 heading/speed signals -> final settings  (byte-identical to the upload)
-              'rebuild' cached Omega windows -> yaw graph / gains / TV -> trajectories (~1e-12 m from the upload)
-              'video'   raw video -> Omega windows on `device` -> as 'rebuild'
+  model_dir   raw assets directory for 'raw'; Omega weights directory for 'video'
+  input_dir   released test package root (release_manifest.json, timing/, videos/)
+  output_dir  receives submission.json and validation reports
+  device      CUDA required for raw inference; replay/rebuild run on CPU
+  mode        'replay'  archived heading/speed -> final settings
+              'rebuild' archived Omega windows -> yaw graph / gains / TV
+              'video'   raw video -> Omega windows, with archived legacy signals
+              'raw'     raw video and frozen weights -> all motion signals
               default: $TIDEGRAPH_MODE or 'replay'
 
-Wide speed, the FLIR speed profiles, the initial heading gauge and the infrared
-heading are retained legacy signals read from data/inputs in every mode; see METHOD.md.
-Inference only, no network, deterministic.
+Only 'raw' regenerates every motion input. See RAW_REPRODUCTION.md for its
+verification status and environment requirements. Fresh GPU inference may differ
+numerically from archived estimates. Inference is offline and does not train.
 """
 import argparse
 import hashlib
@@ -29,7 +30,7 @@ sys.path.insert(0, str(ROOT / 'src'))
 CONFIG = ROOT / 'configs' / 'final_entry.json'
 DATA = ROOT / 'data'
 SUBMITTED = ROOT / 'submission' / 'submission.json'
-MODES = ('replay', 'rebuild', 'video')
+MODES = ('replay', 'rebuild', 'video', 'raw')
 
 
 def omega_stage(model_dir, input_dir, output_dir, device):
@@ -50,6 +51,14 @@ def main(model_dir, input_dir, output_dir, device, mode=None, omega_dir=None, om
     mode = mode or os.environ.get('TIDEGRAPH_MODE', 'replay')
     if mode not in MODES:
         raise ValueError(f'mode must be one of {MODES}')
+    if mode == 'raw':
+        if not device.startswith('cuda'):
+            raise ValueError('Full raw inference requires a CUDA GPU')
+        import subprocess
+        assets = Path(model_dir) / 'assets.json'
+        subprocess.run([sys.executable, str(ROOT/'raw_run.py'), '--input', str(input_dir),
+                        '--output', str(output_dir), '--assets', str(assets)], check=True)
+        return json.loads((Path(output_dir)/'raw_report.json').read_text())
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
     tic = time.perf_counter()

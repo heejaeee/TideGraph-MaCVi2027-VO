@@ -1,0 +1,420 @@
+{
+  "scope": "Unit/regression check using archived estimated fixtures; NOT raw-video verification",
+  "stages": {
+    "runs/domain_v24_submission/test/signals": {
+      "clip_108": {
+        "times": 0.0,
+        "speed": 0.0,
+        "yaw": 0.0,
+        "family_yaws": 0.0,
+        "dpvo_yaws": 0.0
+      },
+      "clip_107": {
+        "times": 0.0,
+        "speed": 0.0,
+        "yaw": 0.0,
+        "family_yaws": 0.0,
+        "dpvo_yaws": 0.0
+      },
+      "clip_104": {
+        "times": 0.0,
+        "speed": 0.0,
+        "yaw": 0.0,
+        "family_yaws": 0.0,
+        "dpvo_yaws": 0.0
+      },
+      "clip_095": {
+        "times": 0.0,
+        "speed": 0.0,
+        "yaw": 0.0,
+        "family_yaws": 0.0,
+        "dpvo_yaws": 0.0
+      },
+      "clip_109": {
+        "times": 0.0,
+        "speed": 0.0,
+        "yaw": 0.0,
+        "family_yaws": 0.0,
+        "dpvo_yaws": 0.0
+      },
+      "clip_094": {
+        "times": 0.0,
+        "speed": 0.0,
+        "yaw": 0.0,
+        "family_yaws": 0.0,
+        "dpvo_yaws": 0.0
+      },
+      "clip_093": {
+        "times": 0.0,
+        "speed": 0.0,
+        "yaw": 0.0,
+        "family_yaws": 0.0,
+        "dpvo_yaws": 0.0
+      },
+      "clip_099": {
+        "times": 0.0,
+        "speed": 0.0,
+        "yaw": 0.0,
+        "family_yaws": 0.0,
+        "dpvo_yaws": 0.0
+      },
+      "clip_111": {
+        "times": 0.0,
+        "speed": 0.0,
+        "yaw": 0.0,
+        "family_yaws": 0.0,
+        "dpvo_yaws": 0.0
+      },
+      "clip_096": {
+        "times": 0.0,
+        "speed": 0.0,
+        "yaw": 0.0,
+        "family_yaws": 0.0,
+        "dpvo_yaws": 0.0
+      },
+      "clip_098": {
+        "times": 0.0,
+        "speed": 0.0,
+        "yaw": 0.0,
+        "family_yaws": 0.0,
+        "dpvo_yaws": 0.0
+      }
+    },
+    "runs/domain_v65_submission/test/signals": {
+      "clip_108": {
+        "times": 0.0,
+        "speed": 0.0,
+        "yaw": 0.0,
+        "v24_control": 0.0,
+        "variant_deltas": 0.0,
+        "fold_delta": 0.0,
+        "envelope": 0.0
+      },
+      "clip_107": {
+        "times": 0.0,
+        "speed": 0.0,
+        "yaw": 0.0,
+        "v24_control": 0.0,
+        "variant_deltas": 0.0,
+        "fold_delta": 0.0,
+        "envelope": 0.0
+      },
+      "clip_104": {
+        "times": 0.0,
+        "speed": 0.0,
+        "yaw": 0.0,
+        "v24_control": 0.0,
+        "variant_deltas": 0.0,
+        "fold_delta": 0.0,
+        "envelope": 0.0
+      },
+      "clip_095": {
+        "times": 0.0,
+        "speed": 0.0,
+        "yaw": 0.0,
+        "v24_control": 0.0,
+        "variant_deltas": 0.0,
+        "fold_delta": 0.0,
+        "envelope": 0.0
+      },
+      "clip_109": {
+        "times": 0.0,
+        "speed": 0.0,
+        "yaw": 0.0,
+        "v24_control": 0.0,
+        "variant_deltas": 0.0,
+        "fold_delta": 0.0,
+        "envelope": 0.0
+      },
+      "clip_094": {
+        "times": 0.0,
+        "speed": 0.0,
+        "yaw": 0.0,
+        "v24_control": 0.0,
+        "variant_deltas": 1.9041132691410834e-08,
+        "fold_delta": 0.0,
+        "envelope": 0.0
+      },
+      "clip_093": {
+        "times": 0.0,
+        "speed": 0.0,
+        "yaw": 0.0,
+        "v24_control": 0.0,
+        "variant_deltas": 0.0,
+        "fold_delta": 0.0,
+        "envelope": 0.0
+      },
+      "clip_099": {
+        "times": 0.0,
+        "speed": 0.0,
+        "yaw": 0.0,
+        "v24_control": 0.0,
+        "variant_deltas": 0.0,
+        "fold_delta": 0.0,
+        "envelope": 0.0
+      },
+      "clip_111": {
+        "times": 0.0,
+        "speed": 0.0,
+        "yaw": 0.0,
+        "v24_control": 0.0,
+        "variant_deltas": 0.0,
+        "fold_delta": 0.0,
+        "envelope": 0.0
+      },
+      "clip_096": {
+        "times": 0.0,
+        "speed": 0.0,
+        "yaw": 0.0,
+        "v24_control": 0.0,
+        "variant_deltas": 0.0,
+        "fold_delta": 0.0,
+        "envelope": 0.0
+      },
+      "clip_098": {
+        "times": 0.0,
+        "speed": 0.0,
+        "yaw": 0.0,
+        "v24_control": 0.0,
+        "variant_deltas": 0.0,
+        "fold_delta": 0.0,
+        "envelope": 0.0
+      }
+    },
+    "runs/domain_v73_submission/test/signals": {
+      "clip_108": {
+        "times": 0.0,
+        "yaw": 0.0,
+        "speed": 0.0,
+        "base_speed": 0.0,
+        "log_speed_delta": 0.0,
+        "variant_deltas": 0.0
+      },
+      "clip_107": {
+        "times": 0.0,
+        "yaw": 0.0,
+        "speed": 0.0,
+        "base_speed": 0.0,
+        "log_speed_delta": 0.0,
+        "variant_deltas": 0.0
+      },
+      "clip_104": {
+        "times": 0.0,
+        "yaw": 0.0,
+        "speed": 0.0,
+        "base_speed": 0.0,
+        "log_speed_delta": 0.0,
+        "variant_deltas": 0.0
+      },
+      "clip_095": {
+        "times": 0.0,
+        "yaw": 0.0,
+        "speed": 0.0,
+        "base_speed": 0.0,
+        "log_speed_delta": 0.0,
+        "variant_deltas": 0.0
+      },
+      "clip_109": {
+        "times": 0.0,
+        "yaw": 0.0,
+        "speed": 0.0,
+        "base_speed": 0.0,
+        "log_speed_delta": 0.0,
+        "variant_deltas": 0.0
+      },
+      "clip_094": {
+        "times": 0.0,
+        "yaw": 0.0,
+        "speed": 0.0,
+        "base_speed": 0.0,
+        "log_speed_delta": 0.0,
+        "variant_deltas": 0.0
+      },
+      "clip_093": {
+        "times": 0.0,
+        "yaw": 0.0,
+        "speed": 0.0,
+        "base_speed": 0.0,
+        "log_speed_delta": 0.0,
+        "variant_deltas": 0.0
+      },
+      "clip_099": {
+        "times": 0.0,
+        "yaw": 0.0,
+        "speed": 0.0,
+        "base_speed": 0.0,
+        "log_speed_delta": 0.0,
+        "variant_deltas": 0.0
+      },
+      "clip_111": {
+        "times": 0.0,
+        "yaw": 0.0,
+        "speed": 0.0,
+        "base_speed": 0.0,
+        "log_speed_delta": 0.0,
+        "variant_deltas": 0.0
+      },
+      "clip_096": {
+        "times": 0.0,
+        "yaw": 0.0,
+        "speed": 0.0,
+        "base_speed": 0.0,
+        "log_speed_delta": 0.0,
+        "variant_deltas": 0.0
+      },
+      "clip_098": {
+        "times": 0.0,
+        "yaw": 0.0,
+        "speed": 0.0,
+        "base_speed": 0.0,
+        "log_speed_delta": 0.0,
+        "variant_deltas": 0.0
+      }
+    },
+    "runs/domain_v76_direction_guarded_speed/test/base/signals": {
+      "clip_108": {
+        "times": 0.0,
+        "yaw": 0.0,
+        "speed": 0.0,
+        "direction_confidence": 0.0,
+        "new_residual": 0.0,
+        "v65_control": 0.0,
+        "v73_control": 0.0,
+        "stable_residual_quarter": 0.0,
+        "direction_guarded_quarter": 0.0,
+        "direction_guarded_half": 0.0,
+        "unfiltered_residual_quarter": 0.0
+      },
+      "clip_107": {
+        "times": 0.0,
+        "yaw": 0.0,
+        "speed": 0.0,
+        "direction_confidence": 0.0,
+        "new_residual": 0.0,
+        "v65_control": 0.0,
+        "v73_control": 0.0,
+        "stable_residual_quarter": 0.0,
+        "direction_guarded_quarter": 0.0,
+        "direction_guarded_half": 0.0,
+        "unfiltered_residual_quarter": 0.0
+      },
+      "clip_104": {
+        "times": 0.0,
+        "yaw": 0.0,
+        "speed": 0.0,
+        "direction_confidence": 0.0,
+        "new_residual": 0.0,
+        "v65_control": 0.0,
+        "v73_control": 0.0,
+        "stable_residual_quarter": 0.0,
+        "direction_guarded_quarter": 0.0,
+        "direction_guarded_half": 0.0,
+        "unfiltered_residual_quarter": 0.0
+      },
+      "clip_095": {
+        "times": 0.0,
+        "yaw": 0.0,
+        "speed": 0.0,
+        "direction_confidence": 0.0,
+        "new_residual": 0.0,
+        "v65_control": 0.0,
+        "v73_control": 0.0,
+        "stable_residual_quarter": 0.0,
+        "direction_guarded_quarter": 0.0,
+        "direction_guarded_half": 0.0,
+        "unfiltered_residual_quarter": 0.0
+      },
+      "clip_109": {
+        "times": 0.0,
+        "yaw": 0.0,
+        "speed": 0.0,
+        "direction_confidence": 0.0,
+        "new_residual": 0.0,
+        "v65_control": 0.0,
+        "v73_control": 0.0,
+        "stable_residual_quarter": 0.0,
+        "direction_guarded_quarter": 0.0,
+        "direction_guarded_half": 0.0,
+        "unfiltered_residual_quarter": 0.0
+      },
+      "clip_094": {
+        "times": 0.0,
+        "yaw": 0.0,
+        "speed": 0.0,
+        "direction_confidence": 0.0,
+        "new_residual": 0.0,
+        "v65_control": 0.0,
+        "v73_control": 0.0,
+        "stable_residual_quarter": 0.0,
+        "direction_guarded_quarter": 0.0,
+        "direction_guarded_half": 0.0,
+        "unfiltered_residual_quarter": 0.0
+      },
+      "clip_093": {
+        "times": 0.0,
+        "yaw": 0.0,
+        "speed": 0.0,
+        "direction_confidence": 0.0,
+        "new_residual": 0.0,
+        "v65_control": 0.0,
+        "v73_control": 0.0,
+        "stable_residual_quarter": 0.0,
+        "direction_guarded_quarter": 0.0,
+        "direction_guarded_half": 0.0,
+        "unfiltered_residual_quarter": 0.0
+      },
+      "clip_099": {
+        "times": 0.0,
+        "yaw": 0.0,
+        "speed": 0.0,
+        "direction_confidence": 0.0,
+        "new_residual": 0.0,
+        "v65_control": 0.0,
+        "v73_control": 0.0,
+        "stable_residual_quarter": 0.0,
+        "direction_guarded_quarter": 0.0,
+        "direction_guarded_half": 0.0,
+        "unfiltered_residual_quarter": 0.0
+      },
+      "clip_111": {
+        "times": 0.0,
+        "yaw": 0.0,
+        "speed": 0.0,
+        "direction_confidence": 0.0,
+        "new_residual": 0.0,
+        "v65_control": 0.0,
+        "v73_control": 0.0,
+        "stable_residual_quarter": 0.0,
+        "direction_guarded_quarter": 0.0,
+        "direction_guarded_half": 0.0,
+        "unfiltered_residual_quarter": 0.0
+      },
+      "clip_096": {
+        "times": 0.0,
+        "yaw": 0.0,
+        "speed": 0.0,
+        "direction_confidence": 0.0,
+        "new_residual": 0.0,
+        "v65_control": 0.0,
+        "v73_control": 0.0,
+        "stable_residual_quarter": 0.0,
+        "direction_guarded_quarter": 0.0,
+        "direction_guarded_half": 0.0,
+        "unfiltered_residual_quarter": 0.0
+      },
+      "clip_098": {
+        "times": 0.0,
+        "yaw": 0.0,
+        "speed": 0.0,
+        "direction_confidence": 0.0,
+        "new_residual": 0.0,
+        "v65_control": 0.0,
+        "v73_control": 0.0,
+        "stable_residual_quarter": 0.0,
+        "direction_guarded_quarter": 0.0,
+        "direction_guarded_half": 0.0,
+        "unfiltered_residual_quarter": 0.0
+      }
+    }
+  }
+}

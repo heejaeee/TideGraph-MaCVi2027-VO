@@ -1,0 +1,16 @@
+{
+  "scope": "Self-consistency with submitted estimated trajectories; no TEST ground truth or official rescoring",
+  "clips": 1,
+  "complete": false,
+  "byte_identical": false,
+  "generated_sha256": "26e4f1d942dbcf4b2fd9a4dc7e158ca35021c6b7039aa2e3404404e3ab7468c1",
+  "submitted_sha256": "41133948ef57731a18df59c66d919179be3a66730725109ac6621c2b8953bc35",
+  "per_clip": {
+    "clip_093": {
+      "samples": 601,
+      "max_coordinate_difference": 0.006459319889870585,
+      "aligned_rmse_over_path_length": 1.0081622256984924e-06,
+      "alignment_scale": 1.0000004215973533
+    }
+  }
+}

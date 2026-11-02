@@ -14,17 +14,21 @@ adapted to a trajectory task: the output is one `submission.json` bundle, not pe
 
 ## Hand-in status
 
-This is a review draft. Cached replay and rebuild were verified again on 2026-11-01: both exactly match the supplied 10.83% artifact. **Full reproduction from released frames alone is not complete**, because video mode still consumes retained speed, IR heading and initial gauge signals. See `HANDIN_STATUS.txt` and `evidence/handin_cpu_verification.json`. Yuanjun Chai email/OpenReview fields must be completed before hand-in. Entry 19406 and uploader 2038 were verified on the public leaderboard.
+This is a review draft. Cached replay and rebuild were verified again on 2026-11-01: both exactly match the supplied 10.83% artifact. A new **raw-video pipeline is implemented** in [`raw_run.py`](raw_run.py), including legacy speed, infrared heading and the initial gauge. A full-path FLIR pilot passed; the 20-clip raw verification is running. This remains distinct from the older hybrid `video` mode. See `HANDIN_STATUS.txt` and `evidence/handin_cpu_verification.json`. Yuanjun Chai email/OpenReview fields must be completed before hand-in. Entry 19406 and uploader 2038 were verified on the public leaderboard.
 
 ## Repository and artifact access
 
 - Code: https://github.com/heejaeee/TideGraph-MaCVi2027-VO (public)
 - Team artifacts: https://huggingface.co/hjkwon1996/TideGraph-MaCVi2027-VO (public)
 - Entry: **19406**, supplied by the team; reported score **10.83%**.
-- No external pretrained neural checkpoint or original video is mirrored in either repository.
-- Code and team artifacts are public; no login or collaborator invitation is required. The separate upstream VGGT-Omega checkpoint still has its own access conditions.
+- A verified checkpoint companion ZIP is hosted on Hugging Face with component-specific license copies and hashes. It contains Omega, Pi3X, DPVO and the speed regressor. Original videos and reference trajectories are not mirrored.
+- Code and team artifacts are public. The checkpoint mirror retains all upstream noncommercial research terms; the upstream Omega download separately uses manual access approval.
 
 `artifacts.lock.json` pins the Hugging Face commit and SHA-256 of both downloads and every extracted cache file. Cached estimates and the TRAIN-fitted model are restored to their original paths before running the existing code.
+
+## Raw videos to submission JSON
+
+See [`RAW_REPRODUCTION.md`](RAW_REPRODUCTION.md) for the CUDA environment, pinned weight setup, one-command inference and independent comparison. A verified four-model companion ZIP can be supplied to setup with `--checkpoint-zip`; other required models are fetched from their pinned upstream sources. No estimated-signal artifact or TRAIN/VAL data is needed for raw inference.
 
 ## Quick start (CPU cached verification; no GPU required)
 
@@ -46,9 +50,10 @@ python repro_check.py . --run --input /path/to/lookout-vo-test-v0.1 --mode rebui
 |---|---|---|
 | `replay` | 19226 heading/speed signals (`data/final_signals`) + final wide settings | **byte-identical** (SHA-256 above) |
 | `rebuild` | Omega window rotations (`data/omega`) + retained signals (`data/inputs`) | max 4.9e-11 m |
+| `raw` | raw videos plus frozen weights; regenerates every motion input | representative full-path FLIR pilot verified; full 20-clip verification pending |
 | `video` | raw test videos → VGGT-Omega on GPU → `rebuild` | Omega rotations within 0.06° median / 0.32° worst of `data/omega`; drift vs the uploaded trajectories 0.080 % mean, 0.137 % max (RTX 4090, 16 min; `evidence/video_rerun_rtx4090.json`) |
 
-These are the three ways to call `run.py`:
+The legacy modes can be called through `run.py`; the new raw mode is documented separately:
 
 ```python
 from run import main
@@ -77,7 +82,7 @@ Docker files are in `docker/`: `Dockerfile` for CPU replay/rebuild, `Dockerfile.
 
 ## Reproducibility boundary
 
-Only the **heading** stages are recomputed here. These signals are downloaded from the pinned Hugging Face snapshot as intermediate
+In the older `video` mode, only the **Omega heading** stages are recomputed. The new `raw` mode recomputes all the following signals. For replay/rebuild/video, these signals are downloaded from the pinned Hugging Face snapshot as intermediate
 estimates in `data/inputs`:
 
 * wide relative speed (water-surface flow + TRAIN-fitted regressor),
@@ -104,7 +109,7 @@ data/inputs/           retained legacy speed, initial heading, IR heading per cl
 data/final_signals/    heading/speed of entry 19226 (replay)
 data/metadata/         released test manifest, timestamps, frame indices (no references)
 submission/            the exact uploaded submission.json + SHA256SUMS
-weights/               weights_link.yaml (Omega checkpoint, gated, not redistributed)
+weights/               original upstream Omega link; public companion in configs/checkpoint_bundle.json
 evidence/              selection history, provenance and validation records
 legacy/                original research scripts, speed-prior training code, 19226 package
 third_party_licenses/  upstream licences and dataset terms

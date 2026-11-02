@@ -70,7 +70,9 @@ the released frame indices and timestamps; coverage is 100 % and the largest gap
   videos, then runs `rebuild`. The rotations land within 0.06° (median) / 0.32° (worst) of `data/omega`.
   Scored with the official metric against the uploaded trajectories, they differ by 0.080 % mean drift
   (0.137 % max). That is a self-consistency proxy, not a test score.
-* **Boundary:** the wide speed signal, the FLIR speed profiles, the IR heading and the initial
-  heading gauge are retained intermediate estimates in `data/inputs`. They are not regenerated
-  from video by a verified single command. The original code is in `legacy/` for review.
+* `raw`: regenerates all motion inputs from released videos and frozen weights, including
+  the speed profiles, IR heading and initial gauge. A complete FLIR clip pilot passed;
+  full 20-clip verification is running. See `RAW_REPRODUCTION.md`.
+* **Legacy-mode boundary:** replay/rebuild/video retain speed, IR heading and the initial
+  heading gauge from `data/inputs`. They do not verify full raw-video reproduction.
 * Original hardware: RTX 5080, torch 2.7.1+cu128. Release re-run: RTX 4090, torch 2.10.0+cu128.
