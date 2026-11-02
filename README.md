@@ -14,7 +14,7 @@ adapted to a trajectory task: the output is one `submission.json` bundle, not pe
 
 ## Hand-in status
 
-This is a review draft. Cached replay and rebuild were verified again on 2026-11-01: both exactly match the supplied 10.83% artifact. A new **raw-video pipeline is implemented** in [`raw_run.py`](raw_run.py), including legacy speed, infrared heading and the initial gauge. A full-path FLIR pilot passed; the 20-clip raw verification is running. This remains distinct from the older hybrid `video` mode. See `HANDIN_STATUS.txt` and `evidence/handin_cpu_verification.json`. Yuanjun Chai email/OpenReview fields must be completed before hand-in. Entry 19406 and uploader 2038 were verified on the public leaderboard.
+This is a review draft. Cached replay and rebuild were verified again on 2026-11-01: both exactly match the supplied 10.83% artifact. A new **raw-video pipeline is implemented** in [`raw_run.py`](raw_run.py), including legacy speed, infrared heading and the initial gauge. A full-path FLIR pilot passed; the 20-clip raw verification is running. This remains distinct from the older hybrid `video` mode. See `HANDIN_STATUS.txt` and `evidence/handin_cpu_verification.json`. All seven author contact and OpenReview records are complete. Entry 19406 and uploader 2038 were verified on the public leaderboard.
 
 ## Repository and artifact access
 
@@ -134,7 +134,7 @@ VGGT-Omega and the other upstream models keep their own terms; see `THIRD_PARTY_
 
 ## Team metadata
 
-Registered team: UW-IPL. Team leader: HeeJae Kwon, University of Washington, contact supplied privately, macvi.org user ID 2038. HeeJae Kwon OpenReview: https://openreview.net/profile?id=~HeeJae_Kwon1. The ordered author record is in `configs/author_metadata.json`; author order is confirmed and missing contact/profile fields are explicitly null.
+Registered team: UW-IPL. Team leader: HeeJae Kwon, University of Washington, contact supplied privately, macvi.org user ID 2038. HeeJae Kwon OpenReview: https://openreview.net/profile?id=~HeeJae_Kwon1. The ordered author record is in `configs/author_metadata.json`; author order is confirmed and all seven email/OpenReview records are complete.
 
 ## Published-release verification
 
