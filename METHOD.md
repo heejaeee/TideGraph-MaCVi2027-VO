@@ -1,7 +1,7 @@
 # Method description
 
-Team: TideGraph   Challenge: Maritime Visual Odometry (MaCVi @ WACV 2027)
-Reported final entry: submission ID `TODO`, mean drift **10.83 %**, all 20 test clips scored,
+Team: UW-IPL; method: TideGraph   Challenge: Maritime Visual Odometry (MaCVi @ WACV 2027)
+Reported final entry: submission ID `19406`, mean drift **10.83 %**, all 20 test clips scored,
 `submission.json` SHA-256 `41133948ef57731a18df59c66d919179be3a66730725109ac6621c2b8953bc35`.
 
 ## Approach
@@ -30,7 +30,7 @@ are identical to 19226.
 
 * No network was trained or fine-tuned for the heading stage. VGGT-Omega is used frozen.
 * The relative-speed regressor (`legacy/speed_prior_flow_v3`, sklearn HistGradientBoosting) was
-  trained on the **68 official TRAIN clips only**, with grouped cross-validation on TRAIN.
+  trained on the **68 official TRAIN clips only**, with three-fold clip-group cross-validation on TRAIN (not verified boat folds).
 * Validation references (24 official VAL clips, plus TRAIN clips with key ≥ 060 used as extra
   offline validation; see `configs/dev_split.json`) were used for development and selection only.
   The models never trained on VAL or TEST videos.
@@ -40,7 +40,7 @@ are identical to 19226.
     Depth Anything 3 metric), VGGT 1B, Pi3X, DPVO / static DPV-SLAM, AnyCalib, CoTracker3 offline.
   * Mask2Former Swin-Tiny ADE20K (`facebook/mask2former-swin-tiny-ade-semantic`). Land / water masks.
   * Exact commits are in `configs/upstream_revisions.json` and `configs/model_inventory.json`.
-* No external datasets were used.
+* No additional raw dataset was used to fit the retained speed regressor. External pretraining is used through the listed checkpoints.
 
 ## Settings chosen with leaderboard feedback (disclosed)
 
@@ -59,13 +59,13 @@ the full record:
 
 The pipeline uses 2 Hz sampling at the released timestamps, the `active_rect` crop, and a resize
 to width 960 (INTER_AREA for wide, INTER_LINEAR for FLIR). Omega runs in fp32 with
-`torch.manual_seed(0)`. There is no test-time augmentation or ensembling. The output contains only
+`torch.manual_seed(0)`. There is no test-time augmentation in the final Omega stage. Overlapping-window rotation fusion and the retained legacy multi-model signals are disclosed above. The output contains only
 the released frame indices and timestamps; coverage is 100 % and the largest gap is 0.82 s.
 
 ## Reproduction notes
 
-* `replay` (CPU, < 2 s): regenerates the uploaded `submission.json` **byte-identically**.
-* `rebuild` (CPU, < 2 s): recomputes every Omega heading from `data/omega` and comes within ≤ 5e-11 m.
+* `replay` (CPU): regenerates the uploaded `submission.json` **byte-identically**.
+* `rebuild` (CPU): recomputes visible headings from cached Omega windows; the latest verification reproduces identical JSON bytes. Runtime depends on environment.
 * `video` (GPU, 7.2 GB peak, about 16 min on an RTX 4090): regenerates the Omega windows from the raw test
   videos, then runs `rebuild`. The rotations land within 0.06° (median) / 0.32° (worst) of `data/omega`.
   Scored with the official metric against the uploaded trajectories, they differ by 0.080 % mean drift

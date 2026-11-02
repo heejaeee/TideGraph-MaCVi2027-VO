@@ -1,0 +1,24 @@
+{
+  "code_commit": "9fcb30fa22b88ef1f841f2ec9b61d6edf6894643",
+  "fresh_clone": true,
+  "fresh_python_venv": true,
+  "fresh_hf_cache": true,
+  "hf_revision": "4c6641e990b860d72f5715927c1fa50a33636fab",
+  "raw_video_pipeline_verified": false,
+  "modes": {
+    "replay": {
+      "clips": 20,
+      "sha256": "41133948ef57731a18df59c66d919179be3a66730725109ac6621c2b8953bc35",
+      "byte_identical": true,
+      "max_position_diff_m": 0.0,
+      "elapsed_seconds": 0.6627852828241885
+    },
+    "rebuild": {
+      "clips": 20,
+      "sha256": "41133948ef57731a18df59c66d919179be3a66730725109ac6621c2b8953bc35",
+      "byte_identical": true,
+      "max_position_diff_m": 0.0,
+      "elapsed_seconds": 3.0739524462260306
+    }
+  }
+}

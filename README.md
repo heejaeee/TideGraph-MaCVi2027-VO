@@ -131,3 +131,7 @@ VGGT-Omega and the other upstream models keep their own terms; see `THIRD_PARTY_
 ## Team metadata
 
 Registered team: UW-IPL. Team leader: HeeJae Kwon, University of Washington, contact supplied privately, macvi.org user ID 2038. HeeJae Kwon OpenReview: https://openreview.net/profile?id=~HeeJae_Kwon1. The ordered author record is in `configs/author_metadata.json`; author order is confirmed and missing contact/profile fields are explicitly null.
+
+## Published-release verification
+
+A fresh GitHub clone, fresh Python 3.10 environment and fresh Hugging Face download cache reproduced all 20 clips with zero position difference and the exact entry SHA-256 in both replay and rebuild modes. See `evidence/fresh_clone_verification.json`. The raw-video reproduction boundary above still applies.

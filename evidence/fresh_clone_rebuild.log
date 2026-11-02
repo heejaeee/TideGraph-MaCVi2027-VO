@@ -1,0 +1,76 @@
+layout
+  OK   README.md
+  OK   METHOD.md
+  OK   repro.yaml
+  OK   requirements.txt
+  OK   run.py
+  OK   repro_check.py
+  OK   LICENSE
+  OK   configs/final_entry.json
+  OK   submission/submission.json
+  OK   weights/weights_link.yaml
+  OK   src/tidegraph/core.py
+  OK   src/tidegraph/pipeline.py
+  OK   src/tidegraph/omega_windows.py
+  OK   src/tidegraph/starter/public_dataset.py
+  OK   data/metadata/clip_index.json
+  OK   data/metadata/release_manifest.json
+  OK   docker/Dockerfile
+  OK   data/omega/windows/
+  OK   data/inputs/
+  OK   data/final_signals/
+  OK   data/metadata/timing/
+  OK   no absolute paths in run.py / src/
+repro.yaml
+  OK   team: UW-IPL
+  OK   track: maritime-visual-odometry
+  OK   submission_id: 19406
+  OK   contact: contact supplied privately
+weights
+  OK   weights_link.yaml url
+  OK   weights_link.yaml sha256
+  OK   weights_link.yaml filename
+  OK   checkpoint not downloaded (only mode=video needs it)
+run.py
+  OK   main(model_dir, input_dir, output_dir, device, ...)
+submission/submission.json
+  OK   uploaded bundle: 0.69 MiB (limit 64 MiB)
+  OK   uploaded bundle: 20 clips in clip_order
+  OK   uploaded bundle: minimum gap-aware coverage 1.0000 (gate 0.95, gaps <= 1 s)
+  OK   sha256 41133948ef57731a18df59c66d919179be3a66730725109ac6621c2b8953bc35
+run.main (mode=rebuild)
+rebuild clip_092 wide samples=601 coverage=1.0000
+rebuild clip_093 flir-VIS samples=601 coverage=1.0000
+rebuild clip_094 flir-VIS samples=601 coverage=1.0000
+rebuild clip_095 flir-VIS samples=600 coverage=1.0000
+rebuild clip_096 flir-VIS samples=601 coverage=1.0000
+rebuild clip_097 wide samples=596 coverage=1.0000
+rebuild clip_098 flir-VIS samples=600 coverage=1.0000
+rebuild clip_099 flir-VIS samples=601 coverage=1.0000
+rebuild clip_100 flir-IR samples=602 coverage=1.0000
+Polishing not needed - no active set detected at optimal point
+rebuild clip_101 wide samples=601 coverage=1.0000
+rebuild clip_103 wide samples=601 coverage=1.0000
+rebuild clip_104 flir-VIS samples=600 coverage=1.0000
+rebuild clip_105 wide samples=601 coverage=1.0000
+rebuild clip_106 wide samples=601 coverage=1.0000
+rebuild clip_107 flir-VIS samples=600 coverage=1.0000
+rebuild clip_108 flir-VIS samples=602 coverage=1.0000
+rebuild clip_109 flir-VIS samples=602 coverage=1.0000
+rebuild clip_110 wide samples=601 coverage=1.0000
+rebuild clip_111 flir-VIS samples=601 coverage=1.0000
+rebuild clip_112 wide samples=600 coverage=1.0000
+{
+ "mode": "rebuild",
+ "clips": 20,
+ "sha256": "41133948ef57731a18df59c66d919179be3a66730725109ac6621c2b8953bc35",
+ "byte_identical": true,
+ "max_position_diff_m": 0.0,
+ "elapsed_seconds": 3.0739524462260306
+}
+  OK   regenerated bundle: 0.69 MiB (limit 64 MiB)
+  OK   regenerated bundle: 20 clips in clip_order
+  OK   regenerated bundle: minimum gap-aware coverage 1.0000 (gate 0.95, gaps <= 1 s)
+  OK   regenerated bundle is byte-identical to the upload (41133948ef57731a...)
+
+ALL CHECKS PASSED
