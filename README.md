@@ -14,9 +14,9 @@ adapted to a trajectory task: the output is one `submission.json` bundle, not pe
 
 ## Hand-in status
 
-Current [factsheet PDF](docs/factsheet.pdf), [LaTeX source ZIP](docs/factsheet_LaTeX.zip) and [unsent organizer email](docs/email_to_organizers.txt). The document explicitly distinguishes completed checks from the remaining full raw run.
+Current [factsheet PDF](docs/factsheet.pdf), [LaTeX source ZIP](docs/factsheet_LaTeX.zip) and [unsent organizer email](docs/email_to_organizers.txt). The document includes the completed full raw-run comparison and its limitations.
 
-This is a review draft. Cached replay and rebuild were verified again on 2026-11-01: both exactly match the supplied 10.83% artifact. A new **raw-video pipeline is implemented** in [`raw_run.py`](raw_run.py), including legacy speed, infrared heading and the initial gauge. A full-path FLIR pilot passed; the 20-clip raw verification is running. This remains distinct from the older hybrid `video` mode. See `HANDIN_STATUS.txt` and `evidence/handin_cpu_verification.json`. All seven author contact and OpenReview records are complete. Entry 19406 and uploader 2038 were verified on the public leaderboard.
+A full raw-video run completed all 20 trajectories from the released TEST videos and frozen weights. The mean prediction-to-prediction drift proxy is 0.005156% (maximum 0.081205%), and the maximum aligned RMSE/path-length ratio is 0.000225228. This is self-consistency against the submitted estimates, not hidden-TEST rescoring. Fresh GPU inference is not byte-identical. See `evidence/raw_video_all20.json` and `RAW_REPRODUCTION.md`. Cached replay and rebuild remain byte-identical. All seven author contact and OpenReview records are complete, and the team confirmed VO registration. The official server JSON verifies the submitted SHA-256, 20/20 qualified clips and 100% coverage. The submission factsheet is [docs/factsheet.pdf](docs/factsheet.pdf).
 
 ## Repository and artifact access
 
@@ -52,7 +52,7 @@ python repro_check.py . --run --input /path/to/lookout-vo-test-v0.1 --mode rebui
 |---|---|---|
 | `replay` | 19226 heading/speed signals (`data/final_signals`) + final wide settings | **byte-identical** (SHA-256 above) |
 | `rebuild` | Omega window rotations (`data/omega`) + retained signals (`data/inputs`) | **byte-identical** in the fresh release verification; historical alternate environment differed by at most 4.9e-11 coordinate units |
-| `raw` | raw videos plus frozen weights; regenerates every motion input | representative full-path FLIR pilot verified; full 20-clip verification pending |
+| `raw` | raw videos plus frozen weights; regenerates every motion input | 20/20 completed; self-consistency drift 0.005156% mean, 0.081205% max; not official rescoring |
 | `video` | raw test videos → VGGT-Omega on GPU → `rebuild` | Omega rotations within 0.06° median / 0.32° worst of `data/omega`; drift vs the uploaded trajectories 0.080 % mean, 0.137 % max (RTX 4090, 16 min; `evidence/video_rerun_rtx4090.json`) |
 
 The legacy modes can be called through `run.py`; the new raw mode is documented separately:

@@ -6,9 +6,9 @@ speed regressor. It does not use `data/inputs`, `data/final_signals`, `data/omeg
 the archived submission, or the Hugging Face estimated-signals ZIP during inference.
 TRAIN/VAL videos and reference trajectories are not required for inference.
 
-Integration status: a representative raw-video FLIR clip has passed all stages
-(evidence/raw_video_clip093.json). The full 20-clip run is in progress. The existing replay/rebuild verification remains separate.
-Do not interpret a successful cached replay as verification of this path.
+A full raw-video run completed all 20 trajectories from the released TEST videos and frozen weights. The mean prediction-to-prediction drift proxy is 0.005156% (maximum 0.081205%), and the maximum aligned RMSE/path-length ratio is 0.000225228. This is self-consistency against the submitted estimates, not hidden-TEST rescoring. Fresh GPU inference is not byte-identical. See `evidence/raw_video_all20.json` and `RAW_REPRODUCTION.md`.
+
+The fresh-environment imports, CUDA operators and raw-video CPU smoke are recorded in `evidence/clean_raw_environment.json`.
 
 ## Setup
 
@@ -44,6 +44,13 @@ sources. An existing DPVO checkpoint can also be supplied with
 The R3 scale-consistency patch and DPVO PyTorch compatibility patch in `configs/`
 are applied to the pinned upstream sources. These preserve fixes present in the
 original execution environment. No pretrained weights are changed.
+
+The verification host used a Conda-based Python with an older C++ runtime RPATH.
+Its shell preloaded the system GCC 13 `libstdc++.so.6` and supplied the matching
+NVML library for its installed driver. These were host-specific runtime fixes,
+not model changes. On a normal system Python with a matching NVIDIA driver/toolkit,
+they are not additional pipeline steps. See `evidence/clean_raw_environment.json`
+for the exact verification scope.
 
 ## Run
 

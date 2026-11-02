@@ -1,5 +1,5 @@
 {
-  "scope": "All fresh raw legacy motion stages complete; comparing computed inputs with archived estimates outside inference",
+  "scope": "Raw regenerated legacy motion inputs versus archived estimates; no navigation reference labels",
   "per_clip_max_absolute_difference": {
     "clip_092": {
       "times": 0.0,

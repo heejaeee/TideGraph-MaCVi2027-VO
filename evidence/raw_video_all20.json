@@ -1,0 +1,153 @@
+{
+  "self_consistency_mean_drift_pct": 0.0051560695527321215,
+  "self_consistency_scored_clips": 20,
+  "self_consistency_metric_note": "Starter drift with submitted predictions as reference, using 100-800 lengths in the arbitrary units of the submitted trajectory. Not a hidden-reference challenge score.",
+  "scope": "Self-consistency with submitted estimated trajectories; no TEST ground truth or official rescoring",
+  "clips": 20,
+  "complete": true,
+  "byte_identical": false,
+  "generated_sha256": "96ab5ffa226edb9f411cb680502145c2b541d4d3026ea46f1aa21b2a2c400c95",
+  "submitted_sha256": "41133948ef57731a18df59c66d919179be3a66730725109ac6621c2b8953bc35",
+  "per_clip": {
+    "clip_092": {
+      "self_consistency_drift_pct": 0.00025963435305324437,
+      "samples": 601,
+      "max_coordinate_difference": 0.002338815563497576,
+      "aligned_rmse_over_path_length": 9.147622580358595e-07,
+      "alignment_scale": 1.0000008667752813
+    },
+    "clip_093": {
+      "self_consistency_drift_pct": 0.00038000882955996086,
+      "samples": 601,
+      "max_coordinate_difference": 0.006459319889870585,
+      "aligned_rmse_over_path_length": 1.0081622256984924e-06,
+      "alignment_scale": 1.0000004215973533
+    },
+    "clip_094": {
+      "self_consistency_drift_pct": 0.0004404199307826093,
+      "samples": 601,
+      "max_coordinate_difference": 0.004188378687331351,
+      "aligned_rmse_over_path_length": 1.2303400758415354e-06,
+      "alignment_scale": 0.9999976274445087
+    },
+    "clip_095": {
+      "self_consistency_drift_pct": 0.08120521252605334,
+      "samples": 600,
+      "max_coordinate_difference": 0.34985544985420347,
+      "aligned_rmse_over_path_length": 0.0002252275038922657,
+      "alignment_scale": 0.9988109394718853
+    },
+    "clip_096": {
+      "self_consistency_drift_pct": 8.92544905032836e-05,
+      "samples": 601,
+      "max_coordinate_difference": 0.000744572843288438,
+      "aligned_rmse_over_path_length": 2.773028034338649e-07,
+      "alignment_scale": 1.0000001212487823
+    },
+    "clip_097": {
+      "self_consistency_drift_pct": 0.0002873285429026044,
+      "samples": 596,
+      "max_coordinate_difference": 0.0017944203320894303,
+      "aligned_rmse_over_path_length": 7.45458103304586e-07,
+      "alignment_scale": 0.9999998411733483
+    },
+    "clip_098": {
+      "self_consistency_drift_pct": 5.5520255718878415e-05,
+      "samples": 600,
+      "max_coordinate_difference": 0.001051116625603754,
+      "aligned_rmse_over_path_length": 1.49320051162016e-07,
+      "alignment_scale": 0.9999998651451856
+    },
+    "clip_099": {
+      "self_consistency_drift_pct": 0.00018924230393947805,
+      "samples": 601,
+      "max_coordinate_difference": 0.0014704657290423029,
+      "aligned_rmse_over_path_length": 4.85307657286054e-07,
+      "alignment_scale": 1.0000008954101824
+    },
+    "clip_100": {
+      "self_consistency_drift_pct": 1.3464407803793359e-13,
+      "samples": 602,
+      "max_coordinate_difference": 0.0,
+      "aligned_rmse_over_path_length": 3.8615486855204264e-16,
+      "alignment_scale": 1.0000000000000007
+    },
+    "clip_101": {
+      "self_consistency_drift_pct": 0.0010779526704090647,
+      "samples": 601,
+      "max_coordinate_difference": 0.008059438047212097,
+      "aligned_rmse_over_path_length": 2.8790604079335757e-06,
+      "alignment_scale": 0.9999966001054824
+    },
+    "clip_103": {
+      "self_consistency_drift_pct": 0.00024481173386219437,
+      "samples": 601,
+      "max_coordinate_difference": 0.0004600821350569384,
+      "aligned_rmse_over_path_length": 6.36851749691268e-07,
+      "alignment_scale": 1.000000049476777
+    },
+    "clip_104": {
+      "self_consistency_drift_pct": 0.001229557023400808,
+      "samples": 600,
+      "max_coordinate_difference": 0.008182755875907333,
+      "aligned_rmse_over_path_length": 3.180012556743934e-06,
+      "alignment_scale": 0.9999940495156128
+    },
+    "clip_105": {
+      "self_consistency_drift_pct": 0.0001418531926478234,
+      "samples": 601,
+      "max_coordinate_difference": 0.002892709663711912,
+      "aligned_rmse_over_path_length": 3.8193845467352655e-07,
+      "alignment_scale": 1.0000000795261805
+    },
+    "clip_106": {
+      "self_consistency_drift_pct": 5.145516712359569e-05,
+      "samples": 601,
+      "max_coordinate_difference": 0.0005476065702995081,
+      "aligned_rmse_over_path_length": 1.7768899200305254e-07,
+      "alignment_scale": 0.9999999790408454
+    },
+    "clip_107": {
+      "self_consistency_drift_pct": 0.008148146052957236,
+      "samples": 600,
+      "max_coordinate_difference": 0.02374321424784398,
+      "aligned_rmse_over_path_length": 2.1571496013494764e-05,
+      "alignment_scale": 1.000158481224656
+    },
+    "clip_108": {
+      "self_consistency_drift_pct": 0.0007772054173213418,
+      "samples": 602,
+      "max_coordinate_difference": 0.0037272639312853073,
+      "aligned_rmse_over_path_length": 1.9753825936032887e-06,
+      "alignment_scale": 0.9999969632438095
+    },
+    "clip_109": {
+      "self_consistency_drift_pct": 0.0003044970884648731,
+      "samples": 602,
+      "max_coordinate_difference": 0.0014113383443827843,
+      "aligned_rmse_over_path_length": 8.048876017316606e-07,
+      "alignment_scale": 0.9999978594207496
+    },
+    "clip_110": {
+      "self_consistency_drift_pct": 0.00026668560567232714,
+      "samples": 601,
+      "max_coordinate_difference": 0.0013192172462908047,
+      "aligned_rmse_over_path_length": 7.709259072313024e-07,
+      "alignment_scale": 0.9999994124891646
+    },
+    "clip_111": {
+      "self_consistency_drift_pct": 0.007818309901585593,
+      "samples": 601,
+      "max_coordinate_difference": 0.021435326823933565,
+      "aligned_rmse_over_path_length": 1.835964835855537e-05,
+      "alignment_scale": 0.99988730101108
+    },
+    "clip_112": {
+      "self_consistency_drift_pct": 0.000154295968549551,
+      "samples": 600,
+      "max_coordinate_difference": 0.0005578371583752073,
+      "aligned_rmse_over_path_length": 3.4469683398392497e-07,
+      "alignment_scale": 0.9999997312229986
+    }
+  }
+}

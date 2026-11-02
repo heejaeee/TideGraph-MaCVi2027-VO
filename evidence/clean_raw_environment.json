@@ -62,5 +62,13 @@
     "pin torch and torchvision in raw requirements",
     "install wheel before DPVO build",
     "import torch before loading CUDA extensions"
-  ]
+  ],
+  "host_environment_notes": {
+    "fresh_environment_scope": "Fresh Python venv, not a fresh operating-system image",
+    "nvidia_kernel_driver": "NVRM version: NVIDIA UNIX Open Kernel Module for x86_64  595.91.07  Release Build  (dvs-builder@U22-I3-B08-02-2)  Wed Jul 29 03:01:16 UTC 2026",
+    "cuda_toolkit": "12.8",
+    "cuda_architecture": "12.0",
+    "compiler_runtime": "System GCC 13 libstdc++.so.6 was preloaded because the host base Conda Python has an older C++ runtime RPATH",
+    "nvml": "Host-specific matching NVML library override; does not alter model code or weights"
+  }
 }

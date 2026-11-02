@@ -1,0 +1,332 @@
+{
+  "clips": 20,
+  "checks": [
+    {
+      "key": "clip_092",
+      "mode": "wide",
+      "samples": 601,
+      "coverage": 1.0,
+      "max_gap_s": 0.5947999999999993,
+      "solver": {
+        "converged": true,
+        "iterations": 900,
+        "projected_gradient_max": 3.2371438862810464e-11,
+        "solver": "OSQP_dual",
+        "solver_version": "1.1.3",
+        "fallback": false,
+        "yaw_gain": 1.3
+      }
+    },
+    {
+      "key": "clip_093",
+      "mode": "flir-VIS",
+      "samples": 601,
+      "coverage": 1.0,
+      "max_gap_s": 0.5362999999999971,
+      "solver": {
+        "edges": 8916,
+        "iterations": 2,
+        "downweighted_fraction": 0.0,
+        "residual_median_deg": 0.03496185360181864,
+        "residual_p95_deg": 0.12389506260457718,
+        "final_step_rad": 0.0,
+        "converged": true,
+        "group": "A"
+      }
+    },
+    {
+      "key": "clip_094",
+      "mode": "flir-VIS",
+      "samples": 601,
+      "coverage": 1.0,
+      "max_gap_s": 0.5834000000000117,
+      "solver": {
+        "edges": 8916,
+        "iterations": 2,
+        "downweighted_fraction": 0.0,
+        "residual_median_deg": 0.014791050087142567,
+        "residual_p95_deg": 0.0718915431120851,
+        "final_step_rad": 0.0,
+        "converged": true,
+        "group": "A"
+      }
+    },
+    {
+      "key": "clip_095",
+      "mode": "flir-VIS",
+      "samples": 600,
+      "coverage": 1.0,
+      "max_gap_s": 0.6427,
+      "solver": {
+        "edges": 8880,
+        "iterations": 2,
+        "downweighted_fraction": 0.0,
+        "residual_median_deg": 0.008018850592585293,
+        "residual_p95_deg": 0.026752636244505478,
+        "final_step_rad": 0.0,
+        "converged": true,
+        "group": "A"
+      }
+    },
+    {
+      "key": "clip_096",
+      "mode": "flir-VIS",
+      "samples": 601,
+      "coverage": 1.0,
+      "max_gap_s": 0.6377000000000237,
+      "solver": {
+        "edges": 8916,
+        "iterations": 2,
+        "downweighted_fraction": 0.0,
+        "residual_median_deg": 0.044506511259104285,
+        "residual_p95_deg": 0.1786446679114483,
+        "final_step_rad": 0.0,
+        "converged": true,
+        "group": "B"
+      }
+    },
+    {
+      "key": "clip_097",
+      "mode": "wide",
+      "samples": 596,
+      "coverage": 1.0,
+      "max_gap_s": 0.8240000000000123,
+      "solver": {
+        "converged": true,
+        "iterations": 1325,
+        "projected_gradient_max": 1.0842171604963369e-10,
+        "solver": "OSQP_dual",
+        "solver_version": "1.1.3",
+        "fallback": false,
+        "yaw_gain": 0.95
+      }
+    },
+    {
+      "key": "clip_098",
+      "mode": "flir-VIS",
+      "samples": 600,
+      "coverage": 1.0,
+      "max_gap_s": 0.6612999999999829,
+      "solver": {
+        "edges": 8880,
+        "iterations": 8,
+        "downweighted_fraction": 0.0033783783783783786,
+        "residual_median_deg": 0.01084062124718991,
+        "residual_p95_deg": 0.13088030587701943,
+        "final_step_rad": 2.9009572521943028e-11,
+        "converged": true,
+        "group": "A"
+      }
+    },
+    {
+      "key": "clip_099",
+      "mode": "flir-VIS",
+      "samples": 601,
+      "coverage": 1.0,
+      "max_gap_s": 0.5652000000000044,
+      "solver": {
+        "edges": 8916,
+        "iterations": 2,
+        "downweighted_fraction": 0.0,
+        "residual_median_deg": 0.03196058966633125,
+        "residual_p95_deg": 0.12643216631449708,
+        "final_step_rad": 0.0,
+        "converged": true,
+        "group": "B"
+      }
+    },
+    {
+      "key": "clip_100",
+      "mode": "flir-IR",
+      "samples": 602,
+      "coverage": 1.0,
+      "max_gap_s": 0.5628999999999991,
+      "solver": {}
+    },
+    {
+      "key": "clip_101",
+      "mode": "wide",
+      "samples": 601,
+      "coverage": 1.0,
+      "max_gap_s": 0.6299999999999955,
+      "solver": {
+        "converged": true,
+        "iterations": 100,
+        "projected_gradient_max": 7.105427357601002e-15,
+        "solver": "OSQP_dual",
+        "solver_version": "1.1.3",
+        "fallback": false,
+        "yaw_gain": 0.95
+      }
+    },
+    {
+      "key": "clip_103",
+      "mode": "wide",
+      "samples": 601,
+      "coverage": 1.0,
+      "max_gap_s": 0.5479166666666515,
+      "solver": {
+        "converged": true,
+        "iterations": 875,
+        "projected_gradient_max": 1.0374989756201103e-10,
+        "solver": "OSQP_dual",
+        "solver_version": "1.1.3",
+        "fallback": false,
+        "yaw_gain": 1.3
+      }
+    },
+    {
+      "key": "clip_104",
+      "mode": "flir-VIS",
+      "samples": 600,
+      "coverage": 1.0,
+      "max_gap_s": 0.6419999999999995,
+      "solver": {
+        "edges": 8880,
+        "iterations": 2,
+        "downweighted_fraction": 0.0,
+        "residual_median_deg": 0.05709699588389589,
+        "residual_p95_deg": 0.2333225300608541,
+        "final_step_rad": 0.0,
+        "converged": true,
+        "group": "B"
+      }
+    },
+    {
+      "key": "clip_105",
+      "mode": "wide",
+      "samples": 601,
+      "coverage": 1.0,
+      "max_gap_s": 0.6020000000000003,
+      "solver": {
+        "converged": true,
+        "iterations": 1675,
+        "projected_gradient_max": 3.8162788484896737e-07,
+        "solver": "OSQP_dual",
+        "solver_version": "1.1.3",
+        "fallback": false,
+        "yaw_gain": 0.95
+      }
+    },
+    {
+      "key": "clip_106",
+      "mode": "wide",
+      "samples": 601,
+      "coverage": 1.0,
+      "max_gap_s": 0.5380000000000109,
+      "solver": {
+        "converged": true,
+        "iterations": 1625,
+        "projected_gradient_max": 2.708253390437676e-07,
+        "solver": "OSQP_dual",
+        "solver_version": "1.1.3",
+        "fallback": false,
+        "yaw_gain": 0.95
+      }
+    },
+    {
+      "key": "clip_107",
+      "mode": "flir-VIS",
+      "samples": 600,
+      "coverage": 1.0,
+      "max_gap_s": 0.6585000000000036,
+      "solver": {
+        "edges": 8880,
+        "iterations": 2,
+        "downweighted_fraction": 0.0,
+        "residual_median_deg": 0.017953605617428137,
+        "residual_p95_deg": 0.08597258933501546,
+        "final_step_rad": 0.0,
+        "converged": true,
+        "group": "B"
+      }
+    },
+    {
+      "key": "clip_108",
+      "mode": "flir-VIS",
+      "samples": 602,
+      "coverage": 1.0,
+      "max_gap_s": 0.6436999999999955,
+      "solver": {
+        "edges": 8925,
+        "iterations": 2,
+        "downweighted_fraction": 0.0,
+        "residual_median_deg": 0.02073858335070913,
+        "residual_p95_deg": 0.07140190786512246,
+        "final_step_rad": 0.0,
+        "converged": true,
+        "group": "A"
+      }
+    },
+    {
+      "key": "clip_109",
+      "mode": "flir-VIS",
+      "samples": 602,
+      "coverage": 1.0,
+      "max_gap_s": 0.6691000000000003,
+      "solver": {
+        "edges": 8925,
+        "iterations": 2,
+        "downweighted_fraction": 0.0,
+        "residual_median_deg": 0.016028715565116074,
+        "residual_p95_deg": 0.058092856512556856,
+        "final_step_rad": 0.0,
+        "converged": true,
+        "group": "A"
+      }
+    },
+    {
+      "key": "clip_110",
+      "mode": "wide",
+      "samples": 601,
+      "coverage": 1.0,
+      "max_gap_s": 0.6964000000000001,
+      "solver": {
+        "converged": true,
+        "iterations": 1150,
+        "projected_gradient_max": 2.8054534695343136e-07,
+        "solver": "OSQP_dual",
+        "solver_version": "1.1.3",
+        "fallback": false,
+        "yaw_gain": 0.95
+      }
+    },
+    {
+      "key": "clip_111",
+      "mode": "flir-VIS",
+      "samples": 601,
+      "coverage": 1.0,
+      "max_gap_s": 0.5849000000000011,
+      "solver": {
+        "edges": 8916,
+        "iterations": 2,
+        "downweighted_fraction": 0.0,
+        "residual_median_deg": 0.02149721383360408,
+        "residual_p95_deg": 0.11229309581209727,
+        "final_step_rad": 0.0,
+        "converged": true,
+        "group": "B"
+      }
+    },
+    {
+      "key": "clip_112",
+      "mode": "wide",
+      "samples": 600,
+      "coverage": 1.0,
+      "max_gap_s": 0.5519999999999925,
+      "solver": {
+        "converged": true,
+        "iterations": 1075,
+        "projected_gradient_max": 3.695532768688281e-11,
+        "solver": "OSQP_dual",
+        "solver_version": "1.1.3",
+        "fallback": false,
+        "yaw_gain": 0.95
+      }
+    }
+  ],
+  "sha256": "96ab5ffa226edb9f411cb680502145c2b541d4d3026ea46f1aa21b2a2c400c95",
+  "expected_sha256": "41133948ef57731a18df59c66d919179be3a66730725109ac6621c2b8953bc35",
+  "archived_estimates_read": false,
+  "source": "raw released videos and frozen weights"
+}
