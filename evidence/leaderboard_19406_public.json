@@ -1,0 +1,16 @@
+{
+  "source_url": "https://macvi.org/leaderboard/surface/lookout/lookout-visual-odometry",
+  "checked_utc": "2026-11-02T00:33:11.991716+00:00",
+  "retrieval": "anonymous HTTP with cache-busting query; no portal login",
+  "entry_id": 19406,
+  "team": "UW-IPL",
+  "uploader_macvi_id": 2038,
+  "model": "TideGraph",
+  "drift_pct": 10.83,
+  "scored": 20,
+  "expected": 20,
+  "coverage_pct": 100.0,
+  "displayed_rank": 3,
+  "status": "Eligible",
+  "note": "Displayed public ranking; organizer reproduction validation is a separate process."
+}

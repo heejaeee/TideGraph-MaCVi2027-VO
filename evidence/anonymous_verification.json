@@ -1,0 +1,22 @@
+{
+  "anonymous_github_clone": true,
+  "anonymous_hf_download": true,
+  "network_blocked_during_cpu_inference": true,
+  "github_commit": "1b10fd77d5c9e8ee2e060bc030a46d93749b65d1",
+  "modes": {
+    "replay": {
+      "clips": 20,
+      "sha256": "41133948ef57731a18df59c66d919179be3a66730725109ac6621c2b8953bc35",
+      "byte_identical": true,
+      "max_position_diff_m": 0.0,
+      "elapsed_seconds": 0.42127420427277684
+    },
+    "rebuild": {
+      "clips": 20,
+      "sha256": "41133948ef57731a18df59c66d919179be3a66730725109ac6621c2b8953bc35",
+      "byte_identical": true,
+      "max_position_diff_m": 0.0,
+      "elapsed_seconds": 2.9991612075828016
+    }
+  }
+}

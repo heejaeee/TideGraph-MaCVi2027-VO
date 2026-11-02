@@ -14,7 +14,7 @@ adapted to a trajectory task: the output is one `submission.json` bundle, not pe
 
 ## Hand-in status
 
-This is a review draft. Cached replay and rebuild were verified again on 2026-11-01: both exactly match the supplied 10.83% artifact. **Full reproduction from released frames alone is not complete**, because video mode still consumes retained speed, IR heading and initial gauge signals. See `HANDIN_STATUS.txt` and `evidence/handin_cpu_verification.json`. The uploader ID and the remaining Yuanjun Chai contact/profile fields must be completed before hand-in.
+This is a review draft. Cached replay and rebuild were verified again on 2026-11-01: both exactly match the supplied 10.83% artifact. **Full reproduction from released frames alone is not complete**, because video mode still consumes retained speed, IR heading and initial gauge signals. See `HANDIN_STATUS.txt` and `evidence/handin_cpu_verification.json`. Yuanjun Chai email/OpenReview fields must be completed before hand-in. Entry 19406 and uploader 2038 were verified on the public leaderboard.
 
 ## Repository and artifact access
 
@@ -138,3 +138,5 @@ A fresh GitHub clone, fresh Python 3.10 environment and fresh Hugging Face downl
 ## Author metadata update
 
 The author order is confirmed. Updated emails/OpenReview profiles are in `configs/author_metadata.json` and the factsheet. Team member macvi.org IDs were recovered from the final EURS factsheet at the team's request. The separate EURS Jetson submission is not used as the VO entry identifier; VO remains 19406.
+
+Public access was tested with credentials disabled for Git and a new Hugging Face home with no token. Both downloaded-cache inference modes passed with socket connections blocked; see `evidence/anonymous_verification.json`. This verifies public delivery and offline cached assembly, not full raw-video regeneration.
