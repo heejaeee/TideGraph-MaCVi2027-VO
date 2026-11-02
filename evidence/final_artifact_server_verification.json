@@ -1,0 +1,14 @@
+{
+  "entry_id": 19406,
+  "local_submission_sha256": "41133948ef57731a18df59c66d919179be3a66730725109ac6621c2b8953bc35",
+  "supplied_release_zip_submission_sha256": "41133948ef57731a18df59c66d919179be3a66730725109ac6621c2b8953bc35",
+  "matches_supplied_release": true,
+  "server_result_json_available": true,
+  "server_submission_sha256_comparison": "Exact match",
+  "public_leaderboard_entry_and_score_confirmed": true,
+  "server_submission_sha256": "41133948ef57731a18df59c66d919179be3a66730725109ac6621c2b8953bc35",
+  "qualified": 20,
+  "minimum_observed_temporal_coverage": 1.0,
+  "max_prediction_gap_s": 0.8240000000000123,
+  "score_source": "10.83% from public leaderboard; server result JSON has eligibility and coverage but no drift field"
+}

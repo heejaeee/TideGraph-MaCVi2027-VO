@@ -2,7 +2,7 @@
 
 This is the supplied reproduction release for the **TideGraph method**, team **UW-IPL** (submission ID 19406, provided by the team) in the
 [Maritime Visual Odometry challenge](https://macvi.org/workshop/macvi27/challenges/maritime-visual-odometry).
-Its layout follows the [MaCVi 2027 reproduction template](https://github.com/CeviKle/EURS-MaCVi2027-repro-template),
+Its layout provides the code, weights and callable interface requested for VO reproduction,
 adapted to a trajectory task: the output is one `submission.json` bundle, not per-image files.
 
 | | |
@@ -142,6 +142,6 @@ A fresh GitHub clone, fresh Python 3.10 environment and fresh Hugging Face downl
 
 ## Author metadata update
 
-The author order is confirmed. Updated emails/OpenReview profiles are in `configs/author_metadata.json` and the factsheet. Team member macvi.org IDs were recovered from the final EURS factsheet at the team's request. The separate EURS Jetson submission is not used as the VO entry identifier; VO remains 19406.
+The author order is confirmed. Updated emails/OpenReview profiles are in `configs/author_metadata.json` and the factsheet. The team confirmed that all seven authors are registered VO team members. The final VO entry is 19406.
 
 Public access was tested with credentials disabled for Git and a new Hugging Face home with no token. Both downloaded-cache inference modes passed with socket connections blocked; see `evidence/anonymous_verification.json`. This verifies public delivery and offline cached assembly, not full raw-video regeneration.

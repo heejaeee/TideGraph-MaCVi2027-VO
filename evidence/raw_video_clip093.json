@@ -1,4 +1,7 @@
 {
+  "self_consistency_mean_drift_pct": 0.00038000882955996086,
+  "self_consistency_scored_clips": 1,
+  "self_consistency_metric_note": "Starter drift with submitted predictions as reference, using 100-800 lengths in the arbitrary units of the submitted trajectory. Not a hidden-reference challenge score.",
   "scope": "Self-consistency with submitted estimated trajectories; no TEST ground truth or official rescoring",
   "clips": 1,
   "complete": false,
@@ -7,6 +10,7 @@
   "submitted_sha256": "41133948ef57731a18df59c66d919179be3a66730725109ac6621c2b8953bc35",
   "per_clip": {
     "clip_093": {
+      "self_consistency_drift_pct": 0.00038000882955996086,
       "samples": 601,
       "max_coordinate_difference": 0.006459319889870585,
       "aligned_rmse_over_path_length": 1.0081622256984924e-06,

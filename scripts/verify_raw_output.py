@@ -5,9 +5,13 @@ This is a reproduction/self-consistency check, not a score on hidden TEST labels
 import argparse
 import hashlib
 import json
+import sys
 from pathlib import Path
 
 import numpy as np
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]/'src'))
+from tidegraph.starter.metrics import drift_percent
 
 
 def main():
@@ -34,11 +38,16 @@ def main():
         scale = (sv*d).sum()/max((pc*pc).sum(), 1e-12)
         aligned = scale*pc@rot+q.mean(0)
         path_length = np.linalg.norm(np.diff(q, axis=0), axis=1).sum()
-        clips[key] = dict(samples=len(p), max_coordinate_difference=float(abs(p-q).max()),
+        proxy = drift_percent(q, aligned)
+        clips[key] = dict(self_consistency_drift_pct=float(proxy) if proxy is not None and np.isfinite(proxy) else None, samples=len(p), max_coordinate_difference=float(abs(p-q).max()),
             aligned_rmse_over_path_length=float(np.sqrt(np.mean(np.sum((aligned-q)**2, axis=1)))/max(path_length, 1e-12)),
             alignment_scale=float(scale))
     sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
-    report = dict(scope='Self-consistency with submitted estimated trajectories; no TEST ground truth or official rescoring',
+    valid_proxy = [c['self_consistency_drift_pct'] for c in clips.values() if c['self_consistency_drift_pct'] is not None]
+    report = dict(self_consistency_mean_drift_pct=float(np.mean(valid_proxy)) if valid_proxy else None,
+        self_consistency_scored_clips=len(valid_proxy),
+        self_consistency_metric_note='Starter drift with submitted predictions as reference, using 100-800 lengths in the arbitrary units of the submitted trajectory. Not a hidden-reference challenge score.',
+        scope='Self-consistency with submitted estimated trajectories; no TEST ground truth or official rescoring',
         clips=len(clips), complete=set(actual)==set(expected),
         byte_identical=sha(a.generated)==sha(a.reference), generated_sha256=sha(a.generated),
         submitted_sha256=sha(a.reference), per_clip=clips)

@@ -1,0 +1,13 @@
+{
+  "scope": "Fresh raw-video computations compared after inference with historical intermediate estimates; no GT. GPU model comparison remains separate.",
+  "clips_per_stage": {
+    "klt": 20,
+    "water": 20,
+    "features": 20
+  },
+  "max_numeric_difference": {
+    "klt": 0.0,
+    "water": 0.0,
+    "features": 0.0
+  }
+}
