@@ -6,6 +6,7 @@ dpvo_source="$asset_root/repos/DPVO"
 export MAX_JOBS="${MAX_JOBS:-4}"
 # RTX 5080 uses 12.0. Override for a different GPU before compiling.
 export TORCH_CUDA_ARCH_LIST="${TORCH_CUDA_ARCH_LIST:-12.0}"
+python -m pip install 'wheel==0.45.1'
 python -m pip install 'torch-scatter==2.1.2+pt27cu128' -f 'https://data.pyg.org/whl/torch-2.7.0+cu128.html'
 if [[ ! -f "$dpvo_source/thirdparty/eigen-3.4.0/Eigen/Core" ]]; then
   python - "$dpvo_source" <<'PY'
@@ -22,4 +23,4 @@ with urllib.request.urlopen('https://gitlab.com/libeigen/eigen/-/archive/3.4.0/e
 PY
 fi
 python -m pip install --no-build-isolation --no-deps "$dpvo_source"
-python -c 'import cuda_corr, cuda_ba, lietorch_backends; print("DPVO CUDA extensions imported")'
+python -c 'import torch; import cuda_corr, cuda_ba, lietorch_backends; print("DPVO CUDA extensions imported")'

@@ -1,0 +1,822 @@
+{
+  "scope": "Development trials not retained in final entry 19406. External data and discarded trained checkpoints do not enter final inference.",
+  "reports": {
+    "domain_v78_external/plan.json": {
+      "original_sha256": "6af3a0c5c15cfd16704b110171c9e342e1031eca62b82a222a8aa4da5b8a0a7a",
+      "record": {
+        "created_utc": "2026-10-22T07:42:26.502310+00:00",
+        "purpose": "First external zero-retuning validation. Predictions frozen before reference scoring.",
+        "methods": [
+          "V24",
+          "V65",
+          "V77",
+          "V76_unfiltered_quarter"
+        ],
+        "primary_comparison": "Pohang thermal: frozen FLIR branch. CANOE RGB: transfer stress test of the same constant-base-speed branch, NOT exact official wide-camera routing.",
+        "sequences": [
+          {
+            "key": "clip_1000",
+            "recording": "pohang00",
+            "modality": "thermal_day",
+            "offset_seconds": 600,
+            "duration_seconds": 300
+          },
+          {
+            "key": "clip_1001",
+            "recording": "pohang01",
+            "modality": "thermal_night",
+            "offset_seconds": 600,
+            "duration_seconds": 300
+          },
+          {
+            "key": "clip_1002",
+            "recording": "canoe-2025-08-20-16-07",
+            "modality": "rgb_lake",
+            "offset_seconds": 600,
+            "duration_seconds": 300
+          },
+          {
+            "key": "clip_1003",
+            "recording": "canoe-2025-08-28-14-13",
+            "modality": "rgb_reservoir",
+            "offset_seconds": 600,
+            "duration_seconds": 300
+          }
+        ],
+        "selection": "Predeclared time window [600,900) seconds after first camera timestamp, first frame at or after each 0.5-second target. No reference positions, errors, or image content used for selection. 4 recordings, one window each. Remaining recordings and windows reserved.",
+        "inputs": "Monocular camera pixels, camera calibration, camera timestamps only. References stored separately and read only by evaluation process.",
+        "preprocessing": "Native supplied 8-bit intensity unchanged. If uint16, fixed whole-clip 1/99 percentile linear display map, no per-frame mapping. Pohang undistorted with supplied five-coefficient Brown model, unchanged K; CANOE already rectified. Lossless RGB mp4 and 960-wide cache preserve aspect. No CLAHE.",
+        "adapters": "Existing generic image model CLIs consume all preselected 2Hz frames using --fps100 to prevent jitter-induced second downsampling; actual timestamps retained. Static DPV-SLAM mask resize generalized to input aspect ratio. Shared original postprocessing with redirected inputs. Verify original TRAIN parity before external scoring.",
+        "baseline": "Three raw DPVO seeds0,104729,209759, then family median with VGGT and Pi3X; Gaussian2sec. Base speed1. R3 supplies pose geometry and original planar coordinate convention. AnyCalib9-frame learned K. No provided navigation speed/heading used.",
+        "evaluation": "Official challenge score_trajectory when supported: one global Sim3 per entire selected 5-minute trajectory, 100-800m segment counts. Also globally aligned ATE and translation RPE at1/10/30sec, 10/25/50m short segment diagnostics. No per-segment realignment. Separate dataset/modality means and full failed-case ledger.",
+        "limitations": [
+          "Pohang SLAM baseline is a proxy reference, not perfect ground truth.",
+          "Four fixed windows are a pilot, not the full benchmarks. Two Pohang recordings repeat a route.",
+          "CANOE RGB tests branch transfer, not complete deployed wide-camera pipeline.",
+          "Pretrained model data overlap not audited.",
+          "External scores do not predict official MaCVi percentage."
+        ],
+        "dependencies": {
+          "scripts/v24_pack_uncapped.py": "84465d45c377b6ecbd922bfe7049bc46672cf4cbebfe5ba49da8684ed9c9fc38",
+          "scripts/v13_infer.py": "0b70c01e520b4c042ae493ac288ef92d43a1efa9f26e6e22b2692901e1bde335",
+          "scripts/domain_fusion_v2.py": "f5d6ca063a4f14b0fba11f0c0018caf809131b2228672ed4192aa0f7c72ea72d",
+          "scripts/fuse_headings.py": "32e2654405fb23dfe6b60e71b2d0ba2a8af4bdac5f805083d84a53e7f4e8f71a",
+          "scripts/v65_submission_inputs.py": "a1ce271687cb87581fc3d182078435c18d7c58d29dae38f8d99dc2b6d848f69b",
+          "scripts/v65_static_slam.py": "91fcb58438b76c2d25f0a809d89dc280d95017f4e8ff5281b8331238bfb73e3e",
+          "scripts/v65_complete_masks.py": "bbffcfab866c6299058199b3b054d06f21c733ab9693c9570ffd96d602826b19",
+          "scripts/v64_course_support_envelope.py": "1c5dc260c00eef1b06fe0ac29f3e700d76badee2e919379586e0e5f88b7161d1",
+          "scripts/v50_multiview_course.py": "9f51d9c4d3d2e92aadfb3b198579cf4dd7fa7611b047a20404d00b554bfbebd5",
+          "scripts/v53_course_uncertainty.py": "a282b9b3424214ba59074a052e8e357b77ba06e13bd8d3ce1bdf4d9455195f8e",
+          "scripts/v19_motion.py": "591cfae837a7fb75efb749c7553e2668ff2b140c4188782869b4d691544f71af",
+          "scripts/v73_pack_independent_speed.py": "46c801a9c33cfd7eda40ce94ca5f7853cfe37d3710bceed083bc8893124fe7c6",
+          "scripts/v74_observable_speed.py": "5143b3b37bf0c86ee9af371e0b71c0110bb36155e7739411477cf38a4fc4df57",
+          "scripts/v76_direction_guarded_speed.py": "93a6e3b6f691dbabd8567f81816b6d9bf368a10cbc6d118627f6e4157158b1a9",
+          "scripts/v6_test_dpvo.py": "9cf436ba4a1b442bfda0e00d56d99ed8c7568ffa576cb8875ede1893bd08562a",
+          "scripts/v6_test_models.py": "3c1a7cf4091a8f0afde5ed0eb6291ed837ab2dfe674b4fe46197a8e9f443cf4d",
+          "scripts/v5_dpvo_masked.py": "52239510fb0df69095488664809aeca59ece42eef2f324de22aed3445ddf2df7",
+          "scripts/calibrate_domain_v4.py": "0477c3e0c6715a4b8034f94bf22a9edb94ade1cc0701af079d93084ad322f2d4",
+          "scripts/submission_r3_infer_clip.py": "8635350e136052ede0937779f574d322c84c98d1b5215733f5ffbdbe298da6f8",
+          "scripts/submission_vggt_infer_clip.py": "b5052c19938b0836932661a3ef9a4ff02baf977c7c1d2be56d5fcc4c89f0d0f1",
+          "scripts/pi3x_domain_infer.py": "cf255b893e5b92f350df41f0c1ec2013a28ae88d4e81b7042bffeac12de9282c",
+          "runs/domain_v5/segmentation/model.json": "2a7098431fd2d71ec336acda0e0a63fb33ac482eac3e6abb0e7d629cbed367cd",
+          "repos/DPVO/config/default.yaml": "0351abfbc60d9ec93bf402857130497b2f063f8ce0e8fd6e87cc55c73273594a",
+          "reports/domain_v3/pi3x_source.json": "94265d5ee7607a96cb7a3221b7b8ebc051ed473113a4fd7852bd1f638583ed86"
+        },
+        "preserved_submissions": {
+          "submissions/macvi27_vo_domain_v11_3246/submission.json": "25ed1916505493c3a0ff84c5af135424650991e4181b8287e33ec9876e3b911a",
+          "submissions/macvi27_vo_domain_v12_2539/submission.json": "380055aac4feda24ecbdfe18fe85d10e845ce8a374d6fcef32fe5c357948c05b",
+          "submissions/macvi27_vo_domain_v12_2550/submission.json": "23c685c3dd5f21713b698a848ed137bbdc5de3af1c1a3d5df156e5bf0713b0d8",
+          "submissions/macvi27_vo_domain_v2/submission.json": "0fdc6d241303de4402d380170265aeae315dbb5fbfd0fe7fa4567b53376e205c",
+          "submissions/macvi27_vo_domain_v2_gated/submission.json": "0fdc6d241303de4402d380170265aeae315dbb5fbfd0fe7fa4567b53376e205c",
+          "submissions/macvi27_vo_domain_v3/submission.json": "801b54a1042925101920f3c36c29422c58b595bc72f82f75fbed356731a21c26",
+          "submissions/macvi27_vo_domain_v3_flir_only/submission.json": "c07b5cb71bb9b2b72e5e35b33c0cb4f3af490d0f9d1eac18e694eb3cf75b5278",
+          "submissions/macvi27_vo_domain_v4_calibrated/submission.json": "e19d7d49c15cf78d2b9276f6fa11bf5bba43d80bb98ee816d86e4c5ffd5da3d4",
+          "submissions/macvi27_vo_domain_v6_5881/submission.json": "3854d9ec2792d107656cf8eefea81a846c11e9e1d9d6669dc29c1ea628762328",
+          "submissions/macvi27_vo_domain_v7_5305/submission.json": "72b6f418dadb008a5e0728bc49a8afc16b812a0cc8aa0fe2aa3a5fc2fc381a56",
+          "submissions/macvi27_vo_r3_vggt_v1/submission.json": "1233ca6b7cc6e8a1629543ab477427e1dd9fb55ef1195888c82127a9d12cb484",
+          "submissions/macvi27_vo_v18_long_graph_cap3/submission.json": "5c94a488c02f18407a2dccba76e26956d903e48f2642b9af4fd87f6106f06faf",
+          "submissions/macvi27_vo_v19_course_probe/submission.json": "ce1980f2488271269fcf6e0ba4558bc826a0b38041d21a69c6c04036b6e16000",
+          "submissions/macvi27_vo_v24_raw3_uncapped/submission.json": "f43468c61dac100b9cf949a7d5ee487699b42334db3c55c118ef5ce60510fb79",
+          "submissions/macvi27_vo_v29_background_course/submission.json": "657e647d76bad49e205575f02aafe2c7731676bee5354bfefd2b2498f22c4078",
+          "submissions/macvi27_vo_v2_pi3x_cap3/submission.json": "deee30ffde339f72ee63885cac1d3e68ba7de4094d623015857ffcf83458c301",
+          "submissions/macvi27_vo_v37_ba_course_experimental/submission.json": "0e073f867acf26fdc9b775982c8822e15569f3d324b740932cc67e8db8040a0b",
+          "submissions/macvi27_vo_v42_global_ba/submission.json": "1d0fe33a0be80a8c7ade13a1b91e9d9169714f09b7d08cb607e7cb461c63fbeb",
+          "submissions/macvi27_vo_v65_support_envelope/submission.json": "d65f6ac0b9e934365966f4b211a731eb9059fb038fc9a3f2bd8f38744b7495d3",
+          "submissions/macvi27_vo_v73_independent_speed/submission.json": "d65f6ac0b9e934365966f4b211a731eb9059fb038fc9a3f2bd8f38744b7495d3",
+          "submissions/macvi27_vo_v77_direction_guarded_speed/submission.json": "099765b382abb5da8c777872d4c5d9a81745395a561eb89e18d6cb1aa011bd44"
+        }
+      }
+    },
+    "domain_v79_external_training/plan.json": {
+      "original_sha256": "ec77b630a3be7edb46b018ad39918f6f618fe8880a48461ca3ef8389d49898d2",
+      "record": {
+        "created_utc": "2026-10-22T15:42:09.861504+00:00",
+        "hypothesis": "CANOE-supervised pretraining improves transfer of a small course-correction reliability head over official-TRAIN-only training.",
+        "rules_url": "https://github.com/LOOKOUT-AI/lookout-vo-challenge/blob/main/RULES.md",
+        "external_pretrain": [
+          "clip_1002",
+          "clip_1003"
+        ],
+        "official_train_head_leave_one_clip_out": [
+          "clip_000",
+          "clip_001",
+          "clip_075",
+          "clip_076",
+          "clip_082",
+          "clip_084",
+          "clip_088",
+          "clip_090"
+        ],
+        "excludes": "All official validation/test images and labels. Pohang thermal excluded from learning. No new neural backbone training.",
+        "model": "15-parameter ridge regression predicting alpha clipped0..1. Physical feature scaling, no fitted normalization. Gaussian10sec feature and alpha smoothing. Fixed lambda0.1, no parameter sweep.",
+        "features": [
+          "bias",
+          "abs_centered_course_3deg",
+          "abs_course_3deg",
+          "slam_spread_3deg",
+          "track_spread_3deg",
+          "slam_abs_median_3deg",
+          "track_abs_median_3deg",
+          "slam_sign_agreement",
+          "track_sign_agreement",
+          "family_spread_3deg",
+          "dpvo_seed_spread_3deg",
+          "abs_turn_deg_sec",
+          "abs_course_rate_deg_sec",
+          "speed_correction_abs_10percent",
+          "movement_direction_confidence"
+        ],
+        "ridge": 0.1,
+        "target": "At10sec centers, least-squares optimal correction amplitude from10/30/60sec displacement errors. One common baseline globalSim3 per TRAIN trajectory. Candidate heading correction is centered by speed-weighted mean to remove globally unscored rotation. Target clipped0..1; local correction energy weights normalized equally per recording.",
+        "pretrain_finetune": "External pretrain ridge around no-suppression prior. Official training then ridge around external pretrained weights. Official-only uses the same no-suppression prior; same fixed lambda. Fit each official fold without the held-out clip labels. Pretrained model is the same for all official folds.",
+        "controls": [
+          "V24",
+          "V77",
+          "no_course",
+          "half_course",
+          "official_only",
+          "external_pretrain_finetune",
+          "external_only"
+        ],
+        "primary": "Paired official8 new-head leave-one-clip-out drift: external_pretrain_finetune versus official_only and unchangedV77. Fixed half-course is a shrinkage control. Speed identical toV77 for all controls exceptV24.",
+        "promotion": "No submission in this pilot. Expansion evidence requires at least0.1pp mean gain versus bothV77 andofficial_only, maxharm<=0.2pp versus both, >=5/8 improved versus official_only, and gain after excluding best clip. Otherwise report non-promotion without tuning on failures.",
+        "caveats": [
+          "Only two CANOE recordings, each5min, previously examined inV78. They become training/development data inV79.",
+          "TRAIN8 already influenced upstream pipelines and experiment design. New-head out-of-fold evaluation is not independent end-to-end or boat-disjoint validation.",
+          "No claim of officialTEST gain or full68TRAIN/24VAL evaluation.",
+          "Existing speed model and visual outputs fixed; this pilot tests course gating only."
+        ],
+        "dependencies": {
+          "scripts/v79_external_course_training.py": "db452ce9b0649b843e211cde9530e0cdceb192617b5ba9b5aa96efaa5e4e296c",
+          "scripts/domain_fusion_v3.py": "f9bb84b6bcbdc6d19c051b883aa5186a2e05b938b38341c4bcd53b60c36dd004",
+          "repos/lookout-vo-challenge/starter/metrics.py": "34b12ad089d2f298a4421d6411cc450c466f14e55bca19b76fd2333eb88eab96",
+          "runs/domain_v24_submission/train/signals/clip_000.npz": "48602b0a442cfcba7a3ea2095c5c99d8a8c7702ae5b565227c6176717c995194",
+          "runs/domain_v65_submission/train/signals/clip_000.npz": "419ca6bd5f5f5ba23db2dc1e22406ad06b40f10aee0f0e52fe38141957b7a6e4",
+          "runs/domain_v76_direction_guarded_speed/train/base/signals/clip_000.npz": "9635e48f149dcfdcaefc10fa8359498f3009f79199f7000a163b651b595eb9d8",
+          "runs/domain_v76_direction_guarded_speed/train/base/predictions/direction_guarded_quarter/clip_000.json": "d231b83045de99a1437efe3634e4d9e01bcd9b9a999ce8888e41e993c67c2789",
+          "runs/domain_v24_submission/train/signals/clip_001.npz": "ac5d808ae3ce0acc5f2532e2e639024aaab3aad929afdaa1dd235608dc49721c",
+          "runs/domain_v65_submission/train/signals/clip_001.npz": "102784e4450c5acc41807898cbe8c72475eb5157d34395881968e00b20169c4c",
+          "runs/domain_v76_direction_guarded_speed/train/base/signals/clip_001.npz": "7c68bb8a98c2cf132c69990da3723e1f30963a4e26fe69b81ac30eaa4f9b9868",
+          "runs/domain_v76_direction_guarded_speed/train/base/predictions/direction_guarded_quarter/clip_001.json": "2c6ddf21f835dcc4c9a27f4402811cea0bee00d96bd8c3dcf4849bd69b840637",
+          "runs/domain_v24_submission/train/signals/clip_075.npz": "b354d2191082285b4d67751e8b599d9f4c36821afea5084cce030eb37bfe7883",
+          "runs/domain_v65_submission/train/signals/clip_075.npz": "c6c3281fb00ab2925680dff59ce8a9615f9284376c59064d8aac999400815e8b",
+          "runs/domain_v76_direction_guarded_speed/train/base/signals/clip_075.npz": "fce12f4b390cefca454948eac2ff6ba7a36fb7dc090ff2172c40763cad6dc12b",
+          "runs/domain_v76_direction_guarded_speed/train/base/predictions/direction_guarded_quarter/clip_075.json": "30e0d46ad265367fc919ba26f569e4cab383354f261c148689e024f5350094e7",
+          "runs/domain_v24_submission/train/signals/clip_076.npz": "2f874ff7418e7fe4debe2b132145bb959e2501a200d0c2b38291424807173fec",
+          "runs/domain_v65_submission/train/signals/clip_076.npz": "57e4062083e62818404eb302b0dbfb45dd188dc9b28e33179fb717f149cc80f3",
+          "runs/domain_v76_direction_guarded_speed/train/base/signals/clip_076.npz": "34e7b2aa772a4c0b67c00c7266d3e742c14a5b523bc46d1599a670dd179ce018",
+          "runs/domain_v76_direction_guarded_speed/train/base/predictions/direction_guarded_quarter/clip_076.json": "f0a22317ffa793c479bfb6156d95f6fa33c34c323a954b5d021829355f11ebb2",
+          "runs/domain_v24_submission/train/signals/clip_082.npz": "68e2f7339bce70ab3cf4d8faafbca4fd71060f093c9409aa093715c1c6f33879",
+          "runs/domain_v65_submission/train/signals/clip_082.npz": "e73cde1c5c2693240386a6e9130c7fc48ba0ba081db335ac98b0cbd63c0f7c3b",
+          "runs/domain_v76_direction_guarded_speed/train/base/signals/clip_082.npz": "a85078e14cecf34a81866160a5c620e70c70f3bf8f003d5fc21f6d74703f16ef",
+          "runs/domain_v76_direction_guarded_speed/train/base/predictions/direction_guarded_quarter/clip_082.json": "c6c763aa6a9c12f43af1978edd2396396101c2fa04505e724e4dc2e86c17cb3e",
+          "runs/domain_v24_submission/train/signals/clip_084.npz": "62f110835ff4ababae014ab6f3d17a1165c293d0c4e7cd2cc9a9190f249469ce",
+          "runs/domain_v65_submission/train/signals/clip_084.npz": "33a7d76a875b97c1e0837d97d9361e54204607bbf4c1e99be34c09673e1d274c",
+          "runs/domain_v76_direction_guarded_speed/train/base/signals/clip_084.npz": "35e044c09e2a147f922eecb4abb3362551277e09c4d0902029d72b66a4ce6258",
+          "runs/domain_v76_direction_guarded_speed/train/base/predictions/direction_guarded_quarter/clip_084.json": "1cf6652b868b45b73432d321a62b84154c116c8bf7acfbc23b7ebcce1f726039",
+          "runs/domain_v24_submission/train/signals/clip_088.npz": "198094d8f9869c6028decf5a147f94a685475bdcc612fb5db7ea4dccc131fc25",
+          "runs/domain_v65_submission/train/signals/clip_088.npz": "6e2e92116ceac065001827a07a9b580687f933b7b18911b4d6deafdbdfc497eb",
+          "runs/domain_v76_direction_guarded_speed/train/base/signals/clip_088.npz": "d7c95410cf9a1803c19307c39d9a1702c99f2a55fa2c3abba3badd77e937f534",
+          "runs/domain_v76_direction_guarded_speed/train/base/predictions/direction_guarded_quarter/clip_088.json": "fb6ae734caca00f8c5ca95240b934583665ee9493dac077d25a55670f185e595",
+          "runs/domain_v24_submission/train/signals/clip_090.npz": "5829b02ed0dbfa1c6ef24b43d66d61ab36d7bd19f0507d6ef46b3fc3b2d9498a",
+          "runs/domain_v65_submission/train/signals/clip_090.npz": "09cbbb3bafc1bef5e662701c1911d9472978395366a92bfe5388898e2112a9b0",
+          "runs/domain_v76_direction_guarded_speed/train/base/signals/clip_090.npz": "73b734244b7997104b1075be2879dae9936204e486b92dcf0144118d725e02bf",
+          "runs/domain_v76_direction_guarded_speed/train/base/predictions/direction_guarded_quarter/clip_090.json": "458c1f64dcaca45dee6b1e13710d184c4493312e40e29e589a777d7f15e1f44a",
+          "runs/domain_v78_external/v24/external/signals/clip_1002.npz": "ff076a2e3a447bc025609bb2d4109310584eb71d47cf9dc243d0ca4571c5ead0",
+          "runs/domain_v78_external/v65/external/signals/clip_1002.npz": "cb9b7d7f14505bd81fc313f9cc42ffc421954f2af1bab818235dffe9e06d34e5",
+          "runs/domain_v78_external/v76/external/base/signals/clip_1002.npz": "ea1eca598261a3e651c2b406e6bf969f72e87ce04c96243a79c41eb09878748d",
+          "runs/domain_v78_external/final/V77/clip_1002.json": "a41d2f0a19626ca66b06fbab9dd8a9a07ac5d9fe310b9e9ee695752c49670324",
+          "runs/domain_v78_external/v24/external/signals/clip_1003.npz": "4ce77592be1e9dfaa2e7b5be7df074dd9425fda7be4ef38ffd772f1c441dde4a",
+          "runs/domain_v78_external/v65/external/signals/clip_1003.npz": "2fff18fdc5fccfe7ce860f54f477b3488c847764b4f425190d8d469c1ec39a9b",
+          "runs/domain_v78_external/v76/external/base/signals/clip_1003.npz": "c4dc46b63bcccdbf46bbb7ca5755eb2b174863c1906107d3e0bc282b55985fbf",
+          "runs/domain_v78_external/final/V77/clip_1003.json": "dc062e5badd98c221ea58922c0eeb8507ed47a17f2875bf46abfffee0b76acee"
+        },
+        "preserved_submissions": {
+          "submissions/macvi27_vo_v29_background_course/submission.json": "657e647d76bad49e205575f02aafe2c7731676bee5354bfefd2b2498f22c4078",
+          "submissions/macvi27_vo_v37_ba_course_experimental/submission.json": "0e073f867acf26fdc9b775982c8822e15569f3d324b740932cc67e8db8040a0b",
+          "submissions/macvi27_vo_domain_v3/submission.json": "801b54a1042925101920f3c36c29422c58b595bc72f82f75fbed356731a21c26",
+          "submissions/macvi27_vo_domain_v12_2550/submission.json": "23c685c3dd5f21713b698a848ed137bbdc5de3af1c1a3d5df156e5bf0713b0d8",
+          "submissions/macvi27_vo_v73_independent_speed/submission.json": "d65f6ac0b9e934365966f4b211a731eb9059fb038fc9a3f2bd8f38744b7495d3",
+          "submissions/macvi27_vo_r3_vggt_v1/submission.json": "1233ca6b7cc6e8a1629543ab477427e1dd9fb55ef1195888c82127a9d12cb484",
+          "submissions/macvi27_vo_domain_v2/submission.json": "0fdc6d241303de4402d380170265aeae315dbb5fbfd0fe7fa4567b53376e205c",
+          "submissions/macvi27_vo_domain_v2_gated/submission.json": "0fdc6d241303de4402d380170265aeae315dbb5fbfd0fe7fa4567b53376e205c",
+          "submissions/macvi27_vo_v24_raw3_uncapped/submission.json": "f43468c61dac100b9cf949a7d5ee487699b42334db3c55c118ef5ce60510fb79",
+          "submissions/macvi27_vo_v65_support_envelope/submission.json": "d65f6ac0b9e934365966f4b211a731eb9059fb038fc9a3f2bd8f38744b7495d3",
+          "submissions/macvi27_vo_v19_course_probe/submission.json": "ce1980f2488271269fcf6e0ba4558bc826a0b38041d21a69c6c04036b6e16000",
+          "submissions/macvi27_vo_domain_v3_flir_only/submission.json": "c07b5cb71bb9b2b72e5e35b33c0cb4f3af490d0f9d1eac18e694eb3cf75b5278",
+          "submissions/macvi27_vo_domain_v4_calibrated/submission.json": "e19d7d49c15cf78d2b9276f6fa11bf5bba43d80bb98ee816d86e4c5ffd5da3d4",
+          "submissions/macvi27_vo_domain_v11_3246/submission.json": "25ed1916505493c3a0ff84c5af135424650991e4181b8287e33ec9876e3b911a",
+          "submissions/macvi27_vo_v18_long_graph_cap3/submission.json": "5c94a488c02f18407a2dccba76e26956d903e48f2642b9af4fd87f6106f06faf",
+          "submissions/macvi27_vo_domain_v12_2539/submission.json": "380055aac4feda24ecbdfe18fe85d10e845ce8a374d6fcef32fe5c357948c05b",
+          "submissions/macvi27_vo_domain_v6_5881/submission.json": "3854d9ec2792d107656cf8eefea81a846c11e9e1d9d6669dc29c1ea628762328",
+          "submissions/macvi27_vo_domain_v7_5305/submission.json": "72b6f418dadb008a5e0728bc49a8afc16b812a0cc8aa0fe2aa3a5fc2fc381a56",
+          "submissions/macvi27_vo_v77_direction_guarded_speed/submission.json": "099765b382abb5da8c777872d4c5d9a81745395a561eb89e18d6cb1aa011bd44",
+          "submissions/macvi27_vo_v42_global_ba/submission.json": "1d0fe33a0be80a8c7ade13a1b91e9d9169714f09b7d08cb607e7cb461c63fbeb",
+          "submissions/macvi27_vo_v2_pi3x_cap3/submission.json": "deee30ffde339f72ee63885cac1d3e68ba7de4094d623015857ffcf83458c301"
+        },
+        "runtime_repairs": [
+          {
+            "time": "2026-10-22T15:42:54.977940+00:00",
+            "reason": "Public TRAIN reference does not always cover first/last image. Fit labels only within temporal overlap; never extrapolate a supervised displacement. No completed evaluation scores were read before this repair.",
+            "old_script_sha256": "584356e6df5bf49c1cf7384352943b4da95a0da84c71fcaa48408cb7c35306fc",
+            "new_script_sha256": "ad1ec387e55fde59b61d570f9577e10468d631f1e7a857d3bd84918a1bf9e46c"
+          },
+          {
+            "time": "2026-10-22T15:43:23.289885+00:00",
+            "reason": "clip090 has no observable correction targets. Preserve it in evaluation, log zero supervised rows, and normalize weights over records with training targets. Same numerical observability threshold, model and regularization. No evaluation completed before repair.",
+            "old_script_sha256": "ad1ec387e55fde59b61d570f9577e10468d631f1e7a857d3bd84918a1bf9e46c",
+            "new_script_sha256": "db452ce9b0649b843e211cde9530e0cdceb192617b5ba9b5aa96efaa5e4e296c"
+          }
+        ]
+      }
+    },
+    "domain_v80_pose_training/summary.json": {
+      "original_sha256": "bdf892a5d8c6194a25f678a846526d80921ea1c79ec8556be3a03078ce366b4b",
+      "record": {
+        "verdict": "공식 VAL의 장기 추론에서 원본 96.148% → 학습 후보 96.452%. 양쪽 모두 평가 가능한 24개 중 11개가 개선됐습니다.",
+        "decision": "장기 추론 평균 개선을 확인하지 못했습니다. 기존 TideGraph 제출 후보를 유지합니다.",
+        "online_candidate": "external",
+        "paired_online_mean_delta_pp": 0.30431891614484,
+        "improved_clips": 11,
+        "paired_scored": 24,
+        "worst_regression_pp": 33.98593265323598,
+        "external_minutes_by_role": {
+          "train": 56.801523967583975,
+          "dev": 8.915989919503529,
+          "holdout": 31.13172603050868
+        },
+        "trainable_parameters": 12601351,
+        "official_train_clips": 68,
+        "official_val_clips": 24,
+        "submission_changed": false,
+        "official_test_evaluated": false,
+        "speed_shape_diagnostic": {
+          "pretrained": 64.66770615874107,
+          "candidate": 67.70899655329416
+        }
+      }
+    },
+    "domain_v93_external_curriculum/manifest_audit.json": {
+      "original_sha256": "f52e8f5661ab4f53c5d8a5a7d17fa64f049436e14bd9191d31ea2ba22e3be9e9",
+      "record": {
+        "created_utc": "2026-10-23T00:49:09.825002+00:00",
+        "totals": {
+          "train": {
+            "scenes": 5,
+            "recordings": 3,
+            "frames": 5811,
+            "minutes": 96.76599686940511
+          },
+          "dev": {
+            "scenes": 1,
+            "recordings": 1,
+            "frames": 536,
+            "minutes": 8.915989919503529
+          },
+          "holdout": {
+            "scenes": 4,
+            "recordings": 4,
+            "frames": 1872,
+            "minutes": 31.131726030508677
+          }
+        },
+        "recording_roles_disjoint": true,
+        "camera_transform_roundtrip_passed": true,
+        "rotation_validity_passed": true,
+        "resized_intrinsics_verified": true,
+        "no_fabricated_depth": true,
+        "note": "Pose-only dataset manifest; no new neural training or new model score. Existing holdout has already been evaluated in V80 and is not newly blind."
+      }
+    },
+    "domain_v95_97/pohang_acquisition.json": {
+      "original_sha256": "63f26edd2b7bb60fa326777b3c7aaa9e30fa6c6822e2543a85e4d61a6731a718",
+      "record": {
+        "created_utc": "2026-10-23T02:35:59.272092+00:00",
+        "new_recordings": [
+          "pohang04",
+          "pohang05"
+        ],
+        "frames": 1200,
+        "predeclared_window_seconds": [
+          600,
+          900
+        ],
+        "reference_accessed": false,
+        "training": false
+      }
+    },
+    "domain_v98_targeted_ft/recommendation.json": {
+      "original_sha256": "3917d6c9a3f8cfac22d4dc7eba5bb7b8f70beb2f3712dde6a71cc0abf215b5f7",
+      "record": {
+        "decision": "V87 유지 권장. 이번 미세조정 후보 중 제출 교체 기준을 통과한 모델은 없음.",
+        "candidate": null
+      }
+    },
+    "domain_v100_fin3r/results.json": {
+      "original_sha256": "6230900957267aef92166397e6a1e73dc2ffcf9b75e4e7a76423a9259713eefd",
+      "record": {
+        "summary": [
+          {
+            "group": "CANOE_reused_holdout4",
+            "method": "Fin3R",
+            "mean_drift_pct": 12.64208041333381,
+            "median_drift_pct": 12.329268179705673,
+            "scored": 3,
+            "expected": 4,
+            "mean_delta_pp": 4.8901073062680815,
+            "improved": 0,
+            "worsened": 3,
+            "worst_delta_pp": 12.07456134948519,
+            "without_best_two_mean_delta_pp": 12.07456134948519
+          },
+          {
+            "group": "CANOE_reused_holdout4",
+            "method": "Fin3R_blend25",
+            "mean_drift_pct": 6.224170082407201,
+            "median_drift_pct": 5.598501965888567,
+            "scored": 3,
+            "expected": 4,
+            "mean_delta_pp": -1.5278030246585288,
+            "improved": 2,
+            "worsened": 1,
+            "worst_delta_pp": 1.6877174390468042,
+            "without_best_two_mean_delta_pp": 1.6877174390468042
+          },
+          {
+            "group": "CANOE_reused_holdout4",
+            "method": "V87_frozen",
+            "mean_drift_pct": 7.751973107065729,
+            "median_drift_pct": 10.030511059824736,
+            "scored": 3,
+            "expected": 4,
+            "mean_delta_pp": 0.0,
+            "improved": 0,
+            "worsened": 0,
+            "worst_delta_pp": 0.0,
+            "without_best_two_mean_delta_pp": 0.0
+          },
+          {
+            "group": "CANOE_reused_holdout4",
+            "method": "VGGT",
+            "mean_drift_pct": 9.067873695622152,
+            "median_drift_pct": 9.37032241732523,
+            "scored": 3,
+            "expected": 4,
+            "mean_delta_pp": 1.315900588556423,
+            "improved": 2,
+            "worsened": 1,
+            "worst_delta_pp": 11.028776685935451,
+            "without_best_two_mean_delta_pp": 11.028776685935451
+          },
+          {
+            "group": "CANOE_reused_holdout4",
+            "method": "VGGT_blend25",
+            "mean_drift_pct": 6.7171155377919645,
+            "median_drift_pct": 7.410510045677588,
+            "scored": 3,
+            "expected": 4,
+            "mean_delta_pp": -1.0348575692737647,
+            "improved": 2,
+            "worsened": 1,
+            "worst_delta_pp": 1.4545823774738038,
+            "without_best_two_mean_delta_pp": 1.4545823774738038
+          },
+          {
+            "group": "FLIR_reused_TRAIN8",
+            "method": "Fin3R",
+            "mean_drift_pct": 8.354216036410975,
+            "median_drift_pct": 4.692057724824458,
+            "scored": 8,
+            "expected": 8,
+            "mean_delta_pp": 2.4239018834624164,
+            "improved": 1,
+            "worsened": 7,
+            "worst_delta_pp": 4.398565734907402,
+            "without_best_two_mean_delta_pp": 3.2390654943558617
+          },
+          {
+            "group": "FLIR_reused_TRAIN8",
+            "method": "Fin3R_blend25",
+            "mean_drift_pct": 6.465274291936556,
+            "median_drift_pct": 2.9260390347710263,
+            "scored": 8,
+            "expected": 8,
+            "mean_delta_pp": 0.5349601389879975,
+            "improved": 1,
+            "worsened": 7,
+            "worst_delta_pp": 1.058940632261681,
+            "without_best_two_mean_delta_pp": 0.7236501066352886
+          },
+          {
+            "group": "FLIR_reused_TRAIN8",
+            "method": "V87_frozen",
+            "mean_drift_pct": 5.930314152948558,
+            "median_drift_pct": 2.874119916265533,
+            "scored": 8,
+            "expected": 8,
+            "mean_delta_pp": 0.0,
+            "improved": 0,
+            "worsened": 0,
+            "worst_delta_pp": 0.0,
+            "without_best_two_mean_delta_pp": 0.0
+          },
+          {
+            "group": "FLIR_reused_TRAIN8",
+            "method": "VGGT",
+            "mean_drift_pct": 10.444467785195352,
+            "median_drift_pct": 4.747558091747197,
+            "scored": 8,
+            "expected": 8,
+            "mean_delta_pp": 4.514153632246794,
+            "improved": 0,
+            "worsened": 8,
+            "worst_delta_pp": 17.7983249849184,
+            "without_best_two_mean_delta_pp": 5.830999318684067
+          },
+          {
+            "group": "FLIR_reused_TRAIN8",
+            "method": "VGGT_blend25",
+            "mean_drift_pct": 6.956551116368603,
+            "median_drift_pct": 3.2842026680139096,
+            "scored": 8,
+            "expected": 8,
+            "mean_delta_pp": 1.0262369634200446,
+            "improved": 0,
+            "worsened": 8,
+            "worst_delta_pp": 4.426530801493502,
+            "without_best_two_mean_delta_pp": 1.334632114336251
+          },
+          {
+            "group": "Pohang_new_RGB_proxy2",
+            "method": "Fin3R",
+            "mean_drift_pct": 5.817288528541499,
+            "median_drift_pct": 5.817288528541499,
+            "scored": 2,
+            "expected": 2,
+            "mean_delta_pp": 0.9068796001154933,
+            "improved": 0,
+            "worsened": 2,
+            "worst_delta_pp": 0.9077159587714059,
+            "without_best_two_mean_delta_pp": null
+          },
+          {
+            "group": "Pohang_new_RGB_proxy2",
+            "method": "Fin3R_blend25",
+            "mean_drift_pct": 5.0440669532422575,
+            "median_drift_pct": 5.0440669532422575,
+            "scored": 2,
+            "expected": 2,
+            "mean_delta_pp": 0.13365802481625155,
+            "improved": 0,
+            "worsened": 2,
+            "worst_delta_pp": 0.1506718814368906,
+            "without_best_two_mean_delta_pp": null
+          },
+          {
+            "group": "Pohang_new_RGB_proxy2",
+            "method": "V87_frozen",
+            "mean_drift_pct": 4.910408928426006,
+            "median_drift_pct": 4.910408928426006,
+            "scored": 2,
+            "expected": 2,
+            "mean_delta_pp": 0.0,
+            "improved": 0,
+            "worsened": 0,
+            "worst_delta_pp": 0.0,
+            "without_best_two_mean_delta_pp": null
+          },
+          {
+            "group": "Pohang_new_RGB_proxy2",
+            "method": "VGGT",
+            "mean_drift_pct": 5.31475628764354,
+            "median_drift_pct": 5.31475628764354,
+            "scored": 2,
+            "expected": 2,
+            "mean_delta_pp": 0.4043473592175346,
+            "improved": 0,
+            "worsened": 2,
+            "worst_delta_pp": 0.6222096094558216,
+            "without_best_two_mean_delta_pp": null
+          },
+          {
+            "group": "Pohang_new_RGB_proxy2",
+            "method": "VGGT_blend25",
+            "mean_drift_pct": 4.982183543792132,
+            "median_drift_pct": 4.982183543792132,
+            "scored": 2,
+            "expected": 2,
+            "mean_delta_pp": 0.0717746153661265,
+            "improved": 0,
+            "worsened": 2,
+            "worst_delta_pp": 0.10700188745933659,
+            "without_best_two_mean_delta_pp": null
+          }
+        ]
+      }
+    },
+    "domain_v153_pure/results.json": {
+      "original_sha256": "4bb661895378d0b27fc3f74c90dc548f0e59e793570b7c9c4876a0ac89d155ca",
+      "record": {
+        "summary": {
+          "wide": {
+            "current_A1": {
+              "n": 21,
+              "expected": 21,
+              "mean": 8.220480284980807,
+              "delta": 0.0,
+              "wins": 0,
+              "max_harm": 0.0,
+              "worst": "clip_005"
+            },
+            "omega_graph_A1": {
+              "n": 21,
+              "expected": 21,
+              "mean": 8.363631447432548,
+              "delta": 0.14315116245173892,
+              "wins": 7,
+              "max_harm": 2.3871231139264015,
+              "worst": "clip_064"
+            },
+            "omega_graph_median": {
+              "n": 21,
+              "expected": 21,
+              "mean": 8.220480284980804,
+              "delta": -3.943935125573175e-15,
+              "wins": 0,
+              "max_harm": 7.993605777301127e-15,
+              "worst": "clip_009"
+            },
+            "original_pi3_A1": {
+              "n": 21,
+              "expected": 21,
+              "mean": 9.00741480741895,
+              "delta": 0.7869345224381434,
+              "wins": 3,
+              "max_harm": 4.249429090946307,
+              "worst": "clip_008"
+            },
+            "original_pi3_median": {
+              "n": 21,
+              "expected": 21,
+              "mean": 8.96460298979471,
+              "delta": 0.7441227048139023,
+              "wins": 3,
+              "max_harm": 3.8250182541637625,
+              "worst": "clip_005"
+            },
+            "original_vggt_A1": {
+              "n": 21,
+              "expected": 21,
+              "mean": 10.770705110322588,
+              "delta": 2.55022482534178,
+              "wins": 4,
+              "max_harm": 11.232995305554798,
+              "worst": "clip_008"
+            },
+            "original_vggt_cache_A1": {
+              "n": 21,
+              "expected": 21,
+              "mean": 10.777624270445537,
+              "delta": 2.5571439854647315,
+              "wins": 5,
+              "max_harm": 11.55641748408192,
+              "worst": "clip_008"
+            },
+            "original_vggt_cache_median": {
+              "n": 21,
+              "expected": 21,
+              "mean": 11.023356053479231,
+              "delta": 2.802875768498426,
+              "wins": 4,
+              "max_harm": 11.303795018640386,
+              "worst": "clip_008"
+            },
+            "original_vggt_median": {
+              "n": 21,
+              "expected": 21,
+              "mean": 11.018832950010655,
+              "delta": 2.798352665029848,
+              "wins": 4,
+              "max_harm": 10.98731742269937,
+              "worst": "clip_008"
+            },
+            "pi3_A1": {
+              "n": 21,
+              "expected": 21,
+              "mean": 10.862287241965337,
+              "delta": 2.6418069569845306,
+              "wins": 5,
+              "max_harm": 14.63563732535882,
+              "worst": "clip_037"
+            },
+            "pi3_median": {
+              "n": 21,
+              "expected": 21,
+              "mean": 11.04650447205601,
+              "delta": 2.8260241870752045,
+              "wins": 5,
+              "max_harm": 16.2881066718749,
+              "worst": "clip_037"
+            },
+            "vggt_A1": {
+              "n": 21,
+              "expected": 21,
+              "mean": 12.97233928459662,
+              "delta": 4.751858999615811,
+              "wins": 3,
+              "max_harm": 16.943105243131342,
+              "worst": "clip_016"
+            },
+            "vggt_median": {
+              "n": 21,
+              "expected": 21,
+              "mean": 13.032157392823676,
+              "delta": 4.811677107842868,
+              "wins": 4,
+              "max_harm": 17.319867178506684,
+              "worst": "clip_016"
+            }
+          },
+          "flir-VIS": {
+            "current_A1": {
+              "n": 8,
+              "expected": 8,
+              "mean": 10.216683460941624,
+              "delta": 0.0,
+              "wins": 0,
+              "max_harm": 0.0,
+              "worst": "clip_000"
+            },
+            "omega_graph_A1": {
+              "n": 8,
+              "expected": 8,
+              "mean": 10.216683460941624,
+              "delta": 0.0,
+              "wins": 0,
+              "max_harm": 0.0,
+              "worst": "clip_000"
+            },
+            "omega_graph_median": {
+              "n": 8,
+              "expected": 8,
+              "mean": 10.235265536403578,
+              "delta": 0.018582075461954034,
+              "wins": 3,
+              "max_harm": 0.25922565218379745,
+              "worst": "clip_090"
+            },
+            "original_pi3_A1": {
+              "n": 8,
+              "expected": 8,
+              "mean": 14.973896225098716,
+              "delta": 4.757212764157092,
+              "wins": 0,
+              "max_harm": 19.17397425719841,
+              "worst": "clip_075"
+            },
+            "original_pi3_median": {
+              "n": 8,
+              "expected": 8,
+              "mean": 14.916420692875516,
+              "delta": 4.699737231933893,
+              "wins": 0,
+              "max_harm": 18.996529064400093,
+              "worst": "clip_075"
+            },
+            "original_vggt_A1": {
+              "n": 8,
+              "expected": 8,
+              "mean": 15.866968978322413,
+              "delta": 5.650285517380788,
+              "wins": 0,
+              "max_harm": 23.102555662358796,
+              "worst": "clip_075"
+            },
+            "original_vggt_cache_A1": {
+              "n": 8,
+              "expected": 8,
+              "mean": 15.82371860014604,
+              "delta": 5.607035139204417,
+              "wins": 0,
+              "max_harm": 22.514406147884884,
+              "worst": "clip_075"
+            },
+            "original_vggt_cache_median": {
+              "n": 8,
+              "expected": 8,
+              "mean": 15.323602921428165,
+              "delta": 5.106919460486541,
+              "wins": 0,
+              "max_harm": 21.115238916602067,
+              "worst": "clip_075"
+            },
+            "original_vggt_median": {
+              "n": 8,
+              "expected": 8,
+              "mean": 15.387647558546103,
+              "delta": 5.170964097604479,
+              "wins": 0,
+              "max_harm": 21.846026882809916,
+              "worst": "clip_075"
+            },
+            "pi3_A1": {
+              "n": 8,
+              "expected": 8,
+              "mean": 14.346507698171003,
+              "delta": 4.129824237229379,
+              "wins": 0,
+              "max_harm": 17.496737298499944,
+              "worst": "clip_075"
+            },
+            "pi3_median": {
+              "n": 8,
+              "expected": 8,
+              "mean": 14.321119807485964,
+              "delta": 4.1044363465443405,
+              "wins": 0,
+              "max_harm": 17.222650835987118,
+              "worst": "clip_075"
+            },
+            "vggt_A1": {
+              "n": 8,
+              "expected": 8,
+              "mean": 20.322696072280227,
+              "delta": 10.106012611338606,
+              "wins": 0,
+              "max_harm": 38.76878830456979,
+              "worst": "clip_075"
+            },
+            "vggt_median": {
+              "n": 8,
+              "expected": 8,
+              "mean": 20.359407089263208,
+              "delta": 10.142723628321583,
+              "wins": 0,
+              "max_harm": 38.86129144438557,
+              "worst": "clip_075"
+            }
+          }
+        }
+      }
+    },
+    "flow3r_review/review.json": {
+      "original_sha256": "5c091e0153cbf273810ec862cf811a70632f673ae2e247f3aa807fac6bea0eb1",
+      "record": {
+        "reviewed_utc": "2026-10-23T00:21:34.042593+00:00",
+        "repo": "https://github.com/Kidrauh/flow3r",
+        "commit": "6366c777b4d4c38ffad5c110798cece700b30171",
+        "paper": "https://arxiv.org/abs/2602.20157",
+        "project": "https://flow3r-project.github.io/",
+        "venue": "CVPR2026",
+        "status": "Source/paper review only. No checkpoint inference or local accuracy result.",
+        "summary": "Pi3-based visual geometry trained with factored flow supervision from large unlabeled video collections.",
+        "source_verified": {
+          "outputs": [
+            "camera_poses c2w",
+            "local_points",
+            "global points",
+            "confidence",
+            "flow only when pair_indices supplied"
+          ],
+          "checkpoint": "Official gradio_app.py links Clara211111/flow3r:flow3r.bin; README also links GoogleDrive.",
+          "default_inference_flow": false,
+          "public_train_eval_scripts_found": false,
+          "complete_slam_backend": false
+        },
+        "integration": {
+          "primary": "Replace only Omega16 heading using same2Hz inputs,16frame overlap8,relative-rotation fusion,unchangedV87speed.",
+          "secondary": "Window translation speed only after overlap-scale checks; no assumed metric units.",
+          "training": "Factored flow self-supervision on authorized external RGB could be future research; public repo lacks full training pipeline. New implementation and domain-valid pseudo-flow required."
+        },
+        "limitations": [
+          "Short-window camera accuracy is not challenge100-800m trajectory drift.",
+          "No evaluated maritime FLIR dataset among listed8benchmarknames.",
+          "Dynamic scene reconstruction is not explicit water/ego-motion separation.",
+          "Shares Pi3/VGGT ancestry; not fully independent ensemble evidence.",
+          "Authors note failure in bad pseudo-flow domains and multiple independent motions."
+        ],
+        "recommendation": "Plausible frozen heading challenger, lower priority than requested horizon/calibration/BA and running ViPE. Do not replace officially12.56percentV87 on source claims alone."
+      }
+    }
+  }
+}

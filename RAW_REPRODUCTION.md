@@ -21,6 +21,7 @@ environment, videos and generated intermediates.
 ```bash
 python3.10 -m venv .venv-raw
 source .venv-raw/bin/activate
+python -m pip install --upgrade pip
 python -m pip install torch==2.7.1 torchvision==0.22.1 --index-url https://download.pytorch.org/whl/cu128
 python -m pip install -r requirements-raw.txt
 python scripts/setup_raw_assets.py --output /path/to/raw-assets

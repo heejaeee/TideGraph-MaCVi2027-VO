@@ -1,0 +1,146 @@
+{
+  "scope": "Fresh raw-video baseline speed, IR heading and initial gauge compared with historical estimates after inference; later FLIR consensus corrections not included",
+  "clips": 20,
+  "per_clip_max_absolute_difference": {
+    "clip_092": {
+      "times": 0.0,
+      "yaw": 0.0,
+      "speed": 0.0,
+      "current": 0.0,
+      "initial_yaw": 0.0
+    },
+    "clip_093": {
+      "times": 0.0,
+      "yaw": 0.0,
+      "speed": 0.0,
+      "current": 0.0,
+      "initial_yaw": 0.0
+    },
+    "clip_094": {
+      "times": 0.0,
+      "yaw": 0.0,
+      "speed": 0.0,
+      "current": 0.0,
+      "initial_yaw": 0.0
+    },
+    "clip_095": {
+      "times": 0.0,
+      "yaw": 0.0,
+      "speed": 0.0,
+      "current": 0.0,
+      "initial_yaw": 0.0
+    },
+    "clip_096": {
+      "times": 0.0,
+      "yaw": 0.0,
+      "speed": 0.0,
+      "current": 0.0,
+      "initial_yaw": 0.0
+    },
+    "clip_097": {
+      "times": 0.0,
+      "yaw": 0.0,
+      "speed": 0.0,
+      "current": 0.0,
+      "initial_yaw": 0.0
+    },
+    "clip_098": {
+      "times": 0.0,
+      "yaw": 0.0,
+      "speed": 0.0,
+      "current": 0.0,
+      "initial_yaw": 0.0
+    },
+    "clip_099": {
+      "times": 0.0,
+      "yaw": 0.0,
+      "speed": 0.0,
+      "current": 0.0,
+      "initial_yaw": 0.0
+    },
+    "clip_100": {
+      "times": 0.0,
+      "yaw": 0.0,
+      "speed": 0.0,
+      "current": 0.0,
+      "initial_yaw": 0.0
+    },
+    "clip_101": {
+      "times": 0.0,
+      "yaw": 0.0,
+      "speed": 0.0,
+      "current": 0.0,
+      "initial_yaw": 0.0
+    },
+    "clip_103": {
+      "times": 0.0,
+      "yaw": 0.0,
+      "speed": 0.0,
+      "current": 0.0,
+      "initial_yaw": 0.0
+    },
+    "clip_104": {
+      "times": 0.0,
+      "yaw": 0.0,
+      "speed": 0.0,
+      "current": 0.0,
+      "initial_yaw": 0.0
+    },
+    "clip_105": {
+      "times": 0.0,
+      "yaw": 0.0,
+      "speed": 0.0,
+      "current": 0.0,
+      "initial_yaw": 0.0
+    },
+    "clip_106": {
+      "times": 0.0,
+      "yaw": 0.0,
+      "speed": 0.0,
+      "current": 0.0,
+      "initial_yaw": 0.0
+    },
+    "clip_107": {
+      "times": 0.0,
+      "yaw": 0.0,
+      "speed": 0.0,
+      "current": 0.0,
+      "initial_yaw": 0.0
+    },
+    "clip_108": {
+      "times": 0.0,
+      "yaw": 0.0,
+      "speed": 0.0,
+      "current": 0.0,
+      "initial_yaw": 0.0
+    },
+    "clip_109": {
+      "times": 0.0,
+      "yaw": 0.0,
+      "speed": 0.0,
+      "current": 0.0,
+      "initial_yaw": 0.0
+    },
+    "clip_110": {
+      "times": 0.0,
+      "yaw": 0.0,
+      "speed": 0.0,
+      "current": 0.0,
+      "initial_yaw": 0.0
+    },
+    "clip_111": {
+      "times": 0.0,
+      "yaw": 0.0,
+      "speed": 0.0,
+      "current": 0.0,
+      "initial_yaw": 0.0
+    },
+    "clip_112": {
+      "times": 0.0,
+      "yaw": 0.0,
+      "speed": 0.0,
+      "current": 0.0,
+      "initial_yaw": 0.0
+    }
+  }
+}

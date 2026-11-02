@@ -1,5 +1,8 @@
 # Install torch==2.7.1 and torchvision==0.22.1 from the CUDA 12.8 index first.
 # Compile the pinned DPVO repository after installing this file.
+torch==2.7.1
+torchvision==0.22.1
+wheel==0.45.1
 numpy==1.26.4
 scipy==1.15.3
 scikit-learn==1.7.2

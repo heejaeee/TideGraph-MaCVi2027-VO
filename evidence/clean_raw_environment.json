@@ -1,0 +1,66 @@
+{
+  "scope": "Fresh Python 3.10 venv, documented pip dependencies and newly built DPVO extensions. Backend imports and small CUDA operator smoke; not a second full raw-video inference run.",
+  "results": {
+    "R3": {
+      "passed": true,
+      "returncode": 0,
+      "stdout": "BACKEND_OK\n",
+      "stderr": "/home/hsiangwei/Desktop/MaCVi2027/Odometry/publish_entry19406/raw_assets_verify/repos/R3/depth_anything_3/cfg.py:30: UserWarning: register_new_resolver() is deprecated and will be removed in a future release.\nUse register_resolver() instead.\nSee https://github.com/hydra-ecosystem/omegaconf/issues/426 for migration instructions.\n\n  OmegaConf.register_new_resolver(\"eval\", _safe_eval_resolver)\n"
+    },
+    "VGGT": {
+      "passed": true,
+      "returncode": 0,
+      "stdout": "BACKEND_OK\n",
+      "stderr": ""
+    },
+    "Omega": {
+      "passed": true,
+      "returncode": 0,
+      "stdout": "BACKEND_OK\n",
+      "stderr": ""
+    },
+    "Pi3X": {
+      "passed": true,
+      "returncode": 0,
+      "stdout": "Warning, cannot find cuda-compiled version of RoPE2D, using a slow pytorch version instead\nBACKEND_OK\n",
+      "stderr": ""
+    },
+    "AnyCalib": {
+      "passed": true,
+      "returncode": 0,
+      "stdout": "BACKEND_OK\n",
+      "stderr": ""
+    },
+    "CoTracker": {
+      "passed": true,
+      "returncode": 0,
+      "stdout": "BACKEND_OK\n",
+      "stderr": ""
+    },
+    "Mask2Former": {
+      "passed": true,
+      "returncode": 0,
+      "stdout": "BACKEND_OK\n",
+      "stderr": ""
+    },
+    "DPVO_CUDA": {
+      "passed": true,
+      "returncode": 0,
+      "stdout": "BACKEND_OK\n",
+      "stderr": "/home/hsiangwei/Desktop/MaCVi2027/Odometry/publish_entry19406/raw_assets_verify/repos/DPVO/dpvo/net.py:187: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n  @autocast(enabled=False)\n"
+    }
+  },
+  "all_passed": true,
+  "cpu_raw_clip093_max_numeric_difference": {
+    "klt": 0.0,
+    "water": 0.0,
+    "features": 0.0
+  },
+  "documented_asset_verification": "13 pinned files and 7 source revisions verified; verified local files reused through symlinks, not a full fresh network download",
+  "setup_fixes": [
+    "upgrade pip before CUDA wheel installation",
+    "pin torch and torchvision in raw requirements",
+    "install wheel before DPVO build",
+    "import torch before loading CUDA extensions"
+  ]
+}
