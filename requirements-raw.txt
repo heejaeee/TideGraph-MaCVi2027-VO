@@ -34,3 +34,10 @@ requests
 matplotlib
 gdown
 ninja
+
+# DA3 API imports video-export helpers when R3 is instantiated.
+# Keep MoviePy 1.x: upstream imports moviepy.editor.
+moviepy==1.0.3
+decorator==4.4.2
+imageio-ffmpeg==0.6.0
+proglog==0.1.12

@@ -1,0 +1,169 @@
+{
+  "scope": "Full second raw-video inference in a separate Python 3.10 virtual environment and fresh anonymous public clone, on the same physical host and RTX 5080. Not a separate operating system or GPU.",
+  "tested_base_commit": "9dcae62c0ded14fc8cba8cf845af5746d33b850f",
+  "dependency_fix": [
+    "moviepy==1.0.3",
+    "decorator==4.4.2",
+    "imageio-ffmpeg==0.6.0",
+    "proglog==0.1.12"
+  ],
+  "requirements_sha256": "36c23453ff5ede738845795c30e5feb73139b1544a1ee4986f6bcc2a5046d7ec",
+  "weights": "Existing SHA-256-verified weights and pinned upstream sources reused. No estimated intermediates reused from the first run.",
+  "inference": "All 180 stages completed. CPU stages from this second run resumed after correcting the missing MoviePy dependency; GPU stages ran after the fix.",
+  "comparison": {
+    "self_consistency_mean_drift_pct": 0.0048413468348981435,
+    "self_consistency_scored_clips": 20,
+    "self_consistency_metric_note": "Starter drift with submitted predictions as reference, using 100-800 lengths in the arbitrary units of the submitted trajectory. Not a hidden-reference challenge score.",
+    "scope": "Self-consistency with submitted estimated trajectories; no TEST ground truth or official rescoring",
+    "clips": 20,
+    "complete": true,
+    "byte_identical": false,
+    "generated_sha256": "326f7786b390f0a273d26b8fe69ba11ed50108238bbf7e69dcd6642d998d09bb",
+    "submitted_sha256": "41133948ef57731a18df59c66d919179be3a66730725109ac6621c2b8953bc35",
+    "per_clip": {
+      "clip_092": {
+        "self_consistency_drift_pct": 0.0003020101841058038,
+        "samples": 601,
+        "max_coordinate_difference": 0.0022588515063759473,
+        "aligned_rmse_over_path_length": 9.786789449873009e-07,
+        "alignment_scale": 1.000000512290572
+      },
+      "clip_093": {
+        "self_consistency_drift_pct": 0.00038181137065294336,
+        "samples": 601,
+        "max_coordinate_difference": 0.006398907805547083,
+        "aligned_rmse_over_path_length": 9.809779339848862e-07,
+        "alignment_scale": 1.000000421000229
+      },
+      "clip_094": {
+        "self_consistency_drift_pct": 0.0005665890336988567,
+        "samples": 601,
+        "max_coordinate_difference": 0.0034149776383287644,
+        "aligned_rmse_over_path_length": 1.4923427566917995e-06,
+        "alignment_scale": 0.9999970701390651
+      },
+      "clip_095": {
+        "self_consistency_drift_pct": 0.08141797663531239,
+        "samples": 600,
+        "max_coordinate_difference": 0.34287858509614466,
+        "aligned_rmse_over_path_length": 0.0002304831004059123,
+        "alignment_scale": 0.9989036795340545
+      },
+      "clip_096": {
+        "self_consistency_drift_pct": 0.0005461876999727937,
+        "samples": 601,
+        "max_coordinate_difference": 4.037121911088967,
+        "aligned_rmse_over_path_length": 1.3890566856303105e-06,
+        "alignment_scale": 1.0000003569583094
+      },
+      "clip_097": {
+        "self_consistency_drift_pct": 0.00019429973953916406,
+        "samples": 596,
+        "max_coordinate_difference": 0.001261958441148181,
+        "aligned_rmse_over_path_length": 5.219254890604221e-07,
+        "alignment_scale": 0.9999998596365225
+      },
+      "clip_098": {
+        "self_consistency_drift_pct": 7.739140690391282e-05,
+        "samples": 600,
+        "max_coordinate_difference": 0.0005364575415569561,
+        "aligned_rmse_over_path_length": 2.4562845923453795e-07,
+        "alignment_scale": 1.0000004077667146
+      },
+      "clip_099": {
+        "self_consistency_drift_pct": 0.0005846907209094232,
+        "samples": 601,
+        "max_coordinate_difference": 0.005489005785534573,
+        "aligned_rmse_over_path_length": 1.7081395985571377e-06,
+        "alignment_scale": 1.0000022321431326
+      },
+      "clip_100": {
+        "self_consistency_drift_pct": 1.3464407803793359e-13,
+        "samples": 602,
+        "max_coordinate_difference": 0.0,
+        "aligned_rmse_over_path_length": 3.8615486855204264e-16,
+        "alignment_scale": 1.0000000000000007
+      },
+      "clip_101": {
+        "self_consistency_drift_pct": 0.00034573341729028905,
+        "samples": 601,
+        "max_coordinate_difference": 0.0017793427036281173,
+        "aligned_rmse_over_path_length": 9.963941851113375e-07,
+        "alignment_scale": 0.99999900470255
+      },
+      "clip_103": {
+        "self_consistency_drift_pct": 0.00024123611371389646,
+        "samples": 601,
+        "max_coordinate_difference": 0.0019288793819978167,
+        "aligned_rmse_over_path_length": 6.868840774720734e-07,
+        "alignment_scale": 1.0000001346518026
+      },
+      "clip_104": {
+        "self_consistency_drift_pct": 0.000340009040447677,
+        "samples": 600,
+        "max_coordinate_difference": 0.0020880887337852982,
+        "aligned_rmse_over_path_length": 9.058753525858903e-07,
+        "alignment_scale": 0.9999985217576454
+      },
+      "clip_105": {
+        "self_consistency_drift_pct": 0.00015476076041250972,
+        "samples": 601,
+        "max_coordinate_difference": 0.002888300558012702,
+        "aligned_rmse_over_path_length": 4.0136134860788014e-07,
+        "alignment_scale": 1.0000000783524243
+      },
+      "clip_106": {
+        "self_consistency_drift_pct": 0.0005160708535340146,
+        "samples": 601,
+        "max_coordinate_difference": 0.004015250006716875,
+        "aligned_rmse_over_path_length": 1.3064098868556934e-06,
+        "alignment_scale": 1.0000013743838707
+      },
+      "clip_107": {
+        "self_consistency_drift_pct": 0.00040570902777605725,
+        "samples": 600,
+        "max_coordinate_difference": 0.006145973631435098,
+        "aligned_rmse_over_path_length": 1.1577709178719794e-06,
+        "alignment_scale": 0.9999998341964031
+      },
+      "clip_108": {
+        "self_consistency_drift_pct": 0.0013550923649826494,
+        "samples": 602,
+        "max_coordinate_difference": 0.006902605062322209,
+        "aligned_rmse_over_path_length": 3.5685344899605657e-06,
+        "alignment_scale": 0.9999946126413998
+      },
+      "clip_109": {
+        "self_consistency_drift_pct": 0.00020918287121268235,
+        "samples": 602,
+        "max_coordinate_difference": 0.0013148754465674983,
+        "aligned_rmse_over_path_length": 6.0763703136518e-07,
+        "alignment_scale": 0.9999983639398773
+      },
+      "clip_110": {
+        "self_consistency_drift_pct": 0.00035939302089977747,
+        "samples": 601,
+        "max_coordinate_difference": 0.0057381358246999525,
+        "aligned_rmse_over_path_length": 9.453414049295774e-07,
+        "alignment_scale": 0.99999898789417
+      },
+      "clip_111": {
+        "self_consistency_drift_pct": 0.008627358448589494,
+        "samples": 601,
+        "max_coordinate_difference": 0.02742049091818899,
+        "aligned_rmse_over_path_length": 2.025326808556177e-05,
+        "alignment_scale": 0.9998763551244643
+      },
+      "clip_112": {
+        "self_consistency_drift_pct": 0.0002014339878738787,
+        "samples": 600,
+        "max_coordinate_difference": 0.0008758935901127529,
+        "aligned_rmse_over_path_length": 4.5967756399297873e-07,
+        "alignment_scale": 0.9999997280452756
+      }
+    }
+  },
+  "coverage_min": 1.0,
+  "max_gap_seconds": 0.8240000000000123,
+  "official_score_recomputed": false
+}

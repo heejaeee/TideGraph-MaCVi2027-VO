@@ -8,6 +8,9 @@ TRAIN/VAL videos and reference trajectories are not required for inference.
 
 A full raw-video run completed all 20 trajectories from the released TEST videos and frozen weights. The mean prediction-to-prediction drift proxy is 0.005156% (maximum 0.081205%), and the maximum aligned RMSE/path-length ratio is 0.000225228. This is self-consistency against the submitted estimates, not hidden-TEST rescoring. Fresh GPU inference is not byte-identical. See `evidence/raw_video_all20.json` and `RAW_REPRODUCTION.md`.
 
+A second full raw-video run in the separate Python 3.10 environment and a fresh public clone completed all 20 clips (180 stages), with 100% coverage. Its prediction-to-prediction drift proxy was 0.004841% mean and 0.081418% maximum. This used the same host/GPU and reused verified weights, but no estimated intermediates from the first run. It exposed a missing MoviePy dependency in the R3/DA3 API; `requirements-raw.txt` now pins MoviePy 1.0.3 and its supporting packages. See `evidence/independent_raw_all20.json`. This is not private-reference rescoring.
+
+
 The fresh-environment imports, CUDA operators and raw-video CPU smoke are recorded in `evidence/clean_raw_environment.json`.
 
 ## Setup
